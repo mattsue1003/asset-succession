@@ -25,7 +25,7 @@ body{height:100%;font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC","
 h1{font-size:6.4rem;line-height:1.2;font-weight:900;color:var(--ink);margin-bottom:2.6rem}
 h1.small{font-size:5.2rem}
 .lead{font-size:3.1rem;line-height:1.5;color:#3b4f55;margin-bottom:2.4rem}
-.body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.body{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:2rem}
 .row{display:flex;gap:2.6rem;align-items:stretch}
 .col{flex:1;display:flex;flex-direction:column;gap:1.6rem}
 
@@ -122,15 +122,16 @@ svg.tl{position:absolute;inset:0;width:100%;height:100%}
 .h1row{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-bottom:2.6rem}
 .h1row h1{margin-bottom:0}
 /* true-false */
-.tf{display:flex;flex-direction:column;gap:1.2rem;flex:1}
-.tfr{display:flex;align-items:center;gap:1.6rem;background:var(--white);border:.3rem solid var(--line);border-radius:1.6rem;padding:1.2rem 2rem;font-size:2.8rem;line-height:1.35}
+.tf{display:flex;flex-direction:column;gap:1rem;flex:1;min-height:0;overflow-y:auto}
+.tfr{display:flex;align-items:center;gap:1.4rem;background:var(--white);border:.3rem solid var(--line);border-radius:1.6rem;padding:1rem 2rem;font-size:2.7rem;line-height:1.3}
 .tfr .st{flex:1}
 .tfr button{font:inherit;font-size:2.6rem;font-weight:900;border:.3rem solid var(--teal);background:#fff;color:var(--teal);border-radius:1.2rem;padding:.6rem 2rem;cursor:pointer}
 .tfr button.pick{background:var(--teal);color:#fff}
 .tfr.ok{background:#E3F5E8;border-color:#2E9E5B}.tfr.no{background:var(--orange-soft);border-color:var(--orange)}
-.tfr .why{display:none;font-size:2.3rem;color:#3b4f55;flex-basis:100%}
-.tfr.ok .why,.tfr.no .why{display:block}
-.tfr{flex-wrap:wrap}
+.tfr .why{display:none;font-size:2.2rem;color:#3b4f55;font-weight:400}
+.tfr.ok .st,.tfr.no .st{font-size:2.4rem;font-weight:700}
+.tfr.ok .why,.tfr.no .why{display:inline}
+.tfr button{flex:0 0 auto}
 /* order */
 .ord{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;flex:1}
 .ordi{background:var(--white);border:.3rem solid var(--line);border-radius:1.6rem;padding:1.6rem 2rem;font-size:2.9rem;cursor:pointer;display:flex;align-items:center;gap:1.6rem;min-height:9rem}
@@ -223,10 +224,11 @@ a.link{color:var(--teal);font-weight:700;word-break:break-all}
 <!-- 2 agenda -->
 <section class="slide" data-note="先說清楚今天的立場：我們講的是「通則」和「觀念」，每個家庭情況不同，真正要做決定前，請找地政士、律師、會計師或銀行信託部門確認。今天的數字以財政部公告 115 年標準為準。">
   <div class="tag">今天聊什麼</div>
-  <h1 class="small">八個關鍵題目，一個一個拆開看</h1>
+  <h1 class="small">先規劃第三人生，再談八個傳承題目</h1>
   <div class="body">
     <div class="row">
       <div class="col">
+        <div class="pt"><span class="k">零</span><span><b>第三人生規劃</b>：我在乎什麼、想過什麼生活、錢夠不夠</span></div>
         <div class="pt"><span class="k">一</span><span>贈與稅與遺產稅：數字、級距、常見情境</span></div>
         <div class="pt"><span class="k">二</span><span>遺囑怎麼寫才有效：應繼分、特留分</span></div>
         <div class="pt"><span class="k">三</span><span>信託：把錢交給可靠的制度</span></div>
@@ -252,6 +254,101 @@ a.link{color:var(--teal);font-weight:700;word-break:break-all}
     <div class="box" style="font-size:3.6rem"><span class="pill">2</span>一年可以「免稅」送給孩子多少錢？</div>
     <div class="box" style="font-size:3.6rem"><span class="pill">3</span>如果沒有遺囑，配偶和三個孩子，房子怎麼分？</div>
     <div class="small-note">不用舉手，在心裡回答就好。今天結束時，三題您都會有答案。</div>
+  </div>
+</section>
+
+<!-- 0 section life -->
+<section class="slide sec" data-note="第零章的用意：傳承不是從「錢怎麼分」開始，而是從「我想怎麼活」開始。先把自己的第三人生想清楚、算清楚，剩下的才是要留給家人的。這一章約十分鐘，重點是打開「我的第三人生藍圖」讓大家實際點一點。">
+  <div class="tag">第零章</div>
+  <h1>先規劃第三人生<br>再談傳承</h1>
+  <div class="q">退休不是結束，是人生第三段的開始。<br>先想清楚自己要怎麼活、要花多少，<br>剩下的，才是要留給家人的。</div>
+</section>
+
+<section class="slide" data-note="開場猜猜看：答案 B。多數人會選 A 或 C。帶出「不算不知道」。算法在後面兩頁。" data-quiz='{"ans":1,"fb":"以每月生活費 4 萬、醫療 5 千、年金 2.5 萬、物價每年漲 2%、從 65 歲活到 90 歲估算，加上三年長照準備與一次夢想基金，退休那天大約要準備 1,000 萬。重點不是數字嚇人，而是：現在知道，就來得及準備。"}'>
+  <div class="tag">先猜猜看</div>
+  <div class="q-text">退休後想每月花 4 萬過日子，每月有 2.5 萬年金，從 65 歲規劃到 90 歲。退休那天大約要準備多少？</div>
+  <div class="opts">
+    <div class="opt" tabindex="0"><span class="ab">A</span>300 萬就夠了</div>
+    <div class="opt" tabindex="0"><span class="ab">B</span>大約 1,000 萬</div>
+    <div class="opt" tabindex="0"><span class="ab">C</span>大約 3,000 萬</div>
+    <div class="opt" tabindex="0"><span class="ab">D</span>算不出來，看命</div>
+  </div>
+</section>
+
+<section class="slide" data-note="四個問題的順序很重要：價值在前。先知道自己最在乎的是健康、家庭還是自由，再選目標，才不會跟著別人走。每一格對應網頁的一個步驟，現場可以先口頭問大家第一格：您最在乎的三樣是什麼？">
+  <div class="tag">第三人生</div>
+  <h1 class="small">第三人生，先回答四個問題</h1>
+  <div class="body">
+    <div class="steps">
+      <div class="step"><div class="no">1</div><h3>我最在乎什麼？</h3>從二十個價值裡選五個、排前三名：健康、家庭、自由、安穩、貢獻、信仰……再替現在的生活八個面向打分數。</div>
+      <div class="step"><div class="no">2</div><h3>我想過什麼生活？</h3>對照價值挑生活目標：和家人相聚、學新東西、做志工、種菜、旅行……用一句話寫下三年後過得很好的一天。</div>
+      <div class="step"><div class="no">3</div><h3>怎麼一步一步做？</h3>挑三個目標，各寫三個小到今天就能做的步驟，寫上期限和誰來幫忙。</div>
+      <div class="step"><div class="no">4</div><h3>錢夠不夠？</h3>從期待的每月生活費往回推：退休那天要準備多少、現在每月要存多少、投資多少。</div>
+    </div>
+    <div class="box cool" style="font-size:2.8rem">順序是「價值 → 目標 → 步驟 → 財務」：先知道為什麼，再決定做什麼，最後才算要多少錢。</div>
+  </div>
+</section>
+
+<section class="slide" data-note="講財務的算法，不用算細，講邏輯：①期待的每月生活費×物價上漲 → ②減年金＝每月缺口 → ③乘以退休年數，加長照準備、夢想基金＝退休那天要準備的總額 → ④減現有存款滾到退休時的價值＝缺口 → ⑤缺口除以剩下的月數（含報酬）＝每月要存多少，再依「100 減年齡」分成存款和投資。按鈕打開網頁第四步直接示範。">
+  <div class="tag">第三人生</div>
+  <div class="h1row"><h1 class="small">錢怎麼算：從期待的生活往回推</h1><button class="cbtn teal" onclick="openCalc(null,'life-src')">🌱 打開第三人生藍圖</button></div>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="pt"><span class="k">①</span><span><b>期待的每月生活費</b>（現在物價）× 物價上漲 → 退休當年的生活費</span></div>
+        <div class="pt"><span class="k">②</span><span>減掉<b>年金、租金</b>等固定收入 → <b>每月缺口</b></span></div>
+        <div class="pt"><span class="k">③</span><span>缺口 × 退休年數，加<b>長照準備</b>（每月 × 3 年）與<b>夢想基金</b> → <b>退休那天要準備的總額</b></span></div>
+      </div>
+      <div class="col">
+        <div class="pt"><span class="k">④</span><span>減掉<b>現有存款</b>滾到退休時的價值 → 還差多少</span></div>
+        <div class="pt"><span class="k">⑤</span><span>差額 ÷ 剩下的月數（含投資報酬）→ <b>每月要投入多少</b></span></div>
+        <div class="pt"><span class="k">⑥</span><span>依「<b>100 減年齡</b>」分：55 歲約 55% 存款定存、45% 穩健投資（股債各半的指數型基金，定期定額）</span></div>
+      </div>
+    </div>
+    <div class="box warm" style="font-size:2.7rem;padding:1.4rem 2.2rem">先備好 6 個月生活費的緊急預備金，再開始定期定額；退休前五年把前幾年要用的錢移到定存。這是一般標準做法，不是投資建議。</div>
+  </div>
+</section>
+
+<section class="slide" data-note="現場互動：打開網頁，請一位長輩口述假設數字（不用真實的），全班一起看「退休那天要準備多少」「每月要存多少」兩個數字怎麼變：把生活費從 4 萬改 3 萬、退休年齡 65 改 68，看數字掉多少。網頁資料只存在各自的手機或電腦裡，回家可以自己慢慢填，最後列印成一張藍圖。">
+  <div class="tag">現場做做看</div>
+  <h1 class="small">打開「我的第三人生藍圖」，一起填一次</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="num" style="flex:1;cursor:pointer;border-bottom-color:var(--teal)" onclick="openCalc(null,'life-src')" tabindex="0" onkeydown="if(event.key==='Enter')openCalc(null,'life-src')"><div class="n" style="font-size:5.2rem;color:var(--teal)">🌱 點我開啟</div><div class="u">我的第三人生藍圖</div><div class="d">價值 → 生活目標 → 行動計畫 → 財務安排 → 一張可以列印的藍圖</div></div>
+      </div>
+      <div class="col">
+        <div class="box cool"><h3>現場一起試三件事</h3>
+          <li>請一位長輩口述假設數字，看「退休那天要準備多少」</li>
+          <li>把每月生活費從 4 萬改成 3 萬，看每月要存的錢掉多少</li>
+          <li>把退休年齡從 65 改成 68，再看一次</li>
+        </div>
+        <div class="small-note" style="font-size:2.3rem">資料只存在各自的手機或電腦，不會上傳。回家慢慢填，填完可以列印貼在冰箱，或拿給家人看。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-note="橋接到第一章。把錢分成三層講：第一層自己用（生活費缺口，可以用安養信託、以房養老補）；第二層照顧準備（長照三年，預開型信託）；第三層剩下的才是要留給家人的——怎麼留，就是接下來八個題目。這一頁講完，直接進第一章贈與稅。">
+  <div class="tag">從規劃到傳承</div>
+  <h1 class="small">算完以後：三層錢，三種安排</h1>
+  <div class="body">
+    <div class="steps">
+      <div class="step" style="font-size:3.3rem;line-height:1.45;border-top-color:var(--amber)"><div class="no" style="color:var(--amber)">第一層</div><h3 style="font-size:3.6rem">自己要用的</h3>退休後每月生活費的缺口。不夠：安養信託按月撥付、以房養老、留房養老出租。</div>
+      <div class="step" style="font-size:3.3rem;line-height:1.45;border-top-color:var(--orange)"><div class="no">第二層</div><h3 style="font-size:3.6rem">照顧準備</h3>長照三年的準備金與醫療。放預開型安養信託，需要時才啟動；誰替我做主，用意定監護先選好。</div>
+      <div class="step" style="font-size:3.3rem;line-height:1.45;border-top-color:var(--teal)"><div class="no" style="color:var(--teal)">第三層</div><h3 style="font-size:3.6rem">留給家人的</h3>剩下的，才是傳承。怎麼送最省稅、沒遺囑怎麼分、遺囑怎麼寫、保險能不能免稅——這就是接下來的八個題目。</div>
+    </div>
+    <div class="box warm" style="font-size:2.9rem">先顧好自己的第三人生，傳承才會是心意，不是負擔。</div>
+  </div>
+</section>
+
+<section class="slide" data-note="第零章檢核，填空題。三個空格依序填：價值、目標、錢（財務）。誘答詞「遺囑」「子女」用來提醒：傳承是最後一層，不是第一步。" data-fill='{"bank": ["價值", "生活目標", "錢", "遺囑", "子女", "房子"], "lines": [{"pre": "第三人生先想清楚我最在乎的", "ans": "價值", "post": "，"}, {"pre": "再對照它挑出想過的", "ans": "生活目標", "post": "，"}, {"pre": "最後才從期待的生活往回算要準備多少", "ans": "錢", "post": "；剩下的，才是傳承。"}], "f": "價值 → 目標 → 財務，先顧好自己，剩下的才留給家人。接下來進入第一章：贈與稅與遺產稅。"}'>
+  <div class="tag">學會了嗎</div>
+  <h1 class="small">第三人生規劃的順序</h1>
+  <div class="body">
+    <div class="lead" style="margin-bottom:.4rem">依序點選下方的詞，填進空格</div>
+    <div class="fill-lines"></div>
+    <div class="bank"></div>
   </div>
 </section>
 
@@ -1144,7 +1241,7 @@ a.link{color:var(--teal);font-weight:700;word-break:break-all}
         <div class="num" style="flex:1;cursor:pointer;border-bottom-color:var(--teal)" onclick="openCalc('estate')" tabindex="0" onkeydown="if(event.key==='Enter')openCalc('estate')"><div class="n" style="font-size:6rem">遺產稅</div><div class="u">點我開啟試算</div><div class="d">遺產項目、配偶與子女扣除、未成年加扣、剩餘財產請求權、申報期限與規劃提醒</div></div>
       </div>
     </div>
-    <div class="row" style="align-items:center;gap:2rem"><div class="box cool" style="flex:1;font-size:2.7rem;padding:1.4rem 2.2rem">依財政部公告 115 年標準，教學估算，實際以國稅局核定為準。按 Esc 或右上角關閉即可回到簡報。</div><button class="cbtn teal" onclick="openCalc(null,'inh-src')">🧮 繼承分配／特留分試算器</button></div>
+    <div class="row" style="align-items:center;gap:2rem"><div class="box cool" style="flex:1;font-size:2.7rem;padding:1.4rem 2.2rem">依財政部公告 115 年標準，教學估算，實際以國稅局核定為準。按 Esc 或右上角關閉即可回到簡報。</div><button class="cbtn teal" onclick="openCalc(null,'inh-src')">🧮 繼承分配／特留分試算器</button><button class="cbtn teal" onclick="openCalc(null,'life-src')">🌱 第三人生藍圖</button></div>
   </div>
 </section>
 
@@ -1168,7 +1265,7 @@ a.link{color:var(--teal);font-weight:700;word-break:break-all}
   <h1 class="small">今天回去，先做哪一件？</h1>
   <div class="body">
     <div class="steps">
-      <div class="step"><div class="no">1</div><h3>盤點財產</h3>列一張清單：房子、存款、股票、保單、債務，放在家人找得到的地方。</div>
+      <div class="step"><div class="no">1</div><h3>填完第三人生藍圖</h3>回家打開網頁，把價值、目標、行動和財務填完，列印一張貼在冰箱；順便列財產清單放在家人找得到的地方。</div>
       <div class="step"><div class="no">2</div><h3>和家人開口談</h3>找一個吃飯的日子，說說自己的想法。開口比寫文件更難，也更重要。</div>
       <div class="step"><div class="no">3</div><h3>先寫一份遺囑</h3>到公證人那裡做公證遺囑，或至少親手寫一份有日期、有簽名的自書遺囑。</div>
       <div class="step"><div class="no">4</div><h3>去銀行問信託</h3>了解安養信託怎麼開辦、費用多少，為自己的老後留一道防線。</div>
@@ -1206,6 +1303,316 @@ a.link{color:var(--teal);font-weight:700;word-break:break-all}
 </div>
 </div>
 
+<script type="text/plain" id="life-src"><!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>我的第三人生藍圖</title>
+<style>
+:root{--orange:#E8552D;--amber:#F4A93C;--teal:#028090;--ink:#12343B;--bg:#FBF6EC;--card:#fff;--line:#D9CBB1;--muted:#5d6f74;--soft:#DDEFF0;--warm:#FBE3DA;--text:#12343B;--ok:#2E9E5B;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f2a30;--card:#163d45;--line:#2d5a63;--muted:#a9c3c8;--soft:#1d4a52;--warm:#4a2a20;--text:#f1f4f3;--ink:#f1f4f3}}
+:root[data-theme="dark"]{--bg:#0f2a30;--card:#163d45;--line:#2d5a63;--muted:#a9c3c8;--soft:#1d4a52;--warm:#4a2a20;--text:#f1f4f3;--ink:#f1f4f3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;background:var(--bg);color:var(--text);font-size:22px;line-height:1.55}
+header{background:linear-gradient(135deg,#12343B,#0b5a63);color:#fff;padding:30px 20px 22px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+header .in{max-width:1000px;margin:0 auto}
+header h1{font-size:30px;font-weight:900}
+header p{color:#dfeff1;font-size:17px;margin-top:4px}
+.steps{display:flex;gap:6px;margin-top:14px;flex-wrap:wrap}
+.steps button{flex:1;min-width:110px;font:inherit;font-size:17px;font-weight:900;padding:10px 6px;border-radius:12px;border:2px solid rgba(255,255,255,.35);background:transparent;color:#fff;cursor:pointer}
+.steps button.on{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.steps button.done::before{content:"✓ ";color:#7fe0a0}
+.steps button.on.done::before{color:var(--ink)}
+main{max-width:1000px;margin:0 auto;padding:22px 20px 80px}
+.panel{display:none}.panel.on{display:block;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h2{font-size:28px;font-weight:900;color:var(--teal);margin-bottom:6px}
+.lead{color:var(--muted);font-size:19px;margin-bottom:18px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:22px;margin-bottom:18px}
+.card h3{font-size:22px;color:var(--ink);margin-bottom:10px;font-weight:900}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font:inherit;font-size:21px;padding:12px 20px;border-radius:999px;border:2.5px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;transition:.15s}
+.chip:hover{border-color:var(--teal)}
+.chip.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.chip.rank{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+.chip .n{display:inline-block;background:var(--ink);color:#fff;border-radius:50%;width:28px;height:28px;line-height:28px;text-align:center;font-size:16px;margin-right:6px}
+textarea,input[type=text]{font:inherit;font-size:21px;width:100%;padding:12px 14px;border:2.5px solid var(--line);border-radius:12px;background:var(--card);color:var(--text);outline:none}
+textarea:focus,input:focus{border-color:var(--teal)}
+textarea{min-height:90px;resize:vertical}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.row>*{flex:1;min-width:220px}
+.btn{font:inherit;font-size:22px;font-weight:900;background:var(--orange);color:#fff;border:none;border-radius:14px;padding:14px 28px;cursor:pointer;box-shadow:0 4px 12px rgba(232,85,45,.3)}
+.btn:hover{background:#c9441f}
+.btn.alt{background:var(--card);color:var(--teal);border:2.5px solid var(--teal);box-shadow:none}
+.btn.sm{font-size:18px;padding:10px 18px}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:10px;flex-wrap:wrap}
+/* wheel */
+.wheel{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:760px){.wheel{grid-template-columns:1fr}}
+.wrow{display:flex;align-items:center;gap:10px;background:var(--soft);border-radius:12px;padding:10px 14px}
+.wrow label{flex:1;font-weight:700}
+.wrow input[type=range]{flex:2;accent-color:var(--orange);height:30px}
+.wrow .v{width:36px;text-align:right;font-weight:900;color:var(--orange)}
+.radar{display:flex;justify-content:center;margin-top:12px}
+/* plan */
+.goalcard{border-left:8px solid var(--amber)}
+.stepline{display:flex;gap:10px;align-items:center;margin:8px 0;flex-wrap:wrap}
+.stepline input[type=text]{flex:3;min-width:200px}
+.stepline select{font:inherit;font-size:19px;padding:10px;border:2.5px solid var(--line);border-radius:12px;background:var(--card);color:var(--text)}
+.stepline input[type=checkbox]{width:30px;height:30px;accent-color:var(--ok)}
+.prog{height:16px;background:var(--soft);border-radius:8px;overflow:hidden;margin-top:8px}
+.prog span{display:block;height:100%;background:var(--ok);transition:width .3s}
+/* finance */
+.f{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.f:last-child{border-bottom:none}
+.f label{flex:1;min-width:180px}
+.f small{display:block;color:var(--muted);font-size:16px}
+.f input{font:inherit;font-size:24px;font-weight:900;color:var(--orange);background:transparent;border:none;border-bottom:3px solid var(--amber);text-align:right;width:140px;outline:none}
+.res{background:var(--ink);color:#fff;border-radius:20px;padding:22px}
+.res .lbl{color:#bfd8dc;font-size:17px}
+.res .big{font-size:40px;font-weight:900;color:var(--amber);line-height:1.1;margin:4px 0 12px}
+.res .big.red{color:#ff9a7a}
+.res table{width:100%;border-collapse:collapse;font-size:18px}
+.res td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.14)}.res td:last-child{text-align:right;font-weight:700}
+.bars{display:flex;height:34px;border-radius:17px;overflow:hidden;margin:10px 0 4px}
+.bars span{display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:#12343B}
+.legend{font-size:15px;color:#bfd8dc}
+.tips{margin-top:12px;padding:12px 14px;background:rgba(244,169,60,.14);border-left:5px solid var(--amber);border-radius:10px;font-size:17px;line-height:1.5}
+.tips li{margin-left:20px}
+/* summary */
+.sum h3{color:var(--teal);font-size:22px;margin:16px 0 6px}
+.sum .vision{font-size:24px;font-weight:900;color:var(--ink);background:var(--soft);padding:14px 18px;border-radius:14px}
+.check{display:flex;gap:10px;align-items:center;padding:8px 0;font-size:20px}
+.check input{width:28px;height:28px;accent-color:var(--ok)}
+footer{text-align:center;color:var(--muted);font-size:15px;padding:20px;line-height:1.6}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 22px;border-radius:999px;font-size:18px;opacity:0;transition:.3s;pointer-events:none;z-index:9}
+.toast.on{opacity:1}
+@media print{header,.nav,.btn,.steps,footer,.toast{display:none!important}.panel{display:block!important}body{background:#fff;font-size:16px}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="in">
+  <h1>我的第三人生藍圖</h1>
+  <p>退休不是結束，是人生第三段的開始。花二十分鐘，把想過的生活、在乎的價值、要走的步驟和錢的安排，一次想清楚。</p>
+  <div class="steps" id="steps"></div>
+</div></header>
+
+<main>
+<!-- 2 values -->
+<section class="panel on" id="p1">
+  <h2>第一步：我最在乎什麼？</h2>
+  <div class="lead">先弄清楚「什麼對我最重要」，後面的目標才不會跟著別人走。先點選 5 個最重要的價值，再依重要程度點 3 個排出順序（第一次點是第 1 名）。</div>
+  <div class="card"><h3>我的價值觀（選 5 個）</h3><div class="chips" id="values"></div></div>
+  <div class="card"><h3>前三名排序（點選順序就是名次）</h3><div class="chips" id="rank"></div><div style="margin-top:10px"><button class="btn alt sm" onclick="resetRank()">重新排</button></div></div>
+  <div class="card"><h3>生活滿意度輪盤</h3><div class="lead" style="margin-bottom:10px">現在的生活，每一項您給幾分？（1 分很不滿意，10 分很滿意）分數低的，就是第三人生可以優先改善的地方。</div>
+    <div class="wheel" id="wheel"></div><div class="radar" id="radar"></div></div>
+  <div class="nav"><span></span><button class="btn" onclick="go(2)">下一步：生活目標 →</button></div>
+</section>
+
+<!-- 1 goals -->
+<section class="panel" id="p2">
+  <h2>第二步：我想過什麼樣的生活？</h2>
+  <div class="lead">對照剛才排出的價值，點選符合的生活元素，想選幾個就選幾個；也可以自己加。</div>
+  <div class="card"><h3>生活目標</h3><div class="chips" id="goals"></div>
+    <div class="row" style="margin-top:12px"><input type="text" id="goal-new" placeholder="自己加一個，例如：每年去一次花蓮看朋友"><button class="btn alt sm" onclick="addGoal()">加入</button></div>
+  </div>
+  <div class="card"><h3>我的一句話願景</h3><div class="lead" style="margin-bottom:8px">想像三年後的自己，過得很好的一天，是什麼樣子？用一句話寫下來。</div>
+    <textarea id="vision" placeholder="例如：每天早上和老伴散步，一週去社區大學上兩堂課，假日孫子來家裡吃我煮的菜。"></textarea></div>
+  <div class="nav"><button class="btn alt" onclick="go(1)">← 上一步</button><button class="btn" onclick="go(3)">下一步：行動計畫 →</button></div>
+</section>
+
+<!-- 3 plan -->
+<section class="panel" id="p3">
+  <h2>第三步：怎麼一步一步做到？</h2>
+  <div class="lead">從第二步選的目標，挑最想先做的三個，每個目標寫三個小步驟。小到「今天就能做」最好。</div>
+  <div id="plans"></div>
+  <div class="nav"><button class="btn alt" onclick="go(2)">← 上一步</button><button class="btn" onclick="go(4)">下一步：財務安排 →</button></div>
+</section>
+
+<!-- 4 finance -->
+<section class="panel" id="p4">
+  <h2>第四步：退休後想過多好的生活？現在要存多少？</h2>
+  <div class="lead">從「期待的每月生活費」往回推：先算退休後總共需要多少，再算現在每個月該存多少、投資多少。填大概就好，資料只在您的瀏覽器裡。</div>
+  <div class="row">
+    <div>
+      <div class="card"><h3>我的時間</h3>
+        <div class="f"><label>現在年齡</label><input id="age" type="number" value="55" min="20" max="100"> <span>歲</span></div>
+        <div class="f"><label>預計退休年齡<small>已退休就填現在年齡</small></label><input id="ret" type="number" value="65" min="20" max="100"> <span>歲</span></div>
+        <div class="f"><label>規劃到幾歲<small>台灣平均餘命約 80，建議多抓幾年</small></label><input id="end" type="number" value="90" min="60" max="110"> <span>歲</span></div>
+      </div>
+      <div class="card"><h3>退休後，我期待的生活（以現在的物價）</h3>
+        <div class="f"><label>每月生活費<small>吃住水電交通、休閒學習、孝親</small></label><input id="want" type="number" value="40000" step="1000"> <span>元</span></div>
+        <div class="f"><label>每月醫療與保險費</label><input id="med" type="number" value="5000" step="500"> <span>元</span></div>
+        <div class="f"><label>退休後每月固定收入<small>勞保年金、退休金、租金；不確定可填 0</small></label><input id="pens" type="number" value="25000" step="1000"> <span>元</span></div>
+        <div class="f"><label>長期照顧準備<small>每月 × 年數；居家看護約 3～4 萬，機構 4～7 萬</small></label><span><input id="ltc" type="number" value="40000" step="5000" style="width:110px"> 元 × <input id="ltcy" type="number" value="3" min="0" max="10" style="width:60px"> 年</span></div>
+        <div class="f"><label>夢想基金<small>旅行、學習、圓夢，一次性</small></label><input id="dream" type="number" value="100" step="10"> <span>萬</span></div>
+      </div>
+      <div class="card"><h3>我現在有的、我的假設</h3>
+        <div class="f"><label>目前可動用的存款與投資<small>不含自住的房子</small></label><input id="have" type="number" value="300" step="10"> <span>萬</span></div>
+        <div class="f"><label>投資方式<small>一般標準做法：穩健型，股債各半</small></label><select id="style" style="font:inherit;font-size:20px;font-weight:900;color:var(--orange);background:transparent;border:none;border-bottom:3px solid var(--amber)"><option value="2">保守（定存為主，年約 2%）</option><option value="4" selected>穩健（股債各半，年約 4%）</option><option value="6">積極（股票為主，年約 6%）</option></select></div>
+        <div class="f"><label>物價每年上漲</label><input id="inf" type="number" value="2" step="0.5"> <span>%</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="res" id="res-pre">
+        <div class="lbl">退休那一天，我需要準備好</div><div class="big" id="r-need">—</div>
+        <div class="lbl">現在的存款到那時會長成 <b id="r-have" style="color:#fff">—</b>，還差</div><div class="big red" id="r-gap">—</div>
+        <div class="lbl">所以從現在起，每個月要投入</div><div class="big" id="r-month" style="color:#7fe0a0">—</div>
+        <table>
+          <tr><td>其中放存款／定存（安全的）</td><td id="r-save">—</td></tr>
+          <tr><td>其中放投資（穩健的）</td><td id="r-inv">—</td></tr>
+          <tr><td>建議先備緊急預備金（6 個月生活費）</td><td id="r-emg">—</td></tr>
+          <tr><td>退休後每月缺口（當時物價）</td><td id="r-gapm">—</td></tr>
+          <tr><td>退休後生活年數</td><td id="r-yrs">—</td></tr>
+        </table>
+        <div class="lbl" style="margin-top:12px">需要準備的錢，用在哪裡</div>
+        <div class="bars" id="r-bars"></div><div class="legend" id="r-legend"></div>
+        <div class="tips" id="r-tips"></div>
+      </div>
+    </div>
+  </div>
+  <div class="card"><h3>傳承與保障的準備（勾選已完成的）</h3>
+    <label class="check"><input type="checkbox" class="prep" data-k="will">我已經立了有效的遺囑（親手寫或公證）</label>
+    <label class="check"><input type="checkbox" class="prep" data-k="guard">我已經簽了意定監護契約並公證</label>
+    <label class="check"><input type="checkbox" class="prep" data-k="trust">我了解過安養信託，或已經簽了預開型信託</label>
+    <label class="check"><input type="checkbox" class="prep" data-k="ad">我已經簽了預立醫療決定（病人自主權利法）</label>
+    <label class="check"><input type="checkbox" class="prep" data-k="list">我有一張財產與保單清單，放在家人找得到的地方</label>
+    <label class="check"><input type="checkbox" class="prep" data-k="talk">我已經和家人談過自己老後的想法</label>
+  </div>
+  <div class="nav"><button class="btn alt" onclick="go(3)">← 上一步</button><button class="btn" onclick="go(5)">完成：看我的藍圖 →</button></div>
+</section>
+
+<!-- 5 summary -->
+<section class="panel" id="p5">
+  <h2>我的第三人生藍圖</h2>
+  <div class="lead">這是您今天想清楚的事。可以列印出來貼在冰箱，或拿給家人看。</div>
+  <div class="card sum" id="summary"></div>
+  <div class="nav"><button class="btn alt" onclick="go(4)">← 回去修改</button><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn alt" onclick="clearAll()">全部重來</button><button class="btn" onclick="window.print()">列印／存成 PDF</button></div></div>
+</section>
+</main>
+<footer>愛迪樂健康促進團隊｜本工具為生活規劃練習，財務部分為簡易估算，不是投資或法律建議；實際規劃請洽專業人員。資料只存在您自己的瀏覽器裡。</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const GOALS=['身體健康、能自己走','和家人常相聚','交到新朋友','學一樣新東西','去想去的地方旅行','做志工、幫助別人','種菜、園藝','運動、游泳、打球','信仰與心靈平靜','整理一生的故事','照顧孫子','經濟安穩不操心','有自己的興趣','幫忙社區、鄰里'];
+const VALUES=['健康','家庭','自由','安穩','學習','貢獻','信仰','友誼','獨立','尊嚴','快樂','被需要','冒險','安靜','創造','傳承','被愛','節儉','慷慨','幽默'];
+const WHEEL=['身體健康','家人關係','朋友社交','學習成長','休閒興趣','經濟安全','居住環境','心靈信仰'];
+const STEP_NAMES=['我的價值','生活目標','行動計畫','財務安排','我的藍圖'];
+let S={goals:[],custom:[],vision:'',values:[],rank:[],wheel:WHEEL.map(()=>6),plans:{},fin:{},prep:{},done:[]};
+try{const t=localStorage.getItem('life3');if(t)S=Object.assign(S,JSON.parse(t));}catch(e){}
+function save(){try{localStorage.setItem('life3',JSON.stringify(S));}catch(e){}}
+function toast(t){const e=$('toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),1400);}
+
+/* steps */
+function renderSteps(){$('steps').innerHTML=STEP_NAMES.map((n,i)=>`<button class="${cur===i+1?'on':''} ${S.done.includes(i+1)?'done':''}" onclick="go(${i+1})">${i+1}. ${n}</button>`).join('');}
+let cur=1;
+function go(n){if(!S.done.includes(cur))S.done.push(cur);cur=n;document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='p'+n));renderSteps();if(n===3)renderPlans();if(n===5)renderSummary();save();window.scrollTo({top:0,behavior:'smooth'});}
+
+/* goals */
+function allGoals(){return GOALS.concat(S.custom);}
+function renderGoals(){$('goals').innerHTML=allGoals().map(g=>`<button class="chip ${S.goals.includes(g)?'on':''}" onclick="toggleGoal('${g.replace(/'/g,"\\'")}')">${g}</button>`).join('');}
+function toggleGoal(g){const i=S.goals.indexOf(g);if(i>=0)S.goals.splice(i,1);else S.goals.push(g);save();renderGoals();}
+function addGoal(){const v=$('goal-new').value.trim();if(!v)return;S.custom.push(v);S.goals.push(v);$('goal-new').value='';save();renderGoals();toast('已加入');}
+$('vision').value=S.vision;$('vision').addEventListener('input',e=>{S.vision=e.target.value;save();});
+
+/* values */
+function renderValues(){$('values').innerHTML=VALUES.map(v=>`<button class="chip ${S.values.includes(v)?'on':''}" onclick="toggleValue('${v}')">${v}</button>`).join('');
+  $('rank').innerHTML=S.values.length?S.values.map(v=>{const r=S.rank.indexOf(v);return `<button class="chip ${r>=0?'rank':''}" onclick="pickRank('${v}')">${r>=0?`<span class="n">${r+1}</span>`:''}${v}</button>`;}).join(''):'<span style="color:var(--muted)">先在上面選 5 個價值</span>';}
+function toggleValue(v){const i=S.values.indexOf(v);if(i>=0){S.values.splice(i,1);S.rank=S.rank.filter(x=>x!==v);}else{if(S.values.length>=5){toast('最多選 5 個，先取消一個');return;}S.values.push(v);}save();renderValues();}
+function pickRank(v){if(S.rank.includes(v)||S.rank.length>=3)return;S.rank.push(v);save();renderValues();}
+function resetRank(){S.rank=[];save();renderValues();}
+
+/* wheel */
+function renderWheel(){$('wheel').innerHTML=WHEEL.map((w,i)=>`<div class="wrow"><label>${w}</label><input type="range" min="1" max="10" value="${S.wheel[i]}" oninput="setWheel(${i},this.value)"><span class="v" id="wv${i}">${S.wheel[i]}</span></div>`).join('');renderRadar();}
+function setWheel(i,v){S.wheel[i]=+v;$('wv'+i).textContent=v;save();renderRadar();}
+function renderRadar(){const n=WHEEL.length,R=120,cx=170,cy=170;const pt=(i,r)=>{const a=-Math.PI/2+i*2*Math.PI/n;return [cx+r*Math.cos(a),cy+r*Math.sin(a)];};
+  let g='';[2,4,6,8,10].forEach(k=>{g+=`<polygon points="${WHEEL.map((_,i)=>pt(i,R*k/10).join(',')).join(' ')}" fill="none" stroke="#D9CBB1" stroke-width="1"/>`;});
+  const poly=WHEEL.map((_,i)=>pt(i,R*S.wheel[i]/10).join(',')).join(' ');
+  const labels=WHEEL.map((w,i)=>{const [x,y]=pt(i,R+28);return `<text x="${x}" y="${y}" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="currentColor" font-weight="700">${w}</text>`;}).join('');
+  $('radar').innerHTML=`<svg viewBox="0 0 340 340" width="340" height="340" style="max-width:100%;color:var(--text)">${g}${WHEEL.map((_,i)=>`<line x1="${cx}" y1="${cy}" x2="${pt(i,R)[0]}" y2="${pt(i,R)[1]}" stroke="#D9CBB1"/>`).join('')}<polygon points="${poly}" fill="rgba(2,128,144,.25)" stroke="#028090" stroke-width="3"/>${labels}</svg>`;}
+
+/* plans */
+function renderPlans(){const top=S.goals.slice(0,3);if(!top.length){$('plans').innerHTML='<div class="card">第二步還沒有選生活目標，<button class="btn alt sm" onclick="go(2)">回去選</button></div>';return;}
+  $('plans').innerHTML=top.map((g,gi)=>{const p=S.plans[g]||(S.plans[g]={steps:['','',''],when:['本月','三個月內','一年內'],who:'',done:[false,false,false]});
+    const n=p.done.filter(Boolean).length;
+    return `<div class="card goalcard"><h3>目標 ${gi+1}：${g}</h3>
+      ${[0,1,2].map(i=>`<div class="stepline"><input type="checkbox" ${p.done[i]?'checked':''} onchange="setPlan('${esc(g)}','done',${i},this.checked)"><input type="text" placeholder="小步驟 ${i+1}，例如：打電話問社區大學課程" value="${esc(p.steps[i])}" oninput="setPlan('${esc(g)}','steps',${i},this.value)"><select onchange="setPlan('${esc(g)}','when',${i},this.value)">${['本週','本月','三個月內','一年內'].map(w=>`<option ${p.when[i]===w?'selected':''}>${w}</option>`).join('')}</select></div>`).join('')}
+      <div class="stepline"><span style="font-weight:700">需要誰幫忙：</span><input type="text" placeholder="例如：女兒幫我報名、老王陪我去" value="${esc(p.who)}" oninput="setPlan('${esc(g)}','who',0,this.value)"></div>
+      <div class="prog"><span style="width:${n/3*100}%"></span></div><div style="font-size:17px;color:var(--muted);margin-top:4px">完成 ${n} / 3</div></div>`;}).join('')
+    +(S.goals.length>3?`<div class="lead">您還選了 ${S.goals.length-3} 個目標，先把前三個做起來，之後再回來加。</div>`:'');}
+function esc(t){return String(t).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;');}
+function setPlan(g,k,i,v){const p=S.plans[g];if(k==='who')p.who=v;else p[k][i]=v;save();if(k==='done')renderPlans();}
+
+/* finance */
+const FIN=['age','ret','end','want','med','pens','ltc','ltcy','dream','have','style','inf'];
+FIN.forEach(id=>{if(S.fin[id]!==undefined)$(id).value=S.fin[id];$(id).addEventListener('input',()=>{S.fin[id]=$(id).value;save();calcFin();});});
+let FR={};
+function calcFin(){const v=id=>parseFloat($(id).value)||0;const f=n=>Math.round(n).toLocaleString('zh-TW');const fw=n=>(n/10000).toLocaleString('zh-TW',{maximumFractionDigits:0})+' 萬';
+  const age=v('age'),ret=Math.max(age,v('ret')),end=Math.max(ret+1,v('end')),want=v('want'),med=v('med'),pens=v('pens'),ltc=v('ltc')*12*v('ltcy'),dream=v('dream')*10000,have=v('have')*10000;
+  const r=v('style')/100,inf=v('inf')/100,nAcc=ret-age,nRet=end-ret;
+  const infl=Math.pow(1+inf,nAcc);          // price level at retirement
+  const gapM=Math.max(0,(want+med)*infl-pens); // monthly gap at retirement prices (pension assumed not indexed)
+  const rr=(1+r)/(1+inf)-1;                  // real return during retirement
+  const annuity=rr>0.0001?(1-Math.pow(1+rr,-nRet))/rr:nRet;
+  const living=gapM*12*annuity;              // PV at retirement of living gap
+  const care=ltc*infl, dr=dream*infl;
+  const need=living+care+dr;
+  const haveF=have*Math.pow(1+r,nAcc);
+  const gap=Math.max(0,need-haveF);
+  const mr=r/12,nm=nAcc*12;
+  const month=nm>0?(mr>0?gap*mr/(Math.pow(1+mr,nm)-1):gap/nm):0;
+  const invShare=Math.min(.8,Math.max(.2,(100-age)/100));
+  const emg=(want+med)*6;
+  FR={age,ret,end,need,haveF,gap,month,gapM,nRet,invShare,emg,living,care,dr,retired:nAcc===0};
+  $('r-need').textContent=fw(need);$('r-have').textContent=fw(haveF);$('r-gap').textContent=gap>0?fw(gap):'已經夠了';
+  $('r-month').textContent=nAcc===0?'（已退休，看下方建議）':(gap>0?f(month)+' 元':'0 元');
+  $('r-save').textContent=nAcc===0?'—':f(month*(1-invShare))+' 元（'+Math.round((1-invShare)*100)+'%）';
+  $('r-inv').textContent=nAcc===0?'—':f(month*invShare)+' 元（'+Math.round(invShare*100)+'%）';
+  $('r-emg').textContent=fw(emg);$('r-gapm').textContent=f(gapM)+' 元';$('r-yrs').textContent=nRet+' 年（'+ret+'～'+end+' 歲）';
+  const parts=[['生活費缺口',living,'#F4A93C'],['照顧準備',care,'#E8552D'],['夢想基金',dr,'#7fd1dc']].filter(p=>p[1]>0);const tot=parts.reduce((a,p)=>a+p[1],0)||1;
+  $('r-bars').innerHTML=parts.map(p=>`<span style="width:${p[1]/tot*100}%;background:${p[2]}">${p[1]/tot>0.12?p[0]:''}</span>`).join('');
+  $('r-legend').textContent=parts.map(p=>p[0]+' '+fw(p[1])).join('　');
+  const tips=[];
+  if(nAcc>0){
+    tips.push(`離退休還有 ${nAcc} 年。一般標準做法是「100 減年齡」當投資比例：${age} 歲約 ${Math.round(invShare*100)}% 投資（全球股票＋債券的指數型基金或 ETF，定期定額）、${Math.round((1-invShare)*100)}% 存款定存；每年把比例往存款多挪一點。`);
+    if(gap>0&&month>(want+med)*0.5)tips.push('每月要投入的金額偏高：可以把退休年齡延後幾年、每月生活費下修一點，或把長照準備改用保險與安養信託搭配，再算一次。');
+    if(gap===0)tips.push('現有存款在這個報酬假設下已足夠；重點改成「保住它」：緊急預備金放定存，其餘按比例配置，別因為夠了就全部放在單一標的。');
+    tips.push(`先備好 ${fw(emg)} 的緊急預備金放活存或定存，再開始定期定額；退休前 5 年，逐步把要用的前幾年生活費移到定存，避免剛退休遇到股市下跌。`);
+  }else{
+    tips.push(`已退休：建議把存款分成三層──前 3 年生活費缺口（約 ${fw(gapM*36)}）放定存，長照準備 ${fw(care)} 放預開型安養信託，其餘用穩健配置每年提領補缺口。`);
+    if(gap>0)tips.push(`以目前條件存款不夠撐到 ${end} 歲，可以考慮：降低每月生活費、以房養老、留房養老出租，或和子女討論分攤。`);
+  }
+  tips.push('試算以固定報酬與通膨假設計算，年金未隨物價調整，屬保守估計；不是投資建議，實際請洽專業人員。');
+  $('r-tips').innerHTML='<ul>'+tips.map(t=>'<li>'+t+'</li>').join('')+'</ul>';
+}
+document.querySelectorAll('.prep').forEach(c=>{c.checked=!!S.prep[c.dataset.k];c.onchange=()=>{S.prep[c.dataset.k]=c.checked;save();};});
+
+/* summary */
+function renderSummary(){calcFin();const fw=n=>(n/10000).toLocaleString('zh-TW',{maximumFractionDigits:0})+' 萬';
+  const low=WHEEL.map((w,i)=>[w,S.wheel[i]]).sort((a,b)=>a[1]-b[1]).slice(0,2);
+  const prepNames={will:'遺囑',guard:'意定監護',trust:'安養信託',ad:'預立醫療決定',list:'財產清單',talk:'和家人談過'};
+  const todo=Object.keys(prepNames).filter(k=>!S.prep[k]).map(k=>prepNames[k]);
+  $('summary').innerHTML=`
+    <h3>我的願景</h3><div class="vision">${S.vision?esc(S.vision):'（還沒寫，回第二步寫一句）'}</div>
+    <h3>我最在乎的</h3><div>${S.rank.length?S.rank.map((r,i)=>`<b>${i+1}. ${r}</b>`).join('　'):(S.values.join('、')||'（還沒選）')}</div>
+    <h3>我想要的生活</h3><div>${S.goals.join('、')||'（還沒選）'}</div>
+    <h3>優先改善的生活面向</h3><div>${low.map(l=>`${l[0]}（目前 ${l[1]} 分）`).join('、')}</div>
+    <h3>我的行動計畫</h3>${S.goals.slice(0,3).map(g=>{const p=S.plans[g];if(!p)return '';return `<div style="margin-bottom:8px"><b>${esc(g)}</b><br>${p.steps.map((s,i)=>s?`${p.done[i]?'✅':'⬜'} ${esc(s)}（${p.when[i]}）`:'').filter(Boolean).join('<br>')||'（還沒寫步驟）'}${p.who?`<br><span style="color:var(--muted)">幫手：${esc(p.who)}</span>`:''}</div>`;}).join('')}
+    <h3>我的財務</h3><div>${FR.ret} 歲退休、規劃到 ${FR.end} 歲，退休時需準備 ${fw(FR.need)}；現有存款屆時約 ${fw(FR.haveF)}，${FR.gap>0?'缺口 '+fw(FR.gap)+(FR.retired?'':'，從現在起每月投入 '+Math.round(FR.month).toLocaleString()+' 元（存款 '+Math.round((1-FR.invShare)*100)+'%、投資 '+Math.round(FR.invShare*100)+'%）'):'已足夠'}。緊急預備金 ${fw(FR.emg)}。</div>
+    <h3>還沒完成的保障</h3><div>${todo.length?todo.join('、')+'　← 下一步先從這裡開始':'全部完成，太棒了！'}</div>
+    <h3>完成日期</h3><div>${new Date().toLocaleDateString('zh-TW')}</div>`;}
+
+function clearAll(){if(!confirm('確定要清除全部內容，重新開始？'))return;try{localStorage.removeItem('life3');}catch(e){}location.reload();}
+
+renderSteps();renderGoals();renderValues();renderWheel();calcFin();
+<\/script>
+</body>
+</html>
+</script>
 <script type="text/plain" id="inh-src"><!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -1716,7 +2123,7 @@ document.querySelectorAll('.slide[data-quizset]').forEach(sl=>{
 document.querySelectorAll('.slide[data-tf]').forEach(sl=>{
   const items=JSON.parse(sl.dataset.tf);const box=sl.querySelector('.tf');let done=0,ok=0;
   items.forEach(it=>{const r=document.createElement('div');r.className='tfr';
-    r.innerHTML=`<span class="st">${it.s}</span><button data-v="1">對</button><button data-v="0">錯</button><div class="why">${it.f}</div>`;
+    r.innerHTML=`<span class="st">${it.s}<span class="why">　${it.f}</span></span><button data-v="1">對</button><button data-v="0">錯</button>`;
     r.querySelectorAll('button').forEach(b=>b.onclick=()=>{if(r.classList.contains('ok')||r.classList.contains('no'))return;b.classList.add('pick');const right=(b.dataset.v==='1')===it.a;r.classList.add(right?'ok':'no');beep(right?'ok':'no');addScore(right);if(right)ok++;done++;
       if(done===items.length)setTimeout(()=>openPop('是非題結果','這一組 '+items.length+' 題，答對 '+ok+' 題。'),700);});
     box.appendChild(r);});
@@ -1806,7 +2213,7 @@ calcPlan();
 /* ---- embedded calculator ---- */
 function openCalc(tab,srcId){
   const ov=document.getElementById('calcov'),fr=document.getElementById('calcfr');
-  document.getElementById('calcov-title').textContent=srcId==='inh-src'?'應繼分・特留分 試算器':'贈與稅・遺產稅 試算器';
+  document.getElementById('calcov-title').textContent=srcId==='inh-src'?'應繼分・特留分 試算器':srcId==='life-src'?'我的第三人生藍圖':'贈與稅・遺產稅 試算器';
   const E='<'+'/script>';
   let src=document.getElementById(srcId||'calc-src').textContent.split('<\\/script>').join(E);
   if(tab)src=src.replace('</body>','<script>document.querySelector(\'.tab[data-p="'+tab+'"]\').click();'+E+'</body>');
