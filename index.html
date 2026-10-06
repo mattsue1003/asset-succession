@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>把心意留給家人：資產傳承的關鍵議題</title>
+<style>
+:root{
+  --s:1;
+  --orange:#E8552D; --amber:#F4A93C; --teal:#028090; --ink:#12343B;
+  --paper:#FBF6EC; --paper2:#F3E9D6; --line:#D9CBB1; --teal-soft:#DDEFF0; --orange-soft:#FBE3DA;
+  --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:calc(10px * var(--s));height:100%}
+body{height:100%;font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC","Heiti TC",sans-serif;background:var(--ink);color:var(--ink);overflow:hidden;-webkit-font-smoothing:antialiased}
+#stage{position:absolute;left:50%;top:50%;width:160rem;height:90rem;transform:translate(-50%,-50%);background:var(--paper);overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.2)}
+.slide{position:absolute;inset:0;padding:6rem 8rem 9rem;display:none;flex-direction:column;opacity:0}
+.slide.on{display:flex;animation:in .55s ease forwards}
+@keyframes in{from{opacity:0;transform:translateX(3rem)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.slide.on{animation:none;opacity:1}}
+
+/* chapter tag */
+.tag{display:inline-block;font-size:2.4rem;font-weight:700;color:var(--teal);border-bottom:.5rem solid var(--amber);padding-bottom:.6rem;margin-bottom:2.2rem;letter-spacing:.1em}
+h1{font-size:6.4rem;line-height:1.2;font-weight:900;color:var(--ink);margin-bottom:2.6rem}
+h1.small{font-size:5.2rem}
+.lead{font-size:3.1rem;line-height:1.5;color:#3b4f55;margin-bottom:2.4rem}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.row{display:flex;gap:2.6rem;align-items:stretch}
+.col{flex:1;display:flex;flex-direction:column;gap:1.6rem}
+
+/* points */
+.pt{display:flex;gap:2rem;align-items:flex-start;font-size:3.3rem;line-height:1.4}
+.pt .k{flex:0 0 auto;min-width:6rem;font-weight:900;color:var(--orange)}
+.pt b{color:var(--teal)}
+.box{background:var(--white);border:.3rem solid var(--line);border-radius:2rem;padding:2.6rem 3rem;font-size:3rem;line-height:1.45}
+.box h3{font-size:3.4rem;color:var(--teal);margin-bottom:1.2rem;font-weight:900}
+.box.warm{background:var(--orange-soft);border-color:var(--orange)}
+.box.cool{background:var(--teal-soft);border-color:var(--teal)}
+.box li{margin-left:3.4rem;margin-bottom:.6rem}
+
+/* big numbers */
+.nums{display:grid;grid-template-columns:repeat(var(--c,4),1fr);gap:2.4rem;flex:1}
+.num{background:var(--white);border-radius:2.4rem;border-bottom:1rem solid var(--amber);padding:3rem 2.6rem;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.num .n{font-size:7.6rem;font-weight:900;color:var(--orange);line-height:1.05}
+.num .n small{font-size:3.6rem;color:var(--ink)}
+.num .u{font-size:2.8rem;color:var(--teal);font-weight:700;margin-top:.6rem}
+.num .d{font-size:2.5rem;color:#4a5b60;line-height:1.4;margin-top:1rem}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:3.1rem;background:var(--white);border-radius:2rem;overflow:hidden}
+th,td{padding:1.6rem 2.2rem;text-align:left;border-bottom:.2rem solid var(--line)}
+th{background:var(--teal);color:#fff;font-weight:900}
+tr:last-child td{border-bottom:none}
+td.hl{color:var(--orange);font-weight:900}
+tr.case{cursor:pointer;transition:background .15s}
+tr.case:hover,tr.case:focus-visible{background:var(--teal-soft);outline:none}
+tr.case td:first-child::before{content:"▶ ";color:var(--orange);font-size:2.2rem}
+table.dense th,table.dense td{padding:1.1rem 1.8rem;line-height:1.35}
+
+/* section slide */
+.sec{justify-content:center;background:var(--ink);color:#fff}
+.sec .tag{color:var(--amber);border-color:var(--orange)}
+.sec h1{color:#fff;font-size:9rem}
+.sec .lead{color:#cfe3e6}
+.sec .q{font-size:3.6rem;line-height:1.55;color:#fff;border-left:1rem solid var(--amber);padding-left:3rem;margin-top:1rem}
+
+/* cover */
+.cover{background:linear-gradient(135deg,var(--ink) 0%,#0b5a63 100%);color:#fff;justify-content:center;padding-left:10rem}
+.cover .tag{color:var(--amber);border-color:var(--orange);font-size:2.8rem}
+.cover h1{color:#fff;font-size:10rem;line-height:1.15}
+.cover .lead{color:#dfeff1;font-size:3.6rem}
+.cover .who{margin-top:4rem;font-size:3rem;color:var(--amber);font-weight:700}
+.coin{position:absolute;right:9rem;top:12rem;width:38rem;height:38rem;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffd98a,#F4A93C 55%,#c97a12);box-shadow:0 2rem 6rem rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;font-size:19rem;font-weight:900;color:#7a4300;animation:spin 14s linear infinite}
+@keyframes spin{0%{transform:rotateY(0)}100%{transform:rotateY(360deg)}}
+.coin2{top:52rem;right:28rem;width:22rem;height:22rem;font-size:11rem;animation-duration:9s;animation-direction:reverse}
+
+/* quiz */
+.q-text{font-size:4rem;font-weight:900;line-height:1.4;margin-bottom:2.4rem;color:var(--ink)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;flex:1}
+.opt{background:var(--white);border:.4rem solid var(--line);border-radius:2rem;padding:2.4rem 3rem;font-size:3.3rem;line-height:1.4;cursor:pointer;display:flex;gap:2rem;align-items:center;transition:transform .15s,border-color .15s}
+.opt .ab{flex:0 0 6.4rem;height:6.4rem;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:3.4rem;font-weight:900}
+.opt:hover{transform:translateY(-.4rem);border-color:var(--teal)}
+.opt.ok{background:#E3F5E8;border-color:#2E9E5B}
+.opt.ok .ab{background:#2E9E5B}
+.opt.no{background:var(--orange-soft);border-color:var(--orange);opacity:.75}
+.opt.no .ab{background:var(--orange)}
+.opt:focus-visible{outline:.5rem solid var(--amber)}
+
+/* myth cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;flex:1}
+.card{background:var(--white);border-radius:2rem;border:.4rem solid var(--line);padding:2.4rem;font-size:3rem;line-height:1.4;cursor:pointer;position:relative;display:flex;flex-direction:column;justify-content:center;text-align:center;min-height:18rem}
+.card .m{font-weight:900;font-size:3.3rem}
+.card .a{display:none;text-align:left;font-size:2.7rem;margin-top:1.4rem;color:var(--ink)}
+.card.flip{background:var(--teal-soft);border-color:var(--teal)}
+.card.flip .m{color:var(--orange);text-decoration:line-through;font-size:2.8rem}
+.card.flip .a{display:block}
+
+/* diagram */
+.tri{position:relative;height:44rem;flex:0 0 62rem}
+.node{position:absolute;width:27rem;padding:1.6rem;border-radius:2rem;background:var(--white);border:.4rem solid var(--teal);text-align:center;font-size:2.8rem;line-height:1.35;box-shadow:0 .8rem 2rem rgba(0,0,0,.08)}
+.node b{display:block;font-size:3.4rem;color:var(--teal)}
+.arrow{position:absolute;font-size:2.6rem;color:var(--orange);font-weight:700;background:var(--paper);padding:.4rem 1rem;border-radius:1rem}
+svg.tl{position:absolute;inset:0;width:100%;height:100%}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;flex:1}
+.calc label{display:flex;justify-content:space-between;align-items:center;font-size:2.9rem;background:var(--white);border:.3rem solid var(--line);border-radius:1.6rem;padding:1.2rem 2rem;margin-bottom:1.2rem}
+.calc input{width:19rem;font:inherit;font-size:3rem;font-weight:900;text-align:right;border:none;border-bottom:.4rem solid var(--amber);background:transparent;color:var(--orange);outline:none}
+.calc select{font:inherit;font-size:2.8rem;border:none;border-bottom:.4rem solid var(--amber);background:transparent;color:var(--orange);font-weight:900}
+.res{background:var(--ink);color:#fff;border-radius:2.4rem;padding:3rem;font-size:3rem;line-height:1.6;display:flex;flex-direction:column;justify-content:center}
+.res .big{font-size:8rem;font-weight:900;color:var(--amber);line-height:1.1}
+.res .sm{font-size:2.5rem;color:#bfd8dc}
+
+/* floating calc button */
+#calcfab{position:absolute;right:8rem;top:4.6rem;z-index:6;font:inherit;font-size:2.4rem;font-weight:900;background:var(--orange);color:#fff;border:none;border-radius:999px;padding:.8rem 2.4rem;cursor:pointer;box-shadow:0 .6rem 1.6rem rgba(0,0,0,.25)}
+#calcfab:hover{background:#c9441f}
+/* calculator buttons */
+.cbtn{display:inline-flex;align-items:center;gap:1rem;font:inherit;font-size:2.8rem;font-weight:900;background:var(--orange);color:#fff;border:none;border-radius:1.6rem;padding:1.2rem 2.8rem;cursor:pointer;box-shadow:0 .5rem 1.4rem rgba(232,85,45,.35);white-space:nowrap}
+.cbtn:hover{background:#c9441f}
+.cbtn.teal{background:var(--teal);box-shadow:0 .5rem 1.4rem rgba(2,128,144,.35)}.cbtn.teal:hover{background:#016672}
+.h1row{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-bottom:2.6rem}
+.h1row h1{margin-bottom:0}
+/* true-false */
+.tf{display:flex;flex-direction:column;gap:1.2rem;flex:1}
+.tfr{display:flex;align-items:center;gap:1.6rem;background:var(--white);border:.3rem solid var(--line);border-radius:1.6rem;padding:1.2rem 2rem;font-size:2.8rem;line-height:1.35}
+.tfr .st{flex:1}
+.tfr button{font:inherit;font-size:2.6rem;font-weight:900;border:.3rem solid var(--teal);background:#fff;color:var(--teal);border-radius:1.2rem;padding:.6rem 2rem;cursor:pointer}
+.tfr button.pick{background:var(--teal);color:#fff}
+.tfr.ok{background:#E3F5E8;border-color:#2E9E5B}.tfr.no{background:var(--orange-soft);border-color:var(--orange)}
+.tfr .why{display:none;font-size:2.3rem;color:#3b4f55;flex-basis:100%}
+.tfr.ok .why,.tfr.no .why{display:block}
+.tfr{flex-wrap:wrap}
+/* order */
+.ord{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;flex:1}
+.ordi{background:var(--white);border:.3rem solid var(--line);border-radius:1.6rem;padding:1.6rem 2rem;font-size:2.9rem;cursor:pointer;display:flex;align-items:center;gap:1.6rem;min-height:9rem}
+.ordi .n{flex:0 0 5.6rem;height:5.6rem;border-radius:50%;background:var(--paper2);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--ink);font-size:3rem}
+.ordi.pick .n{background:var(--amber)}
+.ordi.ok{background:#E3F5E8;border-color:#2E9E5B}.ordi.no{background:var(--orange-soft);border-color:var(--orange)}
+/* fill */
+.fill-lines{display:flex;flex-direction:column;gap:1.4rem}
+.fl{font-size:3.2rem;line-height:1.6;background:var(--white);border:.3rem solid var(--line);border-radius:1.6rem;padding:1.2rem 2rem}
+.blank{display:inline-block;min-width:14rem;border-bottom:.5rem solid var(--amber);text-align:center;font-weight:900;color:var(--orange);margin:0 .6rem;padding:0 1rem}
+.blank.cur{background:#fff3d6}
+.blank.ok{color:#2E9E5B;border-color:#2E9E5B}.blank.no{color:var(--orange);text-decoration:line-through}
+.bank{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1rem}
+.bank button{font:inherit;font-size:2.8rem;font-weight:900;background:var(--teal);color:#fff;border:none;border-radius:999px;padding:.8rem 2.4rem;cursor:pointer}
+.bank button:disabled{opacity:.35;cursor:default}
+.bank button.alt{background:var(--white);color:var(--teal);border:.3rem solid var(--teal)}
+/* quizset */
+.qs-prog{font-size:2.6rem;color:var(--teal);font-weight:900;margin-bottom:1rem}
+.qs-done{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:2rem;text-align:center}
+.qs-done .big{font-size:9rem;font-weight:900;color:var(--orange);line-height:1}
+.qs-done .t{font-size:3.6rem;font-weight:900}
+.qs-done button{font:inherit;font-size:2.8rem;background:var(--teal);color:#fff;border:none;border-radius:1.4rem;padding:1rem 3rem;cursor:pointer}
+/* nav */
+#nav{position:absolute;left:0;right:0;bottom:0;height:7rem;background:var(--ink);color:#fff;display:flex;align-items:center;gap:1.6rem;padding:0 3rem;font-size:2.4rem;z-index:5}
+#nav button{font:inherit;font-size:2.4rem;color:#fff;background:transparent;border:.25rem solid rgba(255,255,255,.35);border-radius:1.2rem;padding:.6rem 1.8rem;cursor:pointer}
+#nav button:hover{background:rgba(255,255,255,.12)}
+#nav .sp{flex:1}
+#bar{position:absolute;left:0;top:0;height:.6rem;background:var(--orange);width:0;transition:width .3s}
+#foot{display:none}
+.slide.sec #foot,.slide.cover #foot{color:#9fb8bc}
+
+/* popup */
+#pop{position:absolute;inset:0;background:rgba(18,52,59,.75);display:none;align-items:center;justify-content:center;z-index:9}
+#pop.on{display:flex}
+#pop .in{background:var(--white);border-radius:3rem;padding:4rem 5rem;max-width:120rem;max-height:80rem;overflow:auto;font-size:3.2rem;line-height:1.5;border-top:1.4rem solid var(--amber);animation:pop .35s ease}
+@keyframes pop{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
+#pop .in h3{font-size:4.6rem;color:var(--orange);margin-bottom:1.6rem}
+#pop .in p{margin-bottom:1.4rem}
+#pop .in b{color:var(--teal)}
+#pop button{margin-top:2.4rem;font:inherit;font-size:3rem;background:var(--teal);color:#fff;border:none;border-radius:1.4rem;padding:1.2rem 3.6rem;cursor:pointer}
+
+/* calculator overlay */
+#calcov{position:absolute;inset:0;background:var(--paper);display:none;flex-direction:column;z-index:10}
+#calcov.on{display:flex}
+#calcov .top{height:6rem;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;font-size:2.8rem;font-weight:900}
+#calcov .top button{font:inherit;font-size:2.6rem;background:var(--orange);color:#fff;border:none;border-radius:1.2rem;padding:.6rem 2.2rem;cursor:pointer}
+#calcfr{flex:1;width:100%;border:none;background:#fff}
+/* video */
+#vid{position:absolute;inset:0;background:#000;display:none;flex-direction:column;z-index:10}
+#vid.on{display:flex}
+#vid .top{height:6rem;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;font-size:2.8rem;font-weight:900}
+#vid .top button{font:inherit;font-size:2.6rem;background:var(--orange);color:#fff;border:none;border-radius:1.2rem;padding:.6rem 2.2rem;cursor:pointer}
+#vidfr{flex:1;width:100%;border:none}
+/* notes */
+#notes{position:absolute;right:3rem;bottom:9rem;width:54rem;max-height:60rem;overflow:auto;background:#fff8e1;border:.3rem solid var(--amber);border-radius:1.6rem;padding:2rem;font-size:2.3rem;line-height:1.5;display:none;z-index:8;box-shadow:0 1rem 3rem rgba(0,0,0,.25)}
+#notes.on{display:block}
+#notes h4{color:var(--orange);margin-bottom:.8rem;font-size:2.6rem}
+
+/* toc */
+#toc{position:absolute;inset:0;background:var(--paper);display:none;z-index:7;padding:6rem 8rem;overflow:auto}
+#toc.on{display:block}
+#toc h2{font-size:5rem;margin-bottom:2.4rem;color:var(--teal)}
+#toc .g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.2rem 3rem}
+#toc a{display:block;font-size:2.7rem;color:var(--ink);text-decoration:none;padding:1rem 1.4rem;border-radius:1rem;background:#fff;border:.2rem solid var(--line);cursor:pointer}
+#toc a:hover{border-color:var(--teal)}
+
+a.link{color:var(--teal);font-weight:700;word-break:break-all}
+.small-note{font-size:2.4rem;color:#6a7a7e;line-height:1.45}
+.pill{display:inline-block;background:var(--amber);color:var(--ink);font-weight:900;border-radius:999px;padding:.4rem 1.8rem;font-size:2.6rem;margin-right:1rem}
+.steps{display:flex;gap:1.6rem;flex:1;align-items:stretch}
+.step{flex:1;background:var(--white);border-radius:2rem;border-top:1rem solid var(--teal);padding:2.4rem 2rem;font-size:2.8rem;line-height:1.4}
+.step .no{font-size:4.6rem;font-weight:900;color:var(--orange)}
+.step h3{font-size:3.2rem;margin:.6rem 0 1rem;color:var(--ink)}
+.bigq{font-size:4.6rem;font-weight:900;line-height:1.45;color:var(--ink)}
+</style>
+</head>
+<body>
+<div id="stage">
+<div id="bar"></div>
+
+<!-- 1 cover -->
+<section class="slide cover" data-note="開場先讓大家放鬆：今天不是來推銷任何商品，也不是講很難的法律，而是把「大家遲早都會遇到的事」講清楚。先問現場：有沒有人家裡曾經因為財產的事情鬧得不開心？不用舉手，心裡想一下就好。">
+  <div class="coin">$</div><div class="coin coin2">$</div>
+  <div class="tag">社區講座</div>
+  <h1>把心意留給家人<br>資產傳承的關鍵議題</h1>
+  <div class="lead">贈與稅・遺產稅・遺囑・信託・意定監護・保險・以房養老<br>一次講清楚，少走冤枉路</div>
+  <div class="who">愛迪樂健康促進團隊</div>
+</section>
+
+<!-- 2 agenda -->
+<section class="slide" data-note="先說清楚今天的立場：我們講的是「通則」和「觀念」，每個家庭情況不同，真正要做決定前，請找地政士、律師、會計師或銀行信託部門確認。今天的數字以財政部公告 115 年標準為準。">
+  <div class="tag">今天聊什麼</div>
+  <h1 class="small">八個關鍵題目，一個一個拆開看</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="pt"><span class="k">一</span><span>贈與稅與遺產稅：數字、級距、常見情境</span></div>
+        <div class="pt"><span class="k">二</span><span>遺囑怎麼寫才有效：應繼分、特留分</span></div>
+        <div class="pt"><span class="k">三</span><span>信託：把錢交給可靠的制度</span></div>
+        <div class="pt"><span class="k">四</span><span>意定監護：自己選「將來替我做主的人」</span></div>
+      </div>
+      <div class="col">
+        <div class="pt"><span class="k">五</span><span>買保險能不能降稅？</span></div>
+        <div class="pt"><span class="k">六</span><span>合法把稅負降到最低的規劃方法</span></div>
+        <div class="pt"><span class="k">七</span><span>法規與常見迷思、自動試算系統</span></div>
+        <div class="pt"><span class="k">八</span><span>以房養老、留房養老</span></div>
+      </div>
+    </div>
+    <div class="box warm">今天分享的是一般性的法規與觀念，不是針對個人的法律或稅務建議。實際規劃請洽律師、地政士、會計師或銀行信託部門。數字依財政部公告之 115 年（2026）標準。</div>
+  </div>
+</section>
+
+<!-- 3 warm-up -->
+<section class="slide" data-note="暖身互動，三題都用舉手或點頭回答，不判對錯。目的是讓大家發現「原來我沒想過」。第二題答案是 244 萬，第三題多數人會答「平均分」，但其實配偶的部分比較複雜，後面會講。">
+  <div class="tag">先問三個問題</div>
+  <h1 class="small">您心裡的答案是什麼？</h1>
+  <div class="body">
+    <div class="box" style="font-size:3.6rem"><span class="pill">1</span>您有沒有寫過遺囑？或是想過要寫？</div>
+    <div class="box" style="font-size:3.6rem"><span class="pill">2</span>一年可以「免稅」送給孩子多少錢？</div>
+    <div class="box" style="font-size:3.6rem"><span class="pill">3</span>如果沒有遺囑，配偶和三個孩子，房子怎麼分？</div>
+    <div class="small-note">不用舉手，在心裡回答就好。今天結束時，三題您都會有答案。</div>
+  </div>
+</section>
+
+<!-- 4 section gift tax -->
+<section class="slide sec" data-note="進入第一章。先講贈與稅，因為「生前就開始給」是最多人會用、也最容易出錯的方法。">
+  <div class="tag">第一章</div>
+  <h1>贈與稅與遺產稅</h1>
+  <div class="q">生前給叫「贈與」，身後留叫「遺產」。<br>兩種都要課稅，但規則不一樣，先搞懂數字。</div>
+</section>
+
+
+<section class="slide" data-note="開場誘發好奇：不公布答案前先請大家舉手。多數人會選 A 或 C。答案 B。講完順勢接下一頁的數字。" data-quiz='{"ans": 1, "fb": "生前無償過戶就是「贈與」：1,000 萬減 244 萬免稅額＝756 萬，要繳約 75.6 萬贈與稅，另外還有土地增值稅與契稅。所以很多人改用分年贈與或等繼承。"}'>
+  <div class="tag">先猜猜看</div>
+  <div class="q-text">爸爸想把一間公告現值 1,000 萬的房子過戶給兒子，不收錢。要繳稅嗎？</div>
+  <div class="opts">
+    <div class="opt" tabindex="0"><span class="ab">A</span>不用，自己的房子給自己的孩子</div>
+    <div class="opt" tabindex="0"><span class="ab">B</span>要，超過 244 萬的部分要繳贈與稅</div>
+    <div class="opt" tabindex="0"><span class="ab">C</span>只要繳一點契稅就好</div>
+    <div class="opt" tabindex="0"><span class="ab">D</span>兒子去繳所得稅就好</div>
+  </div>
+</section>
+
+<!-- 5 gift numbers -->
+<section class="slide" data-note="強調「每人、每年」：是送的人（贈與人）每年合計 244 萬，不是每個孩子 244 萬。爸爸 244 萬、媽媽 244 萬，兩個人就是 488 萬。超過的部分才課稅，而且是累進。">
+  <div class="tag">贈與稅</div>
+  <div class="h1row"><h1 class="small">贈與稅的關鍵數字</h1><button class="cbtn " onclick="openCalc('gift')">🧮 贈與稅試算器</button></div>
+  <div class="body">
+    <div class="nums" style="--c:3">
+      <div class="num"><div class="n">244<small>萬</small></div><div class="u">每人每年免稅額</div><div class="d">算「送的人」，一年內送出去的總額</div></div>
+      <div class="num"><div class="n">100<small>萬</small></div><div class="u">子女婚嫁另加</div><div class="d">結婚前後六個月內，父母各可多送 100 萬</div></div>
+      <div class="num"><div class="n">10%</div><div class="u">起跳稅率</div><div class="d">超過免稅額的部分才課稅</div></div>
+    </div>
+    <table>
+      <tr><th>超過免稅額的贈與淨額</th><th>稅率</th><th>舉例</th></tr>
+      <tr><td>2,811 萬以下</td><td class="hl">10%</td><td>一年送 500 萬 → (500-244)×10% ≈ 25.6 萬</td></tr>
+      <tr><td>2,811 萬 ～ 5,621 萬</td><td class="hl">15%</td><td>超過部分累進計算</td></tr>
+      <tr><td>5,621 萬以上</td><td class="hl">20%</td><td>超過部分累進計算</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 6 gift scenarios -->
+<section class="slide" data-note="重點是「視同贈與」和「兩年內併入遺產」。很多長輩以為把錢匯給孩子沒人知道，其實金流在銀行都查得到；還有「幫孩子繳房貸、繳保費」，國稅局都會視為贈與。夫妻之間贈與不計入贈與總額，這是合法工具。">
+  <div class="tag">贈與稅</div>
+  <div class="h1row"><h1 class="small">這些情況，國稅局也算「贈與」</h1><button class="cbtn " onclick="openCalc('gift')">🧮 贈與稅試算器：分年要幾年？</button></div>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="box"><h3>會被視為贈與</h3>
+          <li>幫子女<b>繳房貸、繳保費、付頭期款</b></li>
+          <li>把房子<b>用很便宜的價格賣給</b>孩子（二親等買賣要能證明真的有付錢）</li>
+          <li>用自己的錢<b>幫孩子買車、買股票</b></li>
+          <li>替子女<b>還債、代償</b></li>
+        </div>
+      </div>
+      <div class="col">
+        <div class="box cool"><h3>可以合法運用</h3>
+          <li><b>夫妻之間</b>的贈與，不計入贈與總額</li>
+          <li>生活費、教育費、醫藥費，<b>直接付給學校、醫院</b>不算贈與</li>
+          <li>每年 244 萬<b>分年給</b>，長期累積很可觀</li>
+        </div>
+        <div class="box warm"><h3>要特別注意</h3>過世前<b>兩年內</b>送給配偶、子女、孫子女、兄弟姊妹（及其配偶）的財產，仍會<b>併回遺產</b>課遺產稅。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 estate numbers -->
+<section class="slide" data-note="遺產稅的免稅額 1,333 萬是「每一位被繼承人」，再加各種扣除額。多數小家庭把扣除額加一加，其實很多人根本不用繳。但「不用繳」不代表「不用申報」，這一點後面會提醒。">
+  <div class="tag">遺產稅</div>
+  <div class="h1row"><h1 class="small">遺產稅的關鍵數字（115 年）</h1><button class="cbtn " onclick="openCalc('estate')">🧮 遺產稅試算器</button></div>
+  <div class="body">
+    <div class="nums" style="--c:4">
+      <div class="num"><div class="n">1,333<small>萬</small></div><div class="u">免稅額</div><div class="d">每位過世者</div></div>
+      <div class="num"><div class="n">553<small>萬</small></div><div class="u">配偶扣除額</div><div class="d">配偶在世就可扣</div></div>
+      <div class="num"><div class="n">56<small>萬</small></div><div class="u">每位子女扣除額</div><div class="d">未成年者每差一年再加 56 萬</div></div>
+      <div class="num"><div class="n">138<small>萬</small></div><div class="u">喪葬費扣除額</div><div class="d">父母扣除額也是每人 138 萬</div></div>
+    </div>
+    <table>
+      <tr><th>遺產淨額（扣完以後）</th><th>稅率</th><th>其他扣除</th></tr>
+      <tr><td>5,621 萬以下</td><td class="hl">10%</td><td rowspan="3" style="font-size:2.7rem;line-height:1.5">重度以上身心障礙者每人 693 萬<br>受扶養兄弟姊妹、祖父母每人 56 萬<br>日常生活器具 100 萬、職業工具 56 萬不計入<br>未償債務、稅捐、公共設施保留地等</td></tr>
+      <tr><td>5,621 萬 ～ 1 億 1,242 萬</td><td class="hl">15%</td></tr>
+      <tr><td>1 億 1,242 萬以上</td><td class="hl">20%</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 8 estate example -->
+<section class="slide" data-note="帶大家一行一行算。先確認三件事：①房子用公告現值，不是市價；②配偶、子女、喪葬費都是法定扣除額，不用申請就有；③淨額落在 5,621 萬以下就是 10%。算完提醒：王伯伯有 1,000 萬存款，繳稅沒問題；若遺產幾乎都是房子，子女就可能要賣房繳稅，這就是「預留稅源」的意義。">
+  <div class="tag">遺產稅</div>
+  <div class="h1row"><h1 class="small">實際算一次：王伯伯的家</h1><button class="cbtn " onclick="openCalc('estate')">🧮 遺產稅試算器：換您的數字算算看</button></div>
+  <div class="body">
+    <div class="row">
+      <div class="col" style="flex:0 0 46rem">
+        <div class="box" style="flex:1;font-size:2.8rem"><h3>家庭狀況</h3>王伯伯過世，留下太太與兩個成年子女。<br><br><b>遺產</b><br>房子（公告土地現值＋房屋評定現值）1,500 萬<br>存款 1,000 萬<br>股票 500 萬</div>
+      </div>
+      <div class="col">
+        <table class="dense" style="font-size:2.55rem">
+          <tr><th>步驟</th><th>項目</th><th style="text-align:right;white-space:nowrap">萬元</th></tr>
+          <tr><td>①</td><td>遺產總額 1,500＋1,000＋500</td><td class="hl" style="text-align:right">3,000</td></tr>
+          <tr><td>②</td><td>減：免稅額</td><td style="text-align:right">－1,333</td></tr>
+          <tr><td>③</td><td>減：配偶扣除額</td><td style="text-align:right">－553</td></tr>
+          <tr><td>④</td><td>減：子女扣除額 56 × 2 人</td><td style="text-align:right">－112</td></tr>
+          <tr><td>⑤</td><td>減：喪葬費扣除額</td><td style="text-align:right">－138</td></tr>
+          <tr><td>⑥</td><td><b>遺產淨額</b>（3,000 － 2,136）</td><td class="hl" style="text-align:right">864</td></tr>
+          <tr><td>⑦</td><td>× 稅率 10%（淨額在 5,621 萬以下）</td><td class="hl" style="text-align:right;font-size:3.2rem">86.4</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="box cool" style="font-size:2.6rem;padding:1.6rem 2.4rem">存款 1,000 萬足夠繳稅。若遺產幾乎都是房子、沒有現金，子女可能得賣房繳稅——這就是「預留稅源」。下一頁：太太還有一招，可以讓這筆稅變成零。</div>
+  </div>
+</section>
+
+<!-- 8b 剩餘財產差額分配請求權 -->
+<section class="slide" data-note="這是最常被忽略、也最有力的一條。白話講：夫妻婚後賺的錢是兩個人一起努力的，先生先走，太太有權先拿回「兩人婚後財產差額的一半」，這一半本來就是太太的，不算遺產。申報遺產稅時要主動主張、附證明文件；國稅局核定後一年內要把這筆錢真的給太太，否則會被追稅。婚前財產、繼承來的、別人送的，不算在內。太太也可以不主張，但那等於把節稅機會放掉。">
+  <div class="tag">遺產稅</div>
+  <div class="h1row"><h1 class="small">太太的一招：配偶剩餘財產差額分配請求權</h1><button class="cbtn " onclick="openCalc('estate')">🧮 遺產稅試算器</button></div>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="box" style="font-size:2.7rem"><h3>它是什麼（民法第 1030 條之 1）</h3>
+          <li>夫妻用「法定財產制」（沒特別約定的都是），<b>離婚或一方過世</b>時，<b>婚後財產</b>多的一方，要把差額的一半分給少的一方；這是肯定持家一方的付出</li>
+          <li>這一半本來就屬於太太，所以<b>不算遺產</b>，可以從遺產總額扣掉</li>
+          <li>不算進去的：<b>婚前財產</b>、婚後<b>繼承或受贈</b>取得的財產、慰撫金</li>
+        </div>
+        <div class="box warm" style="font-size:2.6rem">申報遺產稅時要<b>主動主張</b>並附證明；國稅局核定後<b>一年內</b>要真的把錢給太太，不然會被追稅。</div>
+      </div>
+      <div class="col">
+        <table class="dense" style="font-size:2.6rem">
+          <tr><th>再算一次</th><th style="text-align:right;white-space:nowrap">萬元</th></tr>
+          <tr><td>王伯伯的婚後財產（假設全是婚後賺的）</td><td style="text-align:right">3,000</td></tr>
+          <tr><td>太太自己名下的婚後財產</td><td style="text-align:right">600</td></tr>
+          <tr><td>差額 3,000 － 600</td><td style="text-align:right">2,400</td></tr>
+          <tr><td><b>太太可請求：差額的一半</b></td><td class="hl" style="text-align:right">1,200</td></tr>
+          <tr><td>遺產總額 3,000 － 1,200</td><td style="text-align:right">1,800</td></tr>
+          <tr><td>減：免稅額＋扣除額（同上頁）</td><td style="text-align:right">－2,136</td></tr>
+          <tr><td><b>遺產淨額</b></td><td class="hl" style="text-align:right;font-size:3.6rem">0 → 免稅</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 estate procedure -->
+<section class="slide" data-note="最常見的錯誤是「以為沒有超過免稅額就不用申報」。只要有遺產就要申報，才能拿到免稅證明去辦過戶。另一個是「死前趕快去領錢」，銀行在過世前後的大額提領國稅局都會查，而且領出來的現金仍然是遺產。">
+  <div class="tag">遺產稅</div>
+  <h1 class="small">申報流程與期限，別踩雷</h1>
+  <div class="body">
+    <div class="steps">
+      <div class="step"><div class="no">1</div><h3>六個月內申報</h3>自過世日起算，有正當理由可申請延長三個月。<b>不用繳稅也要申報</b>，才拿得到免稅證明書辦過戶。</div>
+      <div class="step"><div class="no">2</div><h3>查調財產</h3>到國稅局申請「財產、所得、贈與資料」查詢，一次看清楚過世者名下所有財產，避免漏報。</div>
+      <div class="step"><div class="no">3</div><h3>兩個月內繳納</h3>收到核定後兩個月內繳清；稅額 30 萬以上可申請分期，也可申請用遺產中的現金或實物抵繳。</div>
+      <div class="step"><div class="no">4</div><h3>辦理過戶</h3>拿完稅或免稅證明，到地政事務所辦繼承登記（自過世起六個月內要辦，逾期有罰鍰）。</div>
+    </div>
+    <div class="box warm">「人走之前趕快把錢領出來」是最常見的錯誤：銀行帳戶大額提領國稅局查得到，領出來的現金一樣要算遺產，還可能被認定漏報而處罰。</div>
+  </div>
+</section>
+
+<!-- 10 quiz 1 -->
+<section class="slide" data-note="第一題小考，請大家舉手選。答案是 B。重點：免稅額是算「送的人」一年送出去的總額。答完用彈窗公布，順便再講一次「兩個人就是 488 萬」。"
+  data-quiz='{"ans":1,"fb":"免稅額是算「贈與人」一年送出去的總額，所以爸爸 244 萬、媽媽 244 萬，加起來一年可以免稅送 488 萬。若孩子結婚，兩人還可各再多送 100 萬。"}'>
+  <div class="tag">小考一下</div>
+  <div class="q-text">爸爸、媽媽想在今年把錢送給獨生子，兩人加起來最多可以免稅送多少？</div>
+  <div class="opts">
+    <div class="opt" tabindex="0"><span class="ab">A</span>244 萬，因為只有一個孩子</div>
+    <div class="opt" tabindex="0"><span class="ab">B</span>488 萬，爸媽各 244 萬</div>
+    <div class="opt" tabindex="0"><span class="ab">C</span>1,333 萬，用遺產免稅額</div>
+    <div class="opt" tabindex="0"><span class="ab">D</span>沒有限制，自己的錢想送就送</div>
+  </div>
+</section>
+
+
+<section class="slide" data-note="檢核第一章。逐題請全班喊「對」或「錯」再點。錯的那幾題正是最常見的迷思。" data-tf='[{"s": "夫妻之間互相贈與財產，不計入贈與總額。", "a": true, "f": "對。遺贈稅法第 20 條，配偶互贈不計入，是合法的規劃工具。"}, {"s": "遺產沒有超過 1,333 萬免稅額，就不需要申報。", "a": false, "f": "錯。仍要在六個月內申報，才能取得免稅證明辦過戶。"}, {"s": "幫兒子繳房貸、繳保費，國稅局會視為贈與。", "a": true, "f": "對。替子女付錢就是贈與，累計超過 244 萬要申報。"}, {"s": "遺產稅的房子是用市價來計算。", "a": false, "f": "錯。用公告土地現值＋房屋評定現值，通常比市價低很多。"}, {"s": "過世前兩年內送給子女的財產，仍要併回遺產課稅。", "a": true, "f": "對。遺贈稅法第 15 條，已繳的贈與稅可以扣抵。"}]'>
+  <div class="tag">學會了嗎</div>
+  <h1 class="small">贈與稅與遺產稅：對還是錯？</h1>
+  <div class="body"><div class="tf"></div></div>
+</section>
+
+<section class="slide" data-note="排序題：請大家討論後，一位長輩上來點，或由講師依全班指示點。點錯可按重來。" data-order='{"items": ["到國稅局查調過世者的財產與所得資料", "六個月內向國稅局申報遺產稅", "收到核定通知後兩個月內繳稅", "取得完稅或免稅證明書", "到地政事務所辦理繼承登記"], "f": "先查清楚有哪些財產，才不會漏報；申報、繳稅、拿證明、過戶，一步一步來。"}'>
+  <div class="tag">學會了嗎</div>
+  <h1 class="small">遺產稅怎麼辦？排出正確順序</h1>
+  <div class="body">
+    <div class="lead" style="margin-bottom:.6rem">點選方塊，照您認為的先後順序排。 <button class="ord-again" style="font:inherit;font-size:2.4rem;background:transparent;border:.3rem solid var(--teal);color:var(--teal);border-radius:1rem;padding:.3rem 1.6rem;cursor:pointer;margin-left:1rem">重來</button></div>
+    <div class="ord"></div>
+  </div>
+</section>
+
+<!-- 11 section will -->
+<section class="slide sec" data-note="進入第二章。先問：沒有遺囑的時候，法律怎麼分？再講遺囑怎麼寫才有效。">
+  <div class="tag">第二章</div>
+  <h1>遺囑、應繼分、特留分</h1>
+  <div class="q">沒寫遺囑，法律替您分；<br>寫了遺囑，也不能什麼都照您的意思。<br>兩個關鍵詞：應繼分、特留分。</div>
+</section>
+
+
+<!-- 11b video -->
+<section class="slide" data-note="電影法：播放前先把三個任務唸一遍，請大家邊看邊找答案。影片約 7 分鐘，可以只播 0:30～4:00（應繼分、特留分與兩個案例）。播完先不公布，直接進下一頁的猜猜看。若投影電腦無法內嵌播放，點「在 YouTube 開啟」。">
+  <div class="tag">看影片找答案</div>
+  <h1 class="small">律師 7 分鐘講清楚：應繼分、特留分</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col" style="flex:0 0 70rem">
+        <div class="box" style="padding:0;overflow:hidden;cursor:pointer;position:relative;height:40rem;background:#000;display:flex;align-items:center;justify-content:center" onclick="openVideo('g7suw9D0pjs')">
+          <img src="https://img.youtube.com/vi/g7suw9D0pjs/hqdefault.jpg" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.85">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:12rem;color:#fff;text-shadow:0 .4rem 2rem rgba(0,0,0,.6)">▶</div>
+        </div>
+        <a class="link" href="https://www.youtube.com/watch?v=g7suw9D0pjs" target="_blank" rel="noopener" style="font-size:2.4rem">在 YouTube 開啟</a>
+      </div>
+      <div class="col">
+        <div class="box cool"><h3>邊看邊找三個答案</h3>
+          <li>遺產 1,200 萬全部給女兒，兒子和媽媽各能保住多少？</li>
+          <li>沒有配偶、沒有子女，全部留給同居人，哥哥姊姊能拿多少？（影片是舊法，新法會不一樣）</li>
+          <li>外甥有沒有繼承權？想給他要怎麼做？</li>
+        </div>
+        <div class="small-note" style="font-size:2.3rem">影片為舊法內容：2027 年 2 月 17 日起兄弟姊妹已無特留分，第二題答案會變成「哥哥姊姊拿不到」。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-note="答案 D。大多數長輩會選 A。這題用來帶出「法定繼承順位」和「特留分」。" data-quiz='{"ans": 3, "fb": "沒有遺囑→三人平分（各 1/3）。有遺囑→可以偏愛小女兒，但哥哥姊姊各有「特留分」（應繼分的一半＝各 1/6），他們可以主張拿回。這就是接下來要講的應繼分與特留分。"}'>
+  <div class="tag">先猜猜看</div>
+  <div class="q-text">王太太有三個孩子，她想把所有財產留給最孝順的小女兒。她可以怎麼做？</div>
+  <div class="opts">
+    <div class="opt" tabindex="0"><span class="ab">A</span>口頭交代小女兒就可以</div>
+    <div class="opt" tabindex="0"><span class="ab">B</span>寫遺囑就能全部給小女兒</div>
+    <div class="opt" tabindex="0"><span class="ab">C</span>法律規定一定要三個人平分</div>
+    <div class="opt" tabindex="0"><span class="ab">D</span>寫遺囑可以多給，但另外兩個孩子仍有最低保障</div>
+  </div>
+</section>
+
+<!-- 12 heirs order -->
+<section class="slide" data-note="順位是「有前面的，後面就沒份」。配偶永遠都有份，是跟當時那一順位的人一起分。強調：兄弟姊妹是第三順位，所以如果沒有子女也沒有父母在世，兄弟姊妹就會進來分，這是很多獨居長輩沒想到的。">
+  <div class="tag">法定繼承</div>
+  <h1 class="small">誰有資格繼承？配偶 ＋ 四個順位</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col" style="flex:0 0 36rem">
+        <div class="num" style="flex:1;border-bottom-color:var(--orange)"><div class="n" style="font-size:5.6rem">配偶</div><div class="u">永遠有份</div><div class="d">和當順位的繼承人一起分</div></div>
+      </div>
+      <div class="col">
+        <div class="steps" style="flex-direction:column;gap:1.2rem">
+          <div class="step" style="display:flex;gap:2rem;align-items:center;padding:1.6rem 2rem"><div class="no">1</div><div><b>直系血親卑親屬</b>：子女、孫子女（親等近者優先，子女已過世由孫子女代位）</div></div>
+          <div class="step" style="display:flex;gap:2rem;align-items:center;padding:1.6rem 2rem"><div class="no">2</div><div><b>父母</b></div></div>
+          <div class="step" style="display:flex;gap:2rem;align-items:center;padding:1.6rem 2rem"><div class="no">3</div><div><b>兄弟姊妹</b></div></div>
+          <div class="step" style="display:flex;gap:2rem;align-items:center;padding:1.6rem 2rem"><div class="no">4</div><div><b>祖父母</b></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="small-note">前一順位有人，後面順位就沒有繼承權。代位繼承只限第一順位（子女先過世由孫子女代位）；姪子姪女、外甥、媳婦女婿、同居伴侶都沒有繼承權。都沒有時，遺產歸國庫。</div>
+  </div>
+</section>
+
+<!-- 13 應繼分 -->
+<section class="slide" data-note="這頁每一列都可以點，會跳出一個真實情境的案例。建議先問全班「配偶和三個孩子，房子怎麼分？」再點第一列公布。第二、三列的案例最有感：年輕夫妻沒想到公婆會分一半；無子女夫妻沒想到另一半要和自己的兄弟姊妹分。最後一列點開會帶到剩餘財產請求權的例子。">
+  <div class="tag">應繼分</div>
+  <div class="h1row"><h1 class="small">沒有遺囑，法律這樣分（點每列看案例）</h1><button class="cbtn teal" onclick="openCalc(null,'inh-src')">🧮 繼承分配試算器</button></div>
+  <div class="body">
+    <table class="dense" style="font-size:3rem">
+      <tr><th>配偶和誰一起繼承</th><th>配偶拿</th><th>其他人拿</th></tr>
+      <tr class="case" data-case="kid" tabindex="0"><td>子女（第一順位）</td><td class="hl">和子女平均分</td><td>例：配偶＋3 子女 → 每人 1/4</td></tr>
+      <tr class="case" data-case="par" tabindex="0"><td>父母（第二順位）</td><td class="hl">1/2</td><td>父母平分另外 1/2</td></tr>
+      <tr class="case" data-case="sib" tabindex="0"><td>兄弟姊妹（第三順位）</td><td class="hl">1/2</td><td>兄弟姊妹平分另外 1/2</td></tr>
+      <tr class="case" data-case="gp" tabindex="0"><td>祖父母（第四順位）</td><td class="hl">2/3</td><td>祖父母平分另外 1/3</td></tr>
+      <tr class="case" data-case="none" tabindex="0"><td>沒有任何順位的人</td><td class="hl">全部</td><td>—（沒有配偶也沒有繼承人 → 國庫）</td></tr>
+    </table>
+    <div class="box cool case" data-case="claim" tabindex="0" style="font-size:2.8rem;cursor:pointer">「法定財產制」的配偶還可先主張<b>剩餘財產差額分配請求權</b>，先拿回婚後財產差額的一半，剩下的才算遺產分。<span class="pill">點我看例子</span></div>
+  </div>
+</section>
+
+<!-- 14 特留分 -->
+<section class="slide" data-note="先講原則：遺囑可以「少給」，不能「給零」，法律保留的最低比例叫特留分。接著宣布最新修法：立法院 115 年 7 月 28 日三讀、總統 8 月 17 日公布，116 年 2 月 17 日起兄弟姊妹不再有特留分（祖父母仍維持 1/3）。這對沒有子女的夫妻和單身長輩影響最大，但要提醒：沒寫遺囑，兄弟姊妹還是照應繼分分。右邊四張卡逐張點開，第三張刻意做舊法／新法對照。">
+  <div class="tag">特留分</div>
+  <div class="h1row"><h1 class="small">遺囑不能把某個人分到「零」（點右邊看案例）</h1><button class="cbtn teal" onclick="openCalc(null,'inh-src')">🧮 特留分試算器</button></div>
+  <div class="body">
+    <div class="row">
+      <div class="col" style="flex:0 0 46rem;gap:1.4rem">
+        <div class="num" style="flex:1;padding:1.6rem"><div class="n" style="font-size:6rem">1/2</div><div class="u">配偶、子女、父母</div><div class="d">至少拿到應繼分的一半</div></div>
+        <div class="num" style="flex:1;padding:1.6rem"><div class="n" style="font-size:6rem">1/3</div><div class="u">祖父母</div><div class="d"><s style="color:#9aa">兄弟姊妹</s> 自 2027 年 2 月 17 日起<b style="color:var(--orange)">刪除</b></div></div>
+      </div>
+      <div class="col">
+        <div class="cards" style="grid-template-columns:1fr 1fr;gap:1.4rem">
+          <div class="card case" data-case="r1" style="min-height:0;padding:1.6rem"><div class="m" style="font-size:2.8rem">全部給小兒子，大兒子能拿回多少？</div></div>
+          <div class="card case" data-case="r2" style="min-height:0;padding:1.6rem"><div class="m" style="font-size:2.8rem">全部遺贈給看護，太太和兒子怎麼辦？</div></div>
+          <div class="card case" data-case="r3" style="min-height:0;padding:1.6rem"><div class="m" style="font-size:2.8rem">沒有孩子，全給先生：舊法 vs 新法</div></div>
+          <div class="card case" data-case="r4" style="min-height:0;padding:1.6rem"><div class="m" style="font-size:2.8rem">特留分要自己開口，不開口呢？</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="box warm" style="font-size:2.7rem;padding:1.6rem 2.4rem">新法只刪「特留分」，沒刪「繼承權」：沒有遺囑時，兄弟姊妹仍照應繼分分遺產。想完全不給手足，<b>一定要立有效的遺囑</b>。</div>
+  </div>
+</section>
+
+<!-- 14b 誰有繼承權 -->
+<section class="slide" data-note="影片裡律師特別提到：外甥沒有繼承權。這頁用是非題的方式，把「大家以為有、其實沒有」的人一次點出來。每題先問全班「有沒有繼承權？」再點。結論只有一句：不是法定繼承人，想給就一定要寫遺囑、指定保險受益人或用信託。" data-tf='[{"s": "外甥、姪子（兄弟姊妹的孩子）", "a": false, "f": "沒有。代位繼承只限第一順位，兄弟姊妹先過世，他們的孩子不能代位。想給，要立遺囑遺贈。"}, {"s": "同居多年的伴侶（沒有結婚登記）", "a": false, "f": "沒有。只有登記的配偶才是法定繼承人。想給，要用遺囑、保險受益人或信託。"}, {"s": "媳婦、女婿", "a": false, "f": "沒有。他們不是血親；但兒子先過世時，孫子女可以代位，媳婦不行。"}, {"s": "沒有辦收養的繼子女、乾兒子", "a": false, "f": "沒有。沒有收養登記就沒有繼承權；想給要用遺囑遺贈。"}, {"s": "已過世兒子留下的孫子女", "a": true, "f": "有。第一順位可以代位繼承，孫子女承接爸爸那一份。"}, {"s": "和自己多年沒往來的親生子女", "a": true, "f": "有。血緣關係不因感情疏離而消失；想少給，只能用遺囑降到特留分。"}]'>
+  <div class="tag">繼承權</div>
+  <h1 class="small">這些人有繼承權嗎？點「對」或「錯」</h1>
+  <div class="body"><div class="tf"></div></div>
+</section>
+
+<!-- 15 五種遺囑 -->
+<section class="slide" data-note="每一列都可以點，會跳出台灣大家都聽過的新聞案例。建議順序：先點最後一列「沒有遺囑」（王永慶，13 年爭產）當開場，再點「自書」（大S 手機打字無效）說明形式要件有多嚴，接著「密封／代筆」講張榮發（法院審了 8 年才確定有效，而且還是要留特留分），最後「公證」講曹西平（想給乾兒子，卡在兄弟姊妹特留分，促成修法）。重點只有一句：遺囑一定要符合法定形式，最穩的是公證遺囑。見證人資格另有一張卡。">
+  <div class="tag">遺囑</div>
+  <h1 class="small">五種遺囑，要件都不一樣（點每一列看新聞案例）</h1>
+  <div class="body">
+    <table class="dense" style="font-size:2.6rem">
+      <tr><th>種類</th><th>怎麼做</th><th>注意</th></tr>
+      <tr class="case" data-case="w1" tabindex="0"><td class="hl">自書遺囑</td><td>自己<b>親手寫</b>全文、寫年月日、親自簽名</td><td>打字、手機、沒日期、只蓋章 → 無效</td></tr>
+      <tr class="case" data-case="w2" tabindex="0"><td class="hl">公證遺囑</td><td>二位見證人在場，向公證人口述，公證人筆記、宣讀、簽名</td><td>最穩妥，法院或民間公證人都可辦</td></tr>
+      <tr class="case" data-case="w3" tabindex="0"><td class="hl">密封遺囑</td><td>簽名後密封，二位見證人陪同向公證人聲明</td><td>內容保密，程序要件多</td></tr>
+      <tr class="case" data-case="w4" tabindex="0"><td class="hl">代筆遺囑</td><td>三位見證人，一人代筆、宣讀、講解，全體簽名</td><td>適合不便書寫者；見證人要合格、全程在場</td></tr>
+      <tr class="case" data-case="w5" tabindex="0"><td class="hl">口授遺囑</td><td>生命危急時口述，二位見證人記錄或錄音</td><td>三個月內能用其他方式立遺囑就失效</td></tr>
+      <tr class="case" data-case="w0" tabindex="0"><td class="hl" style="color:var(--teal)">沒有遺囑</td><td>法律照應繼分分，繼承人自己協議</td><td>王永慶：595 億遺產、爭產 13 年</td></tr>
+    </table>
+    <div class="row" style="gap:1.6rem">
+      <div class="box case" data-case="w6" tabindex="0" style="flex:1;font-size:2.7rem;padding:1.2rem 2rem;cursor:pointer;display:flex;align-items:center"><span class="pill" style="font-size:2.3rem">點我</span>誰不能當遺囑見證人？</div>
+      <div class="box cool" style="flex:2;font-size:2.5rem;padding:1.2rem 2rem">修法後，爭遺產的主戰場會從「特留分」轉向「遺囑有沒有效」。形式不對，一切歸零。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 16 遺囑可以做什麼 -->
+<section class="slide" data-note="遺囑不只是分錢。可以指定「遺囑執行人」，讓一個中立的人負責處理，大大減少子女爭執。也可以交代喪葬方式、把一部分財產遺贈給照顧自己的人或公益團體。建議每隔幾年檢視一次。">
+  <div class="tag">遺囑</div>
+  <h1 class="small">一份好遺囑，可以安排這些事</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="pt"><span class="k">分</span><span><b>指定分配方式</b>：哪間房子給誰、存款怎麼分（記得留特留分）</span></div>
+        <div class="pt"><span class="k">託</span><span><b>指定遺囑執行人</b>：律師、信任的親友或信託業者，負責清點、分配、申報</span></div>
+        <div class="pt"><span class="k">贈</span><span><b>遺贈</b>：給非繼承人，例如照顧多年的外籍看護、公益團體</span></div>
+      </div>
+      <div class="col">
+        <div class="pt"><span class="k">信</span><span><b>遺囑信託</b>：把財產交給銀行管理，按月給孩子或身障子女生活費</span></div>
+        <div class="pt"><span class="k">交</span><span><b>交代身後事</b>：喪葬方式、器官捐贈、寵物安置</span></div>
+        <div class="pt"><span class="k">改</span><span><b>隨時可改</b>：新的遺囑優先於舊的，建議結婚、生子、買賣房產後重新檢視</span></div>
+      </div>
+    </div>
+    <div class="box cool">寫好後告訴信任的人「遺囑放在哪裡」，或請公證人保管。遺囑找不到，等於沒寫。</div>
+  </div>
+</section>
+
+<!-- 17 quiz 2 -->
+<section class="slide" data-note="答案是 C。重點是「特留分是應繼分的一半」，以及「要自己主張」。講完可以延伸：如果大女兒願意，她當然可以尊重媽媽的意思不主張。"
+  data-quiz='{"ans":2,"fb":"直系血親卑親屬的特留分是應繼分的 1/2。兩個女兒應繼分各 1/2，所以大女兒至少可以主張 1/4。她若不主張，則照遺囑由小女兒全拿。"}'>
+  <div class="tag">小考一下</div>
+  <div class="q-text">陳媽媽有兩個女兒，沒有配偶。遺囑寫「全部財產給小女兒」。大女兒最少可以主張拿到多少？</div>
+  <div class="opts">
+    <div class="opt" tabindex="0"><span class="ab">A</span>零，遺囑寫什麼就是什麼</div>
+    <div class="opt" tabindex="0"><span class="ab">B</span>二分之一，姊妹要平分</div>
+    <div class="opt" tabindex="0"><span class="ab">C</span>四分之一，這是她的特留分</div>
+    <div class="opt" tabindex="0"><span class="ab">D</span>三分之一，姊妹算第三順位</div>
+  </div>
+</section>
+
+
+<section class="slide" data-note="填空題：三個空格依序填。誘答詞「打字」「蓋章」「見證人」正好是常見的錯誤作法，填錯時順便再講一次。" data-fill='{"bank": ["親手寫", "年月日", "簽名", "打字", "蓋章", "見證人"], "lines": [{"pre": "自書遺囑必須自己", "ans": "親手寫", "post": "全文，不能用電腦或手機。"}, {"pre": "一定要記明立遺囑的", "ans": "年月日", "post": "，少了就無效。"}, {"pre": "最後要親自", "ans": "簽名", "post": "，不能只蓋印章。"}], "f": "親手寫全文、記明年月日、親自簽名，三個缺一不可；想更穩，就去做公證遺囑。"}'>
+  <div class="tag">學會了嗎</div>
+  <h1 class="small">自書遺囑的三個要件</h1>
+  <div class="body">
+    <div class="lead" style="margin-bottom:.4rem">依序點選下方的詞，填進空格</div>
+    <div class="fill-lines"></div>
+    <div class="bank"></div>
+  </div>
+</section>
+
+<!-- 18 section trust -->
+<section class="slide sec" data-note="第三章信託。先用一句話：信託就是「把財產交給可靠的制度管理，照您訂的規則用」。不用先講名詞。">
+  <div class="tag">第三章</div>
+  <h1>信託</h1>
+  <div class="q">人會老、會失智、會被騙；<br>把錢交給「制度」而不是交給「某一個人」，<br>就是信託的核心。</div>
+</section>
+
+
+<section class="slide" data-note="答案 C。多數人以為要幾千萬。用這題打破「信託是有錢人的事」。" data-quiz='{"ans": 2, "fb": "多數銀行門檻 10～50 萬，有的不設門檻；費用一年約信託財產的 0.2%～0.6%。安養信託是給一般家庭用的工具，不是有錢人專利。"}'>
+  <div class="tag">先猜猜看</div>
+  <div class="q-text">要辦「安養信託」，把錢交給銀行照契約按月撥給自己，大概需要多少錢才能辦？</div>
+  <div class="opts">
+    <div class="opt" tabindex="0"><span class="ab">A</span>至少 3,000 萬</div>
+    <div class="opt" tabindex="0"><span class="ab">B</span>至少 500 萬</div>
+    <div class="opt" tabindex="0"><span class="ab">C</span>幾十萬，甚至不設門檻</div>
+    <div class="opt" tabindex="0"><span class="ab">D</span>要有房子才能辦</div>
+  </div>
+</section>
+
+<!-- 19 trust diagram -->
+<section class="slide" data-note="用三角形講三個角色。重點：財產移到信託專戶後，就不是「某個人名下」，子女、詐騙集團、甚至自己一時衝動都動不了，只能照契約用。可以舉例：每月撥 3 萬到自己帳戶當生活費，住進機構時直接付給機構。">
+  <div class="tag">信託</div>
+  <h1 class="small">三個角色，一份契約</h1>
+  <div class="body">
+    <div class="row">
+      <div class="tri">
+        <svg class="tl" viewBox="0 0 600 460"><path d="M300 70 L110 380 L490 380 Z" fill="none" stroke="#F4A93C" stroke-width="10" stroke-linejoin="round"/></svg>
+        <div class="node" style="left:17.5rem;top:0"><b>委託人</b>把財產交出去的人<br>（就是您）</div>
+        <div class="node" style="left:-2rem;top:26rem"><b>受託人</b>依契約管理財產<br>（銀行信託部）</div>
+        <div class="node" style="left:37rem;top:26rem"><b>受益人</b>依契約領錢的人<br>（自己、配偶、子女）</div>
+        <div class="arrow" style="left:7rem;top:16rem">交付財產</div>
+        <div class="arrow" style="left:40rem;top:16rem">定期給付</div>
+        <div class="arrow" style="left:23rem;top:38rem">依契約約定</div>
+      </div>
+      <div class="col">
+        <div class="box"><h3>信託之後，錢不再是「某個人的」</h3>
+          <li>財產登記在<b>信託專戶</b>，有獨立性</li>
+          <li>只能照<b>契約規定</b>的用途、金額、時間給付</li>
+          <li>可以設<b>信託監察人</b>（子女或社福團體）幫忙把關</li>
+          <li>委託人失智、被騙、被子女施壓，錢都動不了</li>
+        </div>
+        <div class="box cool">信託是契約，條件可以自己訂：按月給生活費、看病直接付醫院、住機構付給機構、身後剩餘分給誰。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 20 trust types -->
+<section class="slide" data-note="四張卡都可以點，會跳出新聞或銀行實際案例。重點放在安養信託：先點它，講 2026 年台北市社會局前社工督導侵占五位受監護長者 1,200 萬的新聞——連公家機關保管存摺都會出事，所以要用「制度」不是「某個人」。費用下一頁再講，這頁先建立信心：門檻不高，一般家庭都辦得起。">
+  <div class="tag">信託</div>
+  <h1 class="small">常見的四種信託（點卡片看案例）</h1>
+  <div class="body">
+    <div class="cards" style="grid-template-columns:repeat(2,1fr);gap:1.6rem">
+      <div class="box case" data-case="t1" tabindex="0" style="cursor:pointer;font-size:2.8rem"><h3>安養信託（給自己）</h3>把退休金、賣房款交給銀行，按月撥生活費、醫療費、機構費用。<b>防詐騙、防失智後財產流失</b>最有效的工具。<span class="pill" style="font-size:2.2rem;margin-top:1rem">看案例</span></div>
+      <div class="box case" data-case="t2" tabindex="0" style="cursor:pointer;font-size:2.8rem"><h3>保險金信託（給家人）</h3>身故保險金不是一次給受益人，而是進入信託帳戶，按月給未成年或身障子女，避免被揮霍或被親戚挪用。<span class="pill" style="font-size:2.2rem;margin-top:1rem">看案例</span></div>
+      <div class="box case" data-case="t3" tabindex="0" style="cursor:pointer;font-size:2.8rem"><h3>不動產信託</h3>房子交給銀行信託，出租收租金當生活費（留房養老），或避免失智後被不當過戶。<span class="pill" style="font-size:2.2rem;margin-top:1rem">看案例</span></div>
+      <div class="box case" data-case="t4" tabindex="0" style="cursor:pointer;font-size:2.8rem"><h3>遺囑信託</h3>在遺囑中指定信託，身後財產由受託人依您的規劃長期照顧配偶、子女，再分配給下一代。<span class="pill" style="font-size:2.2rem;margin-top:1rem">看案例</span></div>
+    </div>
+    <div class="small-note" style="font-size:2.3rem">各銀行信託部門都可諮詢。金管會自 2020 年起推動「信託 2.0」，鼓勵銀行降低門檻、結合安養機構與社福。安養信託受益人已超過 8 萬人。</div>
+  </div>
+</section>
+
+<!-- 20b trust fees -->
+<section class="slide" data-note="用 500 萬的例子算給大家看：一年管理費 1.5 萬，但定存利息就有 7 萬以上，等於用利息的一小部分買一個「誰都動不了」的保障。預開型是重點：現在清醒時先簽，不放錢或放一點點，不收管理費，將來需要時再啟動。各銀行費用會變動，請現場提醒以銀行公告為準。">
+  <div class="tag">信託</div>
+  <h1 class="small">信託大約要花多少錢？</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <table class="dense" style="font-size:2.6rem">
+          <tr><th>費用項目</th><th>安養信託行情</th></tr>
+          <tr><td>簽約手續費（一次）</td><td class="hl">1,000～5,000 元</td></tr>
+          <tr><td>信託管理費（每年）</td><td class="hl">信託財產的 0.2%～0.6%<br><span style="font-size:2.2rem;color:#666">按月扣收，多有每月最低 100～1,000 元</span></td></tr>
+          <tr><td>修約費（改契約時）</td><td class="hl">約 1,000 元／次</td></tr>
+          <tr><td>承作門檻</td><td class="hl">多數不限或 10～50 萬起</td></tr>
+          <tr><td>預開型（先簽約不啟動）</td><td class="hl">多家免簽約費、啟動前免管理費</td></tr>
+        </table>
+      </div>
+      <div class="col">
+        <div class="res" style="flex:1"><div class="sm">例：把 500 萬放進安養信託</div><div class="big" style="font-size:5.6rem">每月約 1,250 元</div><div class="sm">簽約費 3,000 元 ＋ 年管理費 0.3%＝15,000 元<br>而 500 萬定存一年利息約 7 萬元，利息就付得起。<br>十年總費用約 15 萬，換十年「誰都動不了」。</div></div>
+        <div class="box warm" style="font-size:2.5rem;padding:1.4rem 2rem">不動產信託費用較高（簽約數千到數萬元、年管理費 0.3%～0.5%）；身心障礙者、65 歲以上長者多數銀行有折扣。各家不同，以銀行公告為準。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 20c trust myths -->
+<section class="slide" data-note="六張迷思卡，逐張先問全班「對不對？」再點開。最重要的三張：①不是有錢人才辦（幾十萬就能辦）②信託不能省遺產稅（自益信託財產仍是遺產）③失智後再辦就來不及（要意識清楚才能簽，所以推預開型）。">
+  <div class="tag">信託</div>
+  <h1 class="small">信託的迷思與注意事項（點卡片看真相）</h1>
+  <div class="body">
+    <div class="cards">
+      <div class="card"><div class="m">信託是有錢人的工具</div><div class="a">多數銀行不設門檻或 10～50 萬就能辦；500 萬一年費用約 1.5 萬，定存利息就夠付。</div></div>
+      <div class="card"><div class="m">辦信託可以省遺產稅</div><div class="a">自益信託（錢給自己用）的財產仍是您的遺產，一樣要申報；信託主要是「保全」，不是節稅。他益信託給子女則要課贈與稅。</div></div>
+      <div class="card"><div class="m">等失智了再辦就好</div><div class="a">簽約需意識清楚；已失智要先經法院監護宣告，由監護人代辦，程序久也未必順利。趁清醒先簽「預開型」。</div></div>
+      <div class="card"><div class="m">錢交給銀行就拿不回來了</div><div class="a">自益信託可依契約終止或修約（付修約費）；但建議設信託監察人，避免被騙後自己要求解約。</div></div>
+      <div class="card"><div class="m">只要信託，子女就不會吵</div><div class="a">信託管的是「用錢」；身後剩餘財產仍依遺囑或法定繼承分配，所以要和遺囑一起規劃。</div></div>
+      <div class="card"><div class="m">銀行會幫我投資賺錢</div><div class="a">安養信託以保全為主，多放定存；要投資要另外約定，報酬與風險自負，別把它當理財商品。</div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="slide" data-note="檢核信託章。第 2 題和第 3 題最多人答錯。" data-tf='[{"s": "信託是有錢人才用得到的工具。", "a": false, "f": "錯。多數銀行門檻 10～50 萬或不設門檻，一年費用約 0.2%～0.6%。"}, {"s": "把錢放進自益的安養信託，可以省遺產稅。", "a": false, "f": "錯。自益信託的財產仍是您的遺產，信託是保全與專款專用，不是節稅。"}, {"s": "失智以後，隨時都還能自己去銀行簽信託。", "a": false, "f": "錯。簽約需意識清楚；失智後要先經法院監護宣告。所以要趁清醒先簽預開型。"}, {"s": "可以指定子女或社福團體當信託監察人，幫忙把關。", "a": true, "f": "對。監察人可以同意特殊給付、監督銀行是否照契約執行。"}, {"s": "保險金信託可以讓身故保險金分期給孩子，而不是一次領完。", "a": true, "f": "對。避免未成年或身障子女一次拿到大筆錢被揮霍或挪用。"}]'>
+  <div class="tag">學會了嗎</div>
+  <h1 class="small">信託：對還是錯？</h1>
+  <div class="body"><div class="tf"></div></div>
+</section>
+
+<!-- 21 section 意定監護 -->
+<section class="slide sec" data-note="第四章。引導問句：如果有一天您失智了，誰來替您簽字、替您決定住哪裡、錢怎麼用？沒有安排，就是法院來決定。">
+  <div class="tag">第四章</div>
+  <h1>意定監護與老後安排</h1>
+  <div class="q">趁還清醒的時候，<br>自己選好「將來替我做主的人」。</div>
+</section>
+
+
+<section class="slide" data-note="答案 C。常見誤會是 A（子女可以直接處理）。接著講法定監護 vs 意定監護。" data-quiz='{"ans": 2, "fb": "失智後名下財產沒人能動，必須先向法院聲請監護宣告，由法院選監護人，處分不動產還要另外經法院許可，常常要半年以上。趁清醒先做「意定監護」和「安養信託」，就不必走這條路。"}'>
+  <div class="tag">先猜猜看</div>
+  <div class="q-text">如果有一天我失智了，沒有事先安排，誰可以替我賣房子付安養費？</div>
+  <div class="opts">
+    <div class="opt" tabindex="0"><span class="ab">A</span>同住的子女直接可以辦</div>
+    <div class="opt" tabindex="0"><span class="ab">B</span>配偶自然就有權利</div>
+    <div class="opt" tabindex="0"><span class="ab">C</span>要先經法院監護宣告、選定監護人，賣房還要法院許可</div>
+    <div class="opt" tabindex="0"><span class="ab">D</span>里長或社會局可以直接代辦</div>
+  </div>
+</section>
+
+<!-- 22 意定監護 -->
+<section class="slide" data-note="民法 1113 條之 2 以下，108 年上路。流程：找公證人做「意定監護契約」→ 將來失能被法院監護宣告時，法院原則上就依契約選這位當監護人。可以指定多人分工（一人管生活、一人管財產）。可以隨時撤回。搭配安養信託，是目前最完整的老後保障組合。">
+  <div class="tag">意定監護</div>
+  <h1 class="small">法定監護 vs 意定監護</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="box"><h3>法定監護（沒有安排時）</h3>
+          <li>失能後，由<b>法院</b>依親屬聲請選定監護人</li>
+          <li>法院選的人<b>不一定</b>是您想要的人</li>
+          <li>親屬之間可能為了「誰當監護人」起爭執</li>
+        </div>
+      </div>
+      <div class="col">
+        <div class="box cool"><h3>意定監護（自己先選）</h3>
+          <li>清醒時與信任的人簽<b>意定監護契約</b>，須經<b>公證</b></li>
+          <li>可以指定一人或多人、<b>分工</b>（生活照顧、財產管理）</li>
+          <li>將來受監護宣告時，法院<b>原則上照契約</b>選任</li>
+          <li>隨時可<b>撤回</b>或更換；可約定監護人報酬</li>
+        </div>
+      </div>
+    </div>
+    <div class="box warm" style="font-size:3.2rem">黃金組合：<b>意定監護</b>決定「誰替我做主」＋<b>安養信託</b>決定「錢怎麼用」＋<b>遺囑</b>決定「身後怎麼分」。</div>
+  </div>
+</section>
+
+<!-- 22b scope -->
+<section class="slide" data-note="先講「能管什麼」：民法第 1112 條，監護人的職務就是生活、護養療治、財產管理三件事；意定監護可以把這三件事拆開給不同的人，也可以約定賣房子不用再經法院許可。再講「不能管什麼」：身分行為（結婚、離婚、收養、立遺囑）誰都不能代理；拒絕急救、安寧要另外簽「預立醫療決定」；監護人不能把您的財產送人。">
+  <div class="tag">意定監護</div>
+  <h1 class="small">意定監護可以安排什麼？不能安排什麼？</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="box cool" style="flex:1;font-size:2.5rem;padding:1.6rem 2.2rem"><h3>可以寫進契約的</h3>
+          <li><b>生活照顧</b>：住哪裡、請看護、入住機構的決定</li>
+          <li><b>醫療照護</b>：就醫、手術同意、復健安排</li>
+          <li><b>財產管理</b>：帳戶收支、繳費、出租或出售房子</li>
+          <li><b>分工、順位、報酬</b>：一人管生活、一人管財產；可排接手順位；有給無給皆可</li>
+          <li><b>免經法院許可</b>：可約定受任人處分不動產不必再向法院聲請（民法第 1113 條之 9）</li>
+          
+        </div>
+      </div>
+      <div class="col">
+        <div class="box warm" style="flex:1;font-size:2.5rem;padding:1.6rem 2.2rem"><h3>寫了也沒用的</h3>
+          <li><b>身分行為</b>：結婚、離婚、收養、<b>立遺囑</b>，誰都不能代理</li>
+          <li><b>拒絕急救、安寧緩和</b>：要另外依病人自主權利法簽「預立醫療決定」</li>
+          <li><b>把財產送人</b>：監護人不得以受監護人的財產為贈與（民法第 1101 條）</li>
+          <li><b>現在就生效</b>：契約在您受監護宣告後才啟動；現在的事仍由您自己決定</li>
+        </div>
+        <div class="box" style="font-size:2.3rem;padding:1.2rem 2rem">完整的老後安排＝意定監護（誰替我做主）＋安養信託（錢怎麼用）＋預立醫療決定（醫療怎麼選）＋遺囑（身後怎麼分）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 22c compare -->
+<section class="slide" data-note="最常被問的費用：意定監護公證只要約 1,000 元；但要說清楚，將來真的失能時，還是要走一次監護宣告（聲請費 1,500 元＋精神鑑定費約 1～3 萬），意定監護改變的是「法院選誰」和「要不要再經法院許可」，不是省掉監護宣告。差別在於可預期、少爭執、少跑法院。">
+  <div class="tag">意定監護</div>
+  <h1 class="small" style="margin-bottom:1.4rem">意定監護 vs 法定監護（監護宣告），差在哪？</h1>
+  <div class="body">
+    <table class="dense" style="font-size:2.35rem">
+      <tr><th style="width:18%">比較</th><th>意定監護（自己先選）</th><th>法定監護（沒安排時）</th></tr>
+      <tr><td>誰決定監護人</td><td class="hl">自己清醒時選，法院原則上照契約選任</td><td>失能後由法院依親屬聲請選定，不一定是您想要的人</td></tr>
+      <tr><td>什麼時候辦</td><td class="hl">現在，意識清楚時</td><td>失能後，親屬才能聲請</td></tr>
+      <tr><td>前段費用</td><td class="hl">公證費約 1,000 元（未約定報酬）；有約定報酬依報酬總額計費。律師擬約另計</td><td>—</td></tr>
+      <tr><td>失能時的程序</td><td class="hl">仍須聲請監護宣告（聲請費 1,500 元＋精神鑑定費約 1～3 萬），但法院照契約選人</td><td>同樣聲請監護宣告，法院開庭、鑑定、調查親屬意見，常需數月</td></tr>
+      <tr><td>賣房、重大財產</td><td class="hl">可在契約約定免經法院許可</td><td>每次處分不動產都要向法院聲請許可</td></tr>
+      <tr><td>家人爭執風險</td><td class="hl">低，您已白紙黑字決定</td><td>高，誰當監護人常成為爭執點</td></tr>
+    </table>
+    <div class="small-note" style="font-size:2.2rem">聲請費依 2025 年起加徵標準；鑑定費依各縣市核定醫院而異，以法院與醫院公告為準。</div>
+  </div>
+</section>
+
+<!-- 22d how-to -->
+<section class="slide" data-note="流程四步。重點回答三個問題：①準備什麼：雙方身分證、印章、一週內戶籍謄本（記事不省略），80 歲以上多數公證人會要求一週內「無失智」診斷證明；②去哪裡：地方法院公證處或民間公證人事務所都可以，雙方要親自到場，不能代理；③要不要律師：不一定，法務部有免費範本，簡單家庭可直接拿範本去公證處；財產多、想分工、想約定賣房免許可的，建議先找律師擬約再公證。公證完成後公證人 7 日內通知法院備查，隨時可撤回或變更（也要公證）。">
+  <div class="tag">意定監護</div>
+  <h1 class="small" style="margin-bottom:1.6rem">怎麼辦理？準備什麼、去哪裡、要不要找律師</h1>
+  <div class="body">
+    <div class="steps">
+      <div class="step" style="font-size:2.5rem;padding:1.8rem 1.6rem"><div class="no">1</div><h3>談好、寫好契約</h3>和信任的人談清楚誰當受任人、管什麼、要不要報酬。法務部網站有免費範本；財產多或想分工、想約定賣房免許可者，可請律師擬約（費用依服務報價）。</div>
+      <div class="step" style="font-size:2.5rem;padding:1.8rem 1.6rem"><div class="no">2</div><h3>準備文件</h3>雙方身分證、印章、一週內戶籍謄本（記事不省略）。80 歲以上多數公證人會要求一週內「無失智」診斷證明；有指定會同開具財產清冊之人，附其身分資料。</div>
+      <div class="step" style="font-size:2.5rem;padding:1.8rem 1.6rem"><div class="no">3</div><h3>親自去公證</h3>地方法院公證處或民間公證人事務所皆可，先電話預約。本人與受任人<b>都要親自到場</b>，不能代理。公證費約 1,000 元起。</div>
+      <div class="step" style="font-size:2.5rem;padding:1.8rem 1.6rem"><div class="no">4</div><h3>備查與啟動</h3>公證人 7 日內通知法院備查。將來失能時，由家屬聲請監護宣告，法院依契約選任。契約隨時可撤回或變更，但也要經公證。</div>
+    </div>
+    <div class="box cool" style="font-size:2.6rem;padding:1.4rem 2rem">要不要找律師？簡單家庭：拿範本直接到公證處，公證人會協助確認。複雜情況（財產多、再婚家庭、想找非親屬當受任人、要約定報酬）：先找律師擬約，再去公證。</div>
+  </div>
+</section>
+
+<!-- 22e myths -->
+<section class="slide" data-note="六張迷思卡，逐張先問「對不對」再點開。最關鍵的三張：②意定監護不是現在就把權交出去；③不能代立遺囑；⑤受任人不限親屬。">
+  <div class="tag">意定監護</div>
+  <h1 class="small">意定監護的迷思（點卡片看真相）</h1>
+  <div class="body">
+    <div class="cards">
+      <div class="card"><div class="m">有簽意定監護，以後就不用監護宣告了</div><div class="a">還是要。失能時仍須聲請監護宣告（含鑑定），差別是法院照契約選人、不用再爭誰當監護人。</div></div>
+      <div class="card"><div class="m">簽了以後，我的財產就交給受任人管了</div><div class="a">不是。契約在您受監護宣告後才啟動；現在一切仍由您自己決定，隨時可撤回。</div></div>
+      <div class="card"><div class="m">監護人可以幫我立遺囑、決定財產給誰</div><div class="a">不行。立遺囑是身分行為不能代理；監護人也不得把您的財產贈與他人。</div></div>
+      <div class="card"><div class="m">受任人一定要是配偶或子女</div><div class="a">不限親屬。可以是朋友、律師、社福團體（法人）；但照顧您的機構及其員工不能當。</div></div>
+      <div class="card"><div class="m">寫一張紙簽名就有效</div><div class="a">一定要經公證才成立，雙方親自到場；口頭約定或自己簽的紙都無效。</div></div>
+      <div class="card"><div class="m">已經有點失智了，趕快去簽還來得及</div><div class="a">要意識清楚才能簽，公證人會確認（高齡多要求診斷證明）。已失智只能走法定監護宣告。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 22f benefits -->
+<section class="slide" data-note="把好處濃縮成六點，每點都對應前面講過的案例或迷思。講的時候可以反問：如果不做，這六件事誰替您決定？答案都是「法院」或「吵贏的那個孩子」。">
+  <div class="tag">意定監護</div>
+  <h1 class="small">做了意定監護，到底好在哪？</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="pt"><span class="k">一</span><span><b>自己選人</b>：將來替您決定住哪、看哪個醫生、錢怎麼用的人，是您挑的，不是法院挑的</span></div>
+        <div class="pt"><span class="k">二</span><span><b>可以分工、可以排順位</b>：女兒管生活、兒子管財產；第一人不能做時由第二人接手</span></div>
+        <div class="pt"><span class="k">三</span><span><b>賣房不用再跑法院</b>：契約可約定免經法院許可，付安養費不必等半年</span></div>
+      </div>
+      <div class="col">
+        <div class="pt"><span class="k">四</span><span><b>家人不用吵</b>：誰當監護人已經白紙黑字，少了最常見的爭執點</span></div>
+        <div class="pt"><span class="k">五</span><span><b>沒家人也有人</b>：單身、無子女、子女在國外，可以選朋友、律師或社福法人，不會被交給不認識的人</span></div>
+        <div class="pt"><span class="k">六</span><span><b>便宜、可反悔</b>：公證約 1,000 元，隨時可撤回或更換</span></div>
+      </div>
+    </div>
+    <div class="box cool" style="font-size:2.8rem">一句話：意定監護是「替將來的自己，寫一張授權書」。</div>
+  </div>
+</section>
+
+<!-- 22g news -->
+<section class="slide" data-note="三則新聞都可以點。第一則穎川建忠最有力：有錢、有五個兒子，失智後孩子分兩派從台灣告到日本，最後法院只能指定社會局當輔助人，連「想回家」都沒人能替他執行。第二則社工督導：沒有家人的長輩被交給制度裡的某個人，一樣出事。第三則前總統家族：連名人家庭也是家屬上法院聲請，而不是本人事先安排。講完問全班：這三家人，缺的是什麼？">
+  <div class="tag">意定監護</div>
+  <h1 class="small">台灣的真實新聞：沒有事先安排，會怎樣？（點卡片）</h1>
+  <div class="body">
+    <div class="cards" style="grid-template-columns:repeat(3,1fr)">
+      <div class="box case" data-case="g1" tabindex="0" style="cursor:pointer;font-size:2.7rem"><h3>千億總裁，連回家都做不到</h3>五個兒子分兩派，為了「誰能替爸爸簽名」從台灣告到日本；最後法院指定社會局當輔助人。<span class="pill" style="font-size:2.2rem;margin-top:1rem">看案例</span></div>
+      <div class="box case" data-case="g2" tabindex="0" style="cursor:pointer;font-size:2.7rem"><h3>沒有家人，交給制度裡的「某個人」</h3>五位受監護長者的存摺由社會局保管，卻被前社工督導侵占 1,200 多萬。<span class="pill" style="font-size:2.2rem;margin-top:1rem">看案例</span></div>
+      <div class="box case" data-case="g3" tabindex="0" style="cursor:pointer;font-size:2.7rem"><h3>名人家庭，也只能由家屬上法院</h3>2026 年前總統的姊姊向法院聲請輔助宣告，本人公開否認失智，「輔助宣告」一夕成為熱門詞。<span class="pill" style="font-size:2.2rem;margin-top:1rem">看案例</span></div>
+    </div>
+    <div class="box warm" style="font-size:2.7rem;padding:1.4rem 2.2rem">三個家庭的共同點：本人清醒時，沒有先決定「誰替我做主」。</div>
+  </div>
+</section>
+
+<!-- 22h two questions -->
+<section class="slide" data-note="這兩題是講座現場一定會被問的。沒錢那題：意定監護管的是「人」，不只是錢；而且錢越少越不能出錯。孝順那題：孝順不等於法律上有簽字權；失智後再孝順的孩子也要走監護宣告，幾個孝順的孩子更可能意見不同。意定監護是給孝順孩子的授權書，也是保護孩子不被其他親戚懷疑。">
+  <div class="tag">意定監護</div>
+  <h1 class="small">兩個最常見的問題</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="box" style="flex:1;font-size:2.6rem"><h3>「我沒什麼錢，還需要做嗎？」</h3>
+          <li>意定監護管的是<b>人</b>：住哪裡、看哪個醫生、同不同意手術、進哪家機構，跟有沒有錢無關</li>
+          <li>沒有家人的長輩，法院通常指定<b>社會局</b>當監護人，交給不認識的人（見前頁新聞）</li>
+          <li>錢少反而<b>更不能出錯</b>：一筆退休金被挪用，就是全部</li>
+          <li>公證約 1,000 元；無資力者將來的監護宣告程序可向<b>法律扶助基金會</b>求助</li>
+        </div>
+      </div>
+      <div class="col">
+        <div class="box cool" style="flex:1;font-size:2.6rem"><h3>「我的兒女很孝順，還需要做嗎？」</h3>
+          <li>孝順不等於<b>法律上有權簽字</b>：您失智後，再孝順的孩子也動不了您的帳戶和房子，還是要走監護宣告</li>
+          <li>幾個孝順的孩子，常對「要不要賣房」「進哪家機構」<b>意見不同</b>，誰也不能拍板</li>
+          <li>意定監護是<b>給孝順孩子的授權書</b>：讓他能直接替您做事，不必等法院、不必每次聲請許可</li>
+          <li>也是<b>保護孩子</b>：您親自授權，其他親戚就不能說他「擅自處理」</li>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 23 以房養老 -->
+<section class="slide" data-note="以房養老是「逆向抵押」：房子抵押給銀行，銀行每月給您錢，過世後由繼承人還款或由銀行處分房子。適合「有房、現金少、不打算留房」的長輩。要提醒：有年齡與年限限制、利息會累積、要和子女先溝通，不然身後容易爭執。留房養老是另一條路：房子信託出租，收租當生活費，房子還留著。">
+  <div class="tag">以房養老</div>
+  <h1 class="small">房子變月薪：以房養老 vs 留房養老</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="box"><h3>以房養老（逆向抵押）</h3>
+          <li>把房子<b>抵押給銀行</b>，銀行每月撥款給您</li>
+          <li>可以<b>繼續住</b>，過世後繼承人償還，或由銀行處分房屋</li>
+          <li>一般有<b>年齡門檻</b>（多為 55～65 歲以上）與契約年限</li>
+          <li>利息會逐月累積，<b>撥款額度</b>依房屋鑑價與年限計算</li>
+        </div>
+      </div>
+      <div class="col">
+        <div class="box cool"><h3>留房養老（不動產信託）</h3>
+          <li>房子交給銀行信託，<b>出租收租金</b>當生活費</li>
+          <li>房子<b>還是您的</b>，將來仍可傳給子女</li>
+          <li>適合有第二間房、或搬去與子女同住 / 入住機構者</li>
+        </div>
+        <div class="box warm" style="font-size:2.9rem">做決定前先問自己：想不想把房子留給孩子？有沒有跟孩子談過？各銀行都有試算，可先比較再決定。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="slide" data-note="排序題。重點是「公證」在前、「監護宣告」在失能後，兩者差很多年。" data-order='{"items": ["找信任的人談好，決定誰當監護人、分工什麼", "一起到公證人處簽意定監護契約並公證", "公證人通知法院登記備查", "將來失能時，由家屬向法院聲請監護宣告", "法院原則上依契約選任該監護人"], "f": "意定監護是「清醒時先簽、失能時才啟動」；搭配安養信託，錢和人都有安排。"}'>
+  <div class="tag">學會了嗎</div>
+  <h1 class="small">意定監護怎麼辦？排出正確順序</h1>
+  <div class="body">
+    <div class="lead" style="margin-bottom:.6rem">點選方塊，照先後順序排。 <button class="ord-again" style="font:inherit;font-size:2.4rem;background:transparent;border:.3rem solid var(--teal);color:var(--teal);border-radius:1rem;padding:.3rem 1.6rem;cursor:pointer;margin-left:1rem">重來</button></div>
+    <div class="ord"></div>
+  </div>
+</section>
+
+<!-- 24 section insurance -->
+<section class="slide sec" data-note="第五章，最多人問的問題。先投票：覺得「買保險可以避遺產稅」的請舉手。多數會舉手。再講答案：有條件的對，但很容易踩到「實質課稅」。">
+  <div class="tag">第五章</div>
+  <h1>買保險能降稅嗎？</h1>
+  <div class="q">答案是：<br>「用對了可以，用錯了不但不能，還會被連本帶利課回來。」</div>
+</section>
+
+
+<section class="slide" data-note="答案 B。先投票，很多人會選 A。這題直接帶出「實質課稅八大態樣」。" data-quiz='{"ans": 1, "fb": "法律給保險金免遺產稅的優惠，前提是「真的在保障家人」。高齡、重病、躉繳、鉅額、短期、密集、舉債、保費接近保險金，符合這些態樣就會被併入遺產，還可能加罰。"}'>
+  <div class="tag">先猜猜看</div>
+  <div class="q-text">陳爺爺 82 歲、住院中，子女幫他一次繳 3,000 萬保費買人壽保險，指定孫子為受益人。他過世後，這筆保險金要繳遺產稅嗎？</div>
+  <div class="opts">
+    <div class="opt" tabindex="0"><span class="ab">A</span>不用，保險金本來就免稅</div>
+    <div class="opt" tabindex="0"><span class="ab">B</span>要，高齡、重病、躉繳、鉅額，國稅局會實質課稅</div>
+    <div class="opt" tabindex="0"><span class="ab">C</span>只要繳一半</div>
+    <div class="opt" tabindex="0"><span class="ab">D</span>要看孫子幾歲</div>
+  </div>
+</section>
+
+<!-- 25 insurance rules -->
+<section class="slide" data-note="法條有三個：保險法 112 條、遺贈稅法 16 條第 9 款（指定受益人的人壽保險金不計入遺產）、所得基本稅額條例（受益人與要保人不同的人壽及年金保險死亡給付，每一申報戶 3,740 萬以下免計入最低稅負）。但國稅局用「實質課稅原則」看八種態樣，符合就會併入遺產。">
+  <div class="tag">保險與稅</div>
+  <h1 class="small">法律給的優惠，和國稅局的「但書」</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="box cool"><h3>法律給的優惠</h3>
+          <li>指定受益人的<b>人壽保險死亡給付</b>，不計入遺產總額（遺贈稅法第 16 條第 9 款、保險法第 112 條）</li>
+          <li>最低稅負制：死亡給付每一申報戶 <b>3,740 萬</b>以下免計入基本所得額</li>
+        </div>
+      </div>
+      <div class="col">
+        <div class="box warm"><h3>實質課稅的八大態樣（符合就併入遺產）</h3>
+          <li><b>重病</b>投保、<b>高齡</b>投保、<b>短期</b>投保（投保後不久過世）</li>
+          <li><b>躉繳</b>（一次付清）、<b>鉅額</b>投保、<b>密集</b>投保</li>
+          <li><b>舉債</b>投保、<b>保費高於或接近保險金</b></li>
+        </div>
+      </div>
+    </div>
+    <div class="box" style="font-size:3.1rem">一句話判斷：如果買保險的目的看起來是「<b>把現金換個名字藏起來</b>」而不是「保障家人」，國稅局就會把它當遺產，而且可能連同<b>漏報罰鍰</b>一起算。</div>
+  </div>
+</section>
+
+<!-- 26 insurance right use -->
+<section class="slide" data-note="保險真正的價值不是「避稅」，而是「預留稅源」與「指定給誰」。例子：遺產都是房子，沒現金繳稅，子女要賣房或借錢繳稅；有一筆保險金，就能先繳稅再慢慢處理房子。提醒：要保人、被保險人、受益人三者怎麼填會影響課稅，請找專業人員規劃。">
+  <div class="tag">保險與稅</div>
+  <h1 class="small">保險的正確用法</h1>
+  <div class="body">
+    <div class="pt"><span class="k">一</span><span><b>預留稅源</b>：遺產多是房子、沒現金時，保險金讓子女有錢繳稅，不必急著賣房</span></div>
+    <div class="pt"><span class="k">二</span><span><b>指定受益人</b>：保險金直接給指定的人，不用等遺產分割，也可照顧非繼承人</span></div>
+    <div class="pt"><span class="k">三</span><span><b>搭配信託</b>：保險金信託，分期給付，避免一次領完被花光</span></div>
+    <div class="pt"><span class="k">四</span><span><b>早一點、健康時、分期繳</b>：越符合「保障」的樣子，越不會被實質課稅</span></div>
+    <div class="box warm">要保人、被保險人、受益人「三個名字怎麼填」會改變課稅結果（例如要保人變更可能被視為贈與）。買之前請同時問保險業務員<b>和</b>稅務專業人員。</div>
+  </div>
+</section>
+
+
+<section class="slide" data-note="檢核保險章。第 1、3 題是最常見的錯誤認知。" data-tf='[{"s": "只要是保險金，一律不用繳遺產稅。", "a": false, "f": "錯。符合重病、高齡、躉繳、鉅額等實質課稅態樣，會併入遺產。"}, {"s": "健康時分期投保、指定受益人，是保險最站得住腳的用法。", "a": true, "f": "對。越像「保障家人」，越不會被實質課稅。"}, {"s": "要保人、被保險人、受益人三個名字怎麼填，不影響課稅。", "a": false, "f": "錯。例如要保人變更可能被視為贈與；三者關係會改變課稅結果。"}, {"s": "保險金可以當「預留稅源」，讓子女有現金繳遺產稅。", "a": true, "f": "對。遺產多是房子、沒現金時，這是保險最實際的功能。"}]'>
+  <div class="tag">學會了嗎</div>
+  <h1 class="small">保險與稅：對還是錯？</h1>
+  <div class="body"><div class="tf"></div></div>
+</section>
+
+<!-- 27 section planning -->
+<section class="slide sec" data-note="第六章，把前面所有工具組合起來。提醒：合法節稅的核心只有兩個字——「提早」。">
+  <div class="tag">第六章</div>
+  <h1>怎麼規劃，稅負最低？</h1>
+  <div class="q">合法節稅沒有秘密，只有「提早」和「用對工具」。</div>
+</section>
+
+
+<section class="slide" data-note="規劃章開場：答案 B。先投票，常有人選 D 或 C。然後用下一頁的七個做法和規劃試算器實際算給大家看。" data-quiz='{"ans":1,"fb":"合法節稅的核心是「提早」與「分年」：每年免稅額用好用滿、善用配偶剩餘財產請求權、扣除額用滿，再用保險預留稅源。領現金、過戶給一個孩子、重病時買保險，都是會被追稅的作法。"}'>
+  <div class="tag">先猜猜看</div>
+  <div class="q-text">合法把遺產稅降到最低，最有效的一招是？</div>
+  <div class="opts">
+    <div class="opt" tabindex="0"><span class="ab">A</span>過世前趕快把存款領出來</div>
+    <div class="opt" tabindex="0"><span class="ab">B</span>提早開始，每年用免稅額分年贈與</div>
+    <div class="opt" tabindex="0"><span class="ab">C</span>重病時一次買大額保險</div>
+    <div class="opt" tabindex="0"><span class="ab">D</span>房子先全部過戶給一個孩子</div>
+  </div>
+</section>
+
+<!-- 28 strategies -->
+<section class="slide" data-note="逐條講。強調第 1 條分年贈與最務實；第 3 條配偶剩餘財產差額分配請求權常被忽略；第 5 條：不動產以公告現值計算，通常比現金划算，但要考慮房地合一稅和子女日後出售的成本，不要只看遺產稅。">
+  <div class="tag">規劃策略</div>
+  <div class="h1row"><h1 class="small">七個合法、有效的做法</h1><button class="cbtn " onclick="openCalc('gift')">🧮 贈與稅試算器</button></div>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="pt"><span class="k">1</span><span><b>分年贈與</b>：每人每年 244 萬，夫妻一起就是 488 萬，十年近 5,000 萬</span></div>
+        <div class="pt"><span class="k">2</span><span><b>婚嫁贈與</b>：子女結婚前後六個月，父母各再送 100 萬</span></div>
+        <div class="pt"><span class="k">3</span><span><b>配偶剩餘財產差額分配請求權</b>：先分一半給配偶，再算遺產</span></div>
+        <div class="pt"><span class="k">4</span><span><b>扣除額用好用滿</b>：配偶、子女、父母、身障、喪葬費、未償債務</span></div>
+      </div>
+      <div class="col">
+        <div class="pt"><span class="k">5</span><span><b>現金 vs 不動產</b>：房地以公告現值計遺產，但要同時考慮子女日後出售的房地合一稅</span></div>
+        <div class="pt"><span class="k">6</span><span><b>保險預留稅源</b>：健康時分期投保，指定受益人</span></div>
+        <div class="pt"><span class="k">7</span><span><b>遺囑＋信託＋意定監護</b>：不只省稅，更是避免家人爭執</span></div>
+        <div class="box warm" style="font-size:2.8rem">節稅只是其中一個目標。家人和睦、自己老後有保障，往往更重要。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 28b planning calculator -->
+<section class="slide" data-note="規劃試算器：現場請一位長輩給假設數字。先看「什麼都不做」要繳多少，再一格一格打開「分年贈與」「剩餘財產請求權」，讓大家看到稅怎麼一路往下掉。最後看「現金夠不夠繳稅」，不夠就是保險預留稅源的時機。提醒：分年贈與要在過世前兩年以上完成才有效。">
+  <div class="tag">規劃試算</div>
+  <div class="h1row"><h1 class="small">三種做法，稅差多少？</h1><button class="cbtn " onclick="openCalc('estate')">🧮 完整遺產稅／贈與稅試算器</button></div>
+  <div class="calc" style="grid-template-columns:1fr 1.15fr;gap:2rem">
+    <div>
+      <label>存款、股票等（萬元）<input id="p-cash" type="number" value="2000" min="0"></label>
+      <label>不動產公告現值（萬元）<input id="p-land" type="number" value="2500" min="0"></label>
+      <label>配偶在世<select id="p-sp"><option value="1">是</option><option value="0">否</option></select></label>
+      <label>配偶名下婚後財產（萬元）<input id="p-spw" type="number" value="500" min="0"></label>
+      <label>成年子女人數<input id="p-kid" type="number" value="2" min="0"></label>
+      <label>打算分年贈與幾年<input id="p-yrs" type="number" value="5" min="0" max="30"></label>
+      <label>近期結婚的子女人數（各加 100 萬）<input id="p-wed" type="number" value="0" min="0"></label>
+    </div>
+    <div class="res" style="padding:2.2rem">
+      <table style="width:100%;font-size:2.5rem;color:#fff;background:transparent;border-radius:0">
+        <tr><td style="color:#bfd8dc;border-color:rgba(255,255,255,.2)">做法</td><td style="text-align:right;color:#bfd8dc;border-color:rgba(255,255,255,.2)">遺產稅（估）</td></tr>
+        <tr><td style="border-color:rgba(255,255,255,.2)">A　什麼都不做</td><td id="p-a" style="text-align:right;font-weight:900;border-color:rgba(255,255,255,.2)">—</td></tr>
+        <tr><td style="border-color:rgba(255,255,255,.2)">B　分年贈與 <span id="p-byrs"></span></td><td id="p-b" style="text-align:right;font-weight:900;border-color:rgba(255,255,255,.2)">—</td></tr>
+        <tr><td style="border-color:rgba(255,255,255,.2)">C　B ＋ 配偶剩餘財產請求權</td><td id="p-c" style="text-align:right;font-weight:900;color:var(--amber);font-size:3.4rem;border-color:rgba(255,255,255,.2)">—</td></tr>
+      </table>
+      <div id="p-bars" style="display:flex;flex-direction:column;gap:.6rem;margin:1.2rem 0"></div>
+      <div class="sm" id="p-tip" style="font-size:2.3rem;line-height:1.5"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 29 myths -->
+<section class="slide" data-note="互動：先不要翻，逐張問全班「這句話對不對？」再點開看答案。六張都是現場最常聽到的說法。">
+  <div class="tag">常見迷思</div>
+  <h1 class="small">這些話，您聽過嗎？（點卡片看真相）</h1>
+  <div class="body">
+    <div class="cards">
+      <div class="card"><div class="m">人走之前趕快把錢領出來就沒事</div><div class="a">過世前後的大額提領國稅局會查，領出的現金仍是遺產，還可能被罰漏報。</div></div>
+      <div class="card"><div class="m">寫遺囑就可以不給不孝的孩子</div><div class="a">特留分是法律保障的底線，被侵害者可主張扣減；可以少給，不能歸零。</div></div>
+      <div class="card"><div class="m">房子先過戶給一個孩子最省事</div><div class="a">生前過戶算贈與，超過 244 萬要課稅；也可能引發其他子女不滿與日後糾紛。</div></div>
+      <div class="card"><div class="m">保險金一定免遺產稅</div><div class="a">重病、高齡、躉繳、鉅額等八大態樣，會被實質課稅併入遺產。</div></div>
+      <div class="card"><div class="m">遺產沒超過免稅額就不用申報</div><div class="a">仍要在六個月內申報，才能取得免稅證明辦理過戶。</div></div>
+      <div class="card"><div class="m">匯錢給孩子銀行不會知道</div><div class="a">金流有紀錄，幫子女繳房貸、保費、買車都視為贈與。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 30 law list -->
+<section class="slide" data-note="法規清單給大家回去查用，不用一條一條念。重點是知道「哪一題要去看哪一部法」。全國法規資料庫 law.moj.gov.tw 可以免費查全文。">
+  <div class="tag">法規依據</div>
+  <h1 class="small">遇到問題，要查哪一部法？</h1>
+  <div class="body">
+    <table class="dense" style="font-size:2.55rem">
+      <tr><th>題目</th><th>法規</th><th>重點條文</th></tr>
+      <tr><td>贈與稅、遺產稅</td><td class="hl">遺產及贈與稅法</td><td>第 12 條之 1（金額調整）、第 15 條（死前兩年贈與）、第 16 條（不計入遺產）、第 17 條（扣除額）、第 20 條（不計入贈與）</td></tr>
+      <tr><td>繼承、應繼分、特留分、遺囑</td><td class="hl">民法 繼承編</td><td>第 1138～1144 條（順位與應繼分）、第 1189～1198 條（遺囑方式）、第 1223～1225 條（特留分與扣減；<b>兄弟姊妹特留分 2027/2/17 起刪除</b>）</td></tr>
+      <tr><td>配偶剩餘財產</td><td class="hl">民法 親屬編</td><td>第 1030 條之 1</td></tr>
+      <tr><td>意定監護</td><td class="hl">民法 親屬編</td><td>第 1113 條之 2 ～ 之 10</td></tr>
+      <tr><td>信託</td><td class="hl">信託法、信託業法</td><td>信託契約、受託人義務、信託監察人</td></tr>
+      <tr><td>保險與稅</td><td class="hl">保險法、所得基本稅額條例</td><td>保險法第 112 條；所得基本稅額條例第 12 條（3,740 萬）</td></tr>
+    </table>
+    <div class="small-note">全文查詢：全國法規資料庫 law.moj.gov.tw（免費、隨時更新）</div>
+  </div>
+</section>
+
+<!-- 31 calc tools -->
+<section class="slide" data-note="示範財政部電子申報繳稅服務網的試算功能，手機也能用。提醒：不動產價值要用公告土地現值與房屋評定現值（可在內政部或地方稅務局網站查），不是市價。下一頁有本簡報內建的簡易試算，可以現場請一位長輩提供假設數字一起算。">
+  <div class="tag">自動試算系統</div>
+  <div class="h1row" style="margin-bottom:1.6rem"><h1 class="small">免費的官方試算工具</h1><div style="display:flex;gap:1.2rem"><button class="cbtn " onclick="openCalc()">🧮 稅務試算</button><button class="cbtn teal" onclick="openCalc(null,'inh-src')">🧮 繼承分配</button></div></div>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="box" style="font-size:2.6rem;padding:1.6rem 2.4rem"><h3>財政部 電子申報繳稅服務網</h3>遺產稅、贈與稅線上試算與線上申報<br><a class="link">https://www.etax.nat.gov.tw</a><br><span class="small-note">首頁 → 線上服務 → 遺產稅／贈與稅 試算</span></div>
+        <div class="box" style="font-size:2.6rem;padding:1.6rem 2.4rem"><h3>財政部 稅務入口網</h3>稅法常見問答、各地國稅局聯絡方式<br><a class="link">https://www.etax.nat.gov.tw</a>（稅務資訊）／免付費諮詢 <b>0800-000-321</b></div>
+      </div>
+      <div class="col">
+        <div class="box" style="font-size:2.6rem;padding:1.6rem 2.4rem"><h3>不動產價值查詢</h3>內政部地政司「公告土地現值」查詢、各地方稅務局「房屋評定現值」查詢；遺產稅用這兩個數字，不是市價</div>
+        <div class="box" style="font-size:2.6rem;padding:1.6rem 2.4rem"><h3>以房養老、安養信託試算</h3>各銀行官網都有「以房養老試算」與「安養信託」專區；司法院與公證人公會可查意定監護、遺囑公證流程</div>
+      </div>
+    </div>
+    <div class="small-note" style="font-size:2.2rem;line-height:1.3">網址與服務項目可能調整，以各機關官網為準。　</div>
+  </div>
+</section>
+
+<!-- 32 built-in calc -->
+<section class="slide" data-note="點任一顆按鈕，試算器會直接在簡報上方開啟，不用離開投影畫面。現場互動：請一位長輩給假設數字（不要用真實資料），一起算；可示範「配偶在世 vs 不在世」「加一個未成年子女」「主張剩餘財產請求權」差多少稅。按 Esc 或右上角關閉回到簡報。">
+  <div class="tag">現場算算看</div>
+  <h1 class="small">打開試算器，現場一起算</h1>
+  <div class="body">
+    <div class="row">
+      <div class="col">
+        <div class="num" style="flex:1;cursor:pointer;border-bottom-color:var(--orange)" onclick="openCalc('gift')" tabindex="0" onkeydown="if(event.key==='Enter')openCalc('gift')"><div class="n" style="font-size:6rem">贈與稅</div><div class="u">點我開啟試算</div><div class="d">今年已送多少、這次想送多少、婚嫁贈與、夫妻一起規劃、分年贈與要幾年</div></div>
+      </div>
+      <div class="col">
+        <div class="num" style="flex:1;cursor:pointer;border-bottom-color:var(--teal)" onclick="openCalc('estate')" tabindex="0" onkeydown="if(event.key==='Enter')openCalc('estate')"><div class="n" style="font-size:6rem">遺產稅</div><div class="u">點我開啟試算</div><div class="d">遺產項目、配偶與子女扣除、未成年加扣、剩餘財產請求權、申報期限與規劃提醒</div></div>
+      </div>
+    </div>
+    <div class="row" style="align-items:center;gap:2rem"><div class="box cool" style="flex:1;font-size:2.7rem;padding:1.4rem 2.2rem">依財政部公告 115 年標準，教學估算，實際以國稅局核定為準。按 Esc 或右上角關閉即可回到簡報。</div><button class="cbtn teal" onclick="openCalc(null,'inh-src')">🧮 繼承分配／特留分試算器</button></div>
+  </div>
+</section>
+
+<!-- review -->
+<section class="slide" data-note="總複習：一題一題出，全班一起選。答完會顯示今天總共答對幾題（含前面的小考）。可以請答對最多的長輩分享一件回去要做的事。" data-quizset='[
+ {"q":"115 年每人每年贈與稅免稅額是多少？","o":["100 萬","244 萬","553 萬","1,333 萬"],"a":1,"f":"244 萬，算「送的人」一年送出去的總額；夫妻各有一份。"},
+ {"q":"遺產沒有超過免稅額 1,333 萬，需要申報嗎？","o":["不用","要，六個月內申報才能取得免稅證明辦過戶","超過 500 萬才要","看國稅局有沒有來信"],"a":1,"f":"不用繳稅也要申報，否則拿不到免稅證明，房子和存款都辦不了繼承。"},
+ {"q":"自書遺囑一定要具備的三件事是？","o":["打字、簽名、蓋章","親手寫全文、寫年月日、親自簽名","律師在場、錄影、公證","見證人兩位、簽名、封存"],"a":1,"f":"親手寫全文、記明年月日、親自簽名，缺一不可；打字或蓋章代替簽名都無效。"},
+ {"q":"2027 年 2 月 17 日起，哪一種繼承人不再有特留分？","o":["父母","配偶","兄弟姊妹","祖父母"],"a":2,"f":"兄弟姊妹特留分已刪除；但沒有遺囑時，兄弟姊妹仍照應繼分繼承。"},
+ {"q":"安養信託最主要的功能是？","o":["幫我投資賺錢","省遺產稅","把錢交給制度，防詐騙、防失智後被挪用","讓子女不能繼承"],"a":2,"f":"信託是「保全與專款專用」，不是理財也不是節稅；身後剩餘仍依遺囑或法定繼承分配。"},
+ {"q":"「意定監護」要在什麼時候辦？","o":["失智確診後","住進安養機構時","意識清楚時先簽契約並公證","過世前"],"a":2,"f":"趁清醒時自己選監護人並公證，將來受監護宣告時法院原則上照契約選任。"}
+]'>
+  <div class="tag">總複習</div>
+  <h1 class="small">今天聽懂了嗎？六題檢核</h1>
+  <div class="body" id="qs-body"></div>
+</section>
+
+<!-- 33 action -->
+<section class="slide" data-note="結尾互動：請大家在心裡選一件「回去一個月內要做的事」，可以邀請兩三位說出來。給肯定：能坐在這裡聽完，已經比大多數人更早開始了。">
+  <div class="tag">回家以後</div>
+  <h1 class="small">今天回去，先做哪一件？</h1>
+  <div class="body">
+    <div class="steps">
+      <div class="step"><div class="no">1</div><h3>盤點財產</h3>列一張清單：房子、存款、股票、保單、債務，放在家人找得到的地方。</div>
+      <div class="step"><div class="no">2</div><h3>和家人開口談</h3>找一個吃飯的日子，說說自己的想法。開口比寫文件更難，也更重要。</div>
+      <div class="step"><div class="no">3</div><h3>先寫一份遺囑</h3>到公證人那裡做公證遺囑，或至少親手寫一份有日期、有簽名的自書遺囑。</div>
+      <div class="step"><div class="no">4</div><h3>去銀行問信託</h3>了解安養信託怎麼開辦、費用多少，為自己的老後留一道防線。</div>
+    </div>
+    <div class="bigq" style="font-size:4rem">資產傳承，傳的不只是錢，<br>是「不讓家人為難」的心意。</div>
+  </div>
+</section>
+
+<!-- 34 end -->
+<section class="slide cover" data-note="開放提問。若有人問到個案，提醒請找專業人員，並可留下據點或協會聯絡方式。邀請追蹤粉專取得後續課程資訊。">
+  <div class="coin">$</div>
+  <div class="tag">謝謝大家</div>
+  <h1>有問題，歡迎現在問</h1>
+  <div class="lead">今天的內容是通則與觀念<br>每個家庭都不一樣，實際規劃請找律師、地政士、會計師或銀行信託部門</div>
+  <div class="who">愛迪樂健康促進團隊・社團法人台灣生活復能健康促進協會</div>
+</section>
+
+
+<div id="notes"><h4>講師提示（N 鍵開關）</h4><div id="notes-body"></div></div>
+<div id="toc"><h2>目錄（T 鍵開關）</h2><div class="g" id="toc-g"></div></div>
+<div id="calcov"><div class="top"><span id="calcov-title">贈與稅・遺產稅 試算器</span><button onclick="closeCalc()">關閉 ✕</button></div><iframe id="calcfr" title="試算器"></iframe></div>
+<div id="vid"><div class="top"><span>影片</span><button onclick="closeVideo()">關閉 ✕</button></div><iframe id="vidfr" title="影片" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+<div id="pop"><div class="in"><h3 id="pop-h"></h3><div id="pop-b"></div><button onclick="closePop()">知道了</button></div></div>
+
+<div id="nav">
+  <button onclick="go(-1)">上一頁</button>
+  <button onclick="go(1)">下一頁</button>
+  <span id="pg"></span>
+  <span id="score" style="color:var(--amber);font-weight:900">答對 0 / 0</span>
+  <span class="sp" style="text-align:center;color:#9fb8bc;font-size:1.9rem;white-space:nowrap;overflow:hidden">愛迪樂健康促進團隊</span>
+  <button onclick="toggle('toc')">目錄 T</button>
+  <button onclick="toggle('notes')">講師提示 N</button>
+  <button id="snd" onclick="toggleSound()">音效：開</button>
+  <button onclick="fs()">全螢幕 F</button>
+</div>
+</div>
+
+<script type="text/plain" id="inh-src"><!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>應繼分・特留分 試算器</title>
+<style>
+:root{--orange:#E8552D;--amber:#F4A93C;--teal:#028090;--ink:#12343B;--bg:#FBF6EC;--card:#fff;--line:#D9CBB1;--muted:#5d6f74;--soft:#DDEFF0;--warm:#FBE3DA;--text:#12343B;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f2a30;--card:#163d45;--line:#2d5a63;--muted:#a9c3c8;--soft:#1d4a52;--warm:#4a2a20;--text:#f1f4f3;--ink:#f1f4f3}}
+:root[data-theme="dark"]{--bg:#0f2a30;--card:#163d45;--line:#2d5a63;--muted:#a9c3c8;--soft:#1d4a52;--warm:#4a2a20;--text:#f1f4f3;--ink:#f1f4f3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;background:var(--bg);color:var(--text);font-size:20px;line-height:1.5}
+header{background:linear-gradient(135deg,#12343B,#0b5a63);color:#fff;padding:36px 20px 28px}
+header .in{max-width:1100px;margin:0 auto}
+header h1{font-size:34px;font-weight:900;line-height:1.25}
+header p{color:#dfeff1;margin-top:8px;font-size:18px}
+main{max-width:1100px;margin:0 auto;padding:18px 20px 60px}
+.grid{display:grid;grid-template-columns:1fr 1.25fr;gap:22px}
+.grid>div{align-self:start}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:22px}
+.card h2{font-size:22px;color:var(--teal);margin-bottom:14px;font-weight:900}
+.f{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.f:last-child{border-bottom:none}
+.f label{flex:1;min-width:160px}
+.f small{display:block;color:var(--muted);font-size:15px;line-height:1.4}
+.f input,.f select{font:inherit;font-size:22px;font-weight:900;color:var(--orange);background:transparent;border:none;border-bottom:3px solid var(--amber);text-align:right;width:130px;outline:none;padding:4px 2px}
+.f select{text-align:left;width:auto;min-width:90px;max-width:260px}
+.f input:focus-visible,.f select:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.res{background:var(--ink);color:#fff;border-radius:20px;padding:24px;position:sticky;top:12px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .res{background:#071c21}}
+.res .lbl{color:#bfd8dc;font-size:16px}
+.res .big{font-size:30px;font-weight:900;color:var(--amber);line-height:1.2;margin:4px 0 14px}
+.res table{width:100%;border-collapse:collapse;font-size:17px;margin-top:10px}
+.res th{text-align:left;color:#bfd8dc;font-weight:700;padding:6px 4px;border-bottom:2px solid rgba(255,255,255,.3);font-size:15px}
+.res td{padding:8px 4px;border-bottom:1px solid rgba(255,255,255,.14);vertical-align:top}
+.res td.r{text-align:right;white-space:nowrap}
+.res tr.hi td{color:var(--amber);font-weight:900}
+.tips{margin-top:16px;padding:14px 16px;background:rgba(244,169,60,.14);border-left:5px solid var(--amber);border-radius:10px;font-size:16px;line-height:1.55}
+.tips li{margin-left:20px;margin-bottom:6px}
+.warn{background:var(--warm);border:2px solid var(--orange);border-radius:14px;padding:14px 16px;font-size:17px;margin-top:16px;line-height:1.5}
+.explain{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:860px){.explain{grid-template-columns:1fr}}
+.explain .card h3{color:var(--orange);font-size:20px;margin-bottom:8px}
+footer{text-align:center;color:var(--muted);font-size:15px;padding:20px;line-height:1.6}
+</style>
+</head>
+<body>
+<header><div class="in">
+  <h1>應繼分・特留分 試算器</h1>
+  <p>輸入家庭成員與遺產，立即看出：沒有遺囑時法律怎麼分（應繼分）、有遺囑時每個人最少能保住多少（特留分）。已納入 2027 年 2 月 17 日起刪除兄弟姊妹特留分的新制。</p>
+</div></header>
+
+<main>
+<div class="grid">
+<div>
+  <div class="card">
+    <h2>家庭成員</h2>
+    <div class="f"><label>遺產總額（萬元）<small>扣完債務後的淨遺產</small></label><input id="i-total" type="number" value="1200" min="0"> <span>萬</span></div>
+    <div class="f"><label>配偶在世</label><select id="i-sp"><option value="1">是</option><option value="0">否</option></select></div>
+    <div class="f"><label>子女人數（第一順位）<small>已過世子女若留有孫子女，仍算 1 人（由孫子女代位）</small></label><input id="i-kid" type="number" value="0" min="0"> <span>人</span></div>
+    <div class="f"><label>父母在世人數（第二順位）</label><input id="i-par" type="number" value="0" min="0" max="2"> <span>人</span></div>
+    <div class="f"><label>兄弟姊妹人數（第三順位）<small>已過世的兄弟姊妹不算；姪子、外甥不能代位</small></label><input id="i-sib" type="number" value="3" min="0"> <span>人</span></div>
+    <div class="f"><label>祖父母在世人數（第四順位）</label><input id="i-gp" type="number" value="0" min="0" max="4"> <span>人</span></div>
+    <div class="f"><label>過世時間<small>影響兄弟姊妹有沒有特留分</small></label><select id="i-when"><option value="new">2027/2/17 以後（新法）</option><option value="old">2027/2/16 以前（舊法）</option></select></div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h2>遺囑怎麼寫</h2>
+    <div class="f"><label>遺囑內容</label><select id="i-will"><option value="none">沒有遺囑</option><option value="sp">全部給配偶</option><option value="kid1">全部給其中一位子女</option><option value="par1">全部給其中一位父母</option><option value="sib1">全部給其中一位兄弟姊妹</option><option value="other">全部遺贈給非繼承人（看護、乾兒子、公益）</option></select></div>
+    <div class="f"><label>其他繼承人會主張特留分（扣減）嗎</label><select id="i-claim"><option value="1">會</option><option value="0">不會，尊重遺囑</option></select></div>
+  </div>
+</div>
+<div>
+  <div class="res">
+    <div class="lbl" id="o-order"></div>
+    <div class="big" id="o-head"></div>
+    <table id="o-table"></table>
+    <div class="tips" id="o-tips"></div>
+  </div>
+</div>
+</div>
+
+<div class="explain">
+  <div class="card"><h3>應繼分＝沒有遺囑時的「法定分法」</h3>配偶永遠有份，再看四個順位：子女 → 父母 → 兄弟姊妹 → 祖父母，前一順位有人，後面就沒份。配偶和子女平均分；和父母或兄弟姊妹各拿一半；和祖父母拿 2/3。</div>
+  <div class="card"><h3>特留分＝有遺囑時的「最低保障」</h3>遺囑可以多給某人，但每位繼承人仍保有特留分：配偶、子女、父母是應繼分的 1/2；祖父母是 1/3；兄弟姊妹原本是 1/3，2027 年 2 月 17 日起刪除。特留分要由本人主張「扣減」，不主張就照遺囑執行。</div>
+</div>
+<div class="warn">本工具為教學用的簡易估算：未納入代位繼承的細分、拋棄繼承、喪失繼承權、遺贈多人、配偶剩餘財產差額分配請求權等情形。實際個案請洽律師或地政士。</div>
+<footer>依民法第 1138、1144、1223、1225 條，及 2026 年 7 月 28 日三讀、2027 年 2 月 17 日施行之民法第 1223 條修正。愛迪樂健康促進團隊</footer>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);const v=id=>parseFloat($(id).value)||0;
+const f=n=>n.toLocaleString('zh-TW',{maximumFractionDigits:1});
+function frac(num,den){const g=(a,b)=>b?g(b,a%b):a;const d=g(num,den);return (num/d)+'/'+(den/d);}
+function calc(){
+  const total=v('i-total'),sp=v('i-sp'),kid=v('i-kid'),par=Math.min(2,v('i-par')),sib=v('i-sib'),gp=Math.min(4,v('i-gp'));
+  const newLaw=$('i-when').value==='new';const will=$('i-will').value;const claim=v('i-claim');
+  // determine order group
+  let group=null,n=0,name='';
+  if(kid>0){group='kid';n=kid;name='子女';}
+  else if(par>0){group='par';n=par;name='父母';}
+  else if(sib>0){group='sib';n=sib;name='兄弟姊妹';}
+  else if(gp>0){group='gp';n=gp;name='祖父母';}
+  // shares as fractions [num,den] of total
+  let heirs=[];
+  if(sp){
+    let spShare;
+    if(group==='kid')spShare=[1,n+1];else if(group==='par'||group==='sib')spShare=[1,2];else if(group==='gp')spShare=[2,3];else spShare=[1,1];
+    heirs.push({k:'sp',label:'配偶',share:spShare,res:[1,2]});
+  }
+  if(group){
+    let gs; // group share
+    if(!sp)gs=[1,1];else if(group==='kid')gs=[n,n+1];else if(group==='par'||group==='sib')gs=[1,2];else gs=[1,3];
+    const each=[gs[0],gs[1]*n];
+    const res=group==='gp'?[1,3]:group==='sib'?(newLaw?[0,1]:[1,3]):[1,2];
+    for(let i=1;i<=n;i++)heirs.push({k:group+i,label:name+(n>1?' '+i:''),share:each,res:res,grp:group});
+  }
+  // outputs
+  const order=sp?('配偶'+(group?('＋第'+{kid:'一',par:'二',sib:'三',gp:'四'}[group]+'順位（'+name+'）'):'（無其他順位繼承人）')):(group?('第'+{kid:'一',par:'二',sib:'三',gp:'四'}[group]+'順位（'+name+'）'):'沒有任何繼承人');
+  $('o-order').textContent='這次由誰繼承：'+order;
+  if(heirs.length===0){$('o-head').textContent='無繼承人，遺產最終歸國庫（遺囑遺贈除外）';$('o-table').innerHTML='';$('o-tips').innerHTML='<ul><li>沒有配偶、也沒有四個順位的人：可用遺囑把財產遺贈給想照顧的人或公益團體，否則歸國庫。</li></ul>';return;}
+  // will beneficiary
+  let ben=null;
+  if(will==='sp'&&sp)ben='sp';else if(will==='kid1'&&group==='kid')ben='kid1';else if(will==='par1'&&group==='par')ben='par1';else if(will==='sib1'&&group==='sib')ben='sib1';else if(will==='other')ben='other';
+  const willValid=will==='none'||ben!==null;
+  let rows='';let tipsArr=[];
+  let sumRes=0;
+  heirs.forEach(h=>{const sh=h.share[0]/h.share[1];const rs=sh*h.res[0]/h.res[1];h.amtShare=total*sh;h.amtRes=total*rs;h.rsFrac=h.res[0]?frac(h.share[0]*h.res[0],h.share[1]*h.res[1]):'無';});
+  if(will==='none'||!willValid){
+    $('o-head').textContent='沒有遺囑：照應繼分分';
+    rows=heirs.map(h=>`<tr><td>${h.label}</td><td class="r">${frac(h.share[0],h.share[1])}</td><td class="r">${f(h.amtShare)} 萬</td><td class="r">${h.rsFrac}</td><td class="r">${h.res[0]?f(h.amtRes)+' 萬':'—'}</td></tr>`).join('');
+    $('o-table').innerHTML='<tr><th>繼承人</th><th style="text-align:right">應繼分</th><th style="text-align:right">金額</th><th style="text-align:right">特留分</th><th style="text-align:right">最低保障</th></tr>'+rows;
+    if(!willValid&&will!=='none')tipsArr.push('您選的遺囑對象這次不是繼承人（或不存在），已改以無遺囑計算。');
+  }else{
+    const others=heirs.filter(h=>h.k!==ben);
+    const resSum=claim?others.reduce((a,h)=>a+h.amtRes,0):0;
+    const benGet=total-resSum;
+    $('o-head').textContent=(ben==='other'?'遺贈給非繼承人':'全部給'+heirs.find(h=>h.k===ben).label)+'：受益者實拿 '+f(benGet)+' 萬';
+    rows=heirs.map(h=>{const isBen=h.k===ben;const get=isBen?benGet:(claim?h.amtRes:0);return `<tr class="${isBen?'hi':''}"><td>${h.label}${isBen?'（遺囑指定）':''}</td><td class="r">${frac(h.share[0],h.share[1])}</td><td class="r">${h.rsFrac}</td><td class="r">${h.res[0]?f(h.amtRes)+' 萬':'—'}</td><td class="r">${f(get)} 萬</td></tr>`;}).join('');
+    if(ben==='other')rows+=`<tr class="hi"><td>非繼承人（受遺贈）</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">${f(benGet)} 萬</td></tr>`;
+    $('o-table').innerHTML='<tr><th>繼承人</th><th style="text-align:right">應繼分</th><th style="text-align:right">特留分</th><th style="text-align:right">最低保障</th><th style="text-align:right">實拿</th></tr>'+rows;
+    if(claim&&resSum>0)tipsArr.push(`其他繼承人主張扣減後，遺囑受益者從 ${f(total)} 萬減為 ${f(benGet)} 萬。`);
+    if(!claim)tipsArr.push('其他繼承人不主張扣減，遺囑照原樣執行。特留分是「可以要」，不是「自動給」。');
+    if(group==='sib'&&newLaw)tipsArr.push('新法：兄弟姊妹沒有特留分，遺囑可以完全不給手足。');
+    if(group==='sib'&&!newLaw)tipsArr.push('舊法：兄弟姊妹仍有應繼分 1/3 的特留分，遺囑無法完全排除。');
+  }
+  if(group==='sib')tipsArr.push('提醒：沒有遺囑時，不論新舊法，兄弟姊妹都照應繼分繼承。想不給手足，一定要立有效遺囑。');
+  if(sp&&group!=='kid'&&group)tipsArr.push('配偶和'+name+'一起繼承時，配偶只拿一半（祖父母時拿 2/3）。無子女夫妻想把財產全留給另一半，要靠遺囑。');
+  tipsArr.push('不是法定繼承人的人（同居伴侶、媳婦女婿、姪子外甥、未收養的繼子女）只能靠遺囑遺贈、保險受益人或信託取得財產。');
+  if(sp)tipsArr.push('配偶若採法定財產制，還可先主張「剩餘財產差額分配請求權」，拿回婚後財產差額的一半，再分遺產。');
+  $('o-tips').innerHTML='<ul>'+tipsArr.map(t=>'<li>'+t+'</li>').join('')+'</ul>';
+}
+['i-total','i-sp','i-kid','i-par','i-sib','i-gp','i-when','i-will','i-claim'].forEach(id=>$(id).addEventListener('input',calc));
+calc();
+<\/script>
+</body>
+</html>
+</script>
+<script type="text/plain" id="calc-src"><!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>贈與稅・遺產稅 試算器（115 年標準）</title>
+<style>
+:root{--orange:#E8552D;--amber:#F4A93C;--teal:#028090;--ink:#12343B;--bg:#FBF6EC;--card:#fff;--line:#D9CBB1;--muted:#5d6f74;--soft:#DDEFF0;--warm:#FBE3DA;--text:#12343B;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f2a30;--card:#163d45;--line:#2d5a63;--muted:#a9c3c8;--soft:#1d4a52;--warm:#4a2a20;--text:#f1f4f3;--ink:#f1f4f3}}
+:root[data-theme="dark"]{--bg:#0f2a30;--card:#163d45;--line:#2d5a63;--muted:#a9c3c8;--soft:#1d4a52;--warm:#4a2a20;--text:#f1f4f3;--ink:#f1f4f3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;background:var(--bg);color:var(--text);font-size:20px;line-height:1.5}
+header{background:linear-gradient(135deg,#12343B,#0b5a63);color:#fff;padding:36px 20px 28px}
+header .in{max-width:1100px;margin:0 auto}
+header h1{font-size:34px;font-weight:900;line-height:1.25}
+header p{color:#dfeff1;margin-top:8px;font-size:18px}
+.tabs{display:flex;gap:10px;max-width:1100px;margin:18px auto 0;padding:0 20px}
+.tab{flex:1;padding:16px;font-size:22px;font-weight:900;border:3px solid var(--line);border-radius:16px;background:var(--card);color:var(--text);cursor:pointer;text-align:center}
+.tab.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+main{max-width:1100px;margin:0 auto;padding:18px 20px 60px}
+.panel{display:none}.panel.on{display:block}
+.grid{display:grid;grid-template-columns:1.05fr 1fr;gap:22px}
+@media (max-width:820px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:22px}
+.card h2{font-size:22px;color:var(--teal);margin-bottom:14px;font-weight:900}
+.card h3{font-size:19px;color:var(--teal);margin:18px 0 8px;font-weight:900}
+.f{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.f:last-child{border-bottom:none}
+.f label{flex:1;min-width:160px}
+.f small{display:block;color:var(--muted);font-size:15px;line-height:1.4}
+.f input,.f select{font:inherit;font-size:22px;font-weight:900;color:var(--orange);background:transparent;border:none;border-bottom:3px solid var(--amber);text-align:right;width:150px;outline:none;padding:4px 2px}
+.f select{text-align:left;width:auto;min-width:90px}
+.f input:focus-visible,.f select:focus-visible,.tab:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.grid>div{align-self:start}
+.res{background:var(--ink);color:#fff;border-radius:20px;padding:24px;position:sticky;top:12px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .res{background:#071c21}}
+.res .lbl{color:#bfd8dc;font-size:16px}
+.res .big{font-size:56px;font-weight:900;color:var(--amber);line-height:1.1;margin:4px 0 14px}
+.res .mid{font-size:28px;font-weight:900;color:#fff}
+.res table{width:100%;border-collapse:collapse;font-size:17px;margin-top:10px}
+.res td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.res td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+.res tr.sum td{color:var(--amber);font-size:19px;border-bottom:2px solid var(--amber)}
+.tips{margin-top:16px;padding:14px 16px;background:rgba(244,169,60,.14);border-left:5px solid var(--amber);border-radius:10px;font-size:16px;line-height:1.55}
+.tips li{margin-left:20px;margin-bottom:6px}
+.warn{background:var(--warm);border:2px solid var(--orange);border-radius:14px;padding:14px 16px;font-size:17px;margin-top:16px;line-height:1.5}
+.ref{margin-top:22px}
+.ref table{width:100%;border-collapse:collapse;font-size:17px;background:var(--card);border-radius:14px;overflow:hidden}
+.ref th{background:var(--teal);color:#fff;padding:10px;text-align:left}
+.ref td{padding:9px 10px;border-bottom:1px solid var(--line)}
+.bar{height:22px;border-radius:11px;background:var(--soft);overflow:hidden;margin-top:6px;display:flex}
+.bar span{display:block;height:100%}
+.legend{font-size:15px;color:var(--muted);margin-top:6px}
+footer{text-align:center;color:var(--muted);font-size:15px;padding:20px;line-height:1.6}
+.btn{font:inherit;font-size:17px;background:var(--teal);color:#fff;border:none;border-radius:10px;padding:8px 16px;cursor:pointer;margin-top:10px}
+.btn.alt{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+</style>
+</head>
+<body>
+<header><div class="in">
+  <h1>贈與稅・遺產稅 試算器</h1>
+  <p>依財政部公告 115 年（2026）標準。輸入數字，立即看到稅率、稅額、扣除明細與規劃提醒。僅供教學估算，實際以國稅局核定為準。</p>
+</div></header>
+
+<div class="tabs" role="tablist">
+  <button class="tab on" data-p="gift" role="tab">贈與稅</button>
+  <button class="tab" data-p="estate" role="tab">遺產稅</button>
+</div>
+
+<main>
+<!-- ================= GIFT ================= -->
+<section class="panel on" id="p-gift">
+<div class="grid">
+<div>
+  <div class="card">
+    <h2>贈與人的資料（一位贈與人算一次）</h2>
+    <div class="f"><label>今年已經送出去的金額<small>同一年度、同一位贈與人，送給所有人的合計</small></label><input id="g-prev" type="number" min="0" value="0"> <span>萬</span></div>
+    <div class="f"><label>這次想要贈與的金額<small>現金、股票、或不動產的公告現值</small></label><input id="g-now" type="number" min="0" value="500"> <span>萬</span></div>
+    <div class="f"><label>受贈子女在結婚前後六個月內？<small>父母各可再多送 100 萬（婚嫁贈與）</small></label><select id="g-wed"><option value="0">否</option><option value="1">是</option></select></div>
+    <div class="f"><label>贈與的是不動產？<small>不動產另有土地增值稅、契稅，且子女日後出售的房地合一稅成本較高</small></label><select id="g-land"><option value="0">否</option><option value="1">是</option></select></div>
+    <div class="f"><label>配偶也願意一起贈與？<small>夫妻各有 244 萬免稅額，可先把財產贈與配偶（不計入）再分別送</small></label><select id="g-sp"><option value="0">否</option><option value="1">是，兩人一起規劃</option></select></div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h2>分年贈與試算</h2>
+    <div class="f"><label>想在幾年內送完</label><input id="g-yrs" type="number" min="1" max="30" value="5"> <span>年</span></div>
+    <div id="g-plan" style="font-size:18px;line-height:1.6;margin-top:8px"></div>
+  </div>
+</div>
+<div>
+  <div class="res">
+    <div class="lbl">本次贈與後，今年合計應納贈與稅（估）</div>
+    <div class="big" id="g-tax">—</div>
+    <div class="lbl">本次新增稅額 <span class="mid" id="g-add">—</span></div>
+    <table id="g-table"></table>
+    <div class="tips" id="g-tips"></div>
+  </div>
+</div>
+</div>
+<div class="ref">
+  <table>
+    <tr><th>贈與淨額（扣除 244 萬免稅額後）</th><th>稅率</th><th>累進差額</th></tr>
+    <tr><td>2,811 萬以下</td><td>10%</td><td>—</td></tr>
+    <tr><td>2,811 萬 ～ 5,621 萬</td><td>15%</td><td>140.55 萬</td></tr>
+    <tr><td>5,621 萬以上</td><td>20%</td><td>421.6 萬</td></tr>
+  </table>
+  <div class="warn">贈與超過免稅額時，要在贈與後 30 日內向國稅局申報。贈與人過世前兩年內送給配偶、子女、孫子女、兄弟姊妹及其配偶的財產，仍會併回遺產計算遺產稅（已納贈與稅可扣抵）。</div>
+</div>
+</section>
+
+<!-- ================= ESTATE ================= -->
+<section class="panel" id="p-estate">
+<div class="grid">
+<div>
+  <div class="card">
+    <h2>遺產項目（萬元）</h2>
+    <div class="f"><label>不動產<small>用「公告土地現值＋房屋評定現值」，不是市價</small></label><input id="e-land" type="number" min="0" value="1500"> <span>萬</span></div>
+    <div class="f"><label>存款、現金</label><input id="e-cash" type="number" min="0" value="1000"> <span>萬</span></div>
+    <div class="f"><label>股票、基金、債券<small>上市櫃股票用過世日收盤價</small></label><input id="e-stock" type="number" min="0" value="500"> <span>萬</span></div>
+    <div class="f"><label>其他財產<small>車輛、黃金、債權、保單現值（要保人為過世者）等</small></label><input id="e-other" type="number" min="0" value="0"> <span>萬</span></div>
+    <div class="f"><label>過世前兩年內贈與親屬的財產<small>要併回遺產；已繳的贈與稅可扣抵</small></label><input id="e-gift2" type="number" min="0" value="0"> <span>萬</span></div>
+    <div class="f"><label>兩年內贈與已繳的贈與稅</label><input id="e-gifttax" type="number" min="0" value="0"> <span>萬</span></div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h2>家庭狀況與扣除額</h2>
+    <div class="f"><label>配偶在世</label><select id="e-sp"><option value="1">是</option><option value="0">否</option></select></div>
+    <div class="f"><label>成年子女人數<small>每人扣 56 萬</small></label><input id="e-kid" type="number" min="0" value="2"> <span>人</span></div>
+    <div class="f"><label>未成年子女的年齡<small>用逗號分開，例如 15,10。每人 56 萬，再按距 18 歲的年數每年加 56 萬（不足一年以一年計）</small></label><input id="e-minor" type="text" value="" placeholder="例：15,10" style="width:150px;text-align:right"></div>
+    <div class="f"><label>父母在世人數<small>每人扣 138 萬（最多 2 人）</small></label><input id="e-par" type="number" min="0" max="2" value="0"> <span>人</span></div>
+    <div class="f"><label>重度以上身心障礙的繼承人<small>配偶、子女、父母中符合者，每人再扣 693 萬</small></label><input id="e-dis" type="number" min="0" value="0"> <span>人</span></div>
+    <div class="f"><label>受扶養的兄弟姊妹、祖父母<small>每人扣 56 萬（須由過世者扶養）</small></label><input id="e-sib" type="number" min="0" value="0"> <span>人</span></div>
+    <div class="f"><label>未償債務、未繳稅捐、罰鍰<small>有確實證明者</small></label><input id="e-debt" type="number" min="0" value="0"> <span>萬</span></div>
+    <div class="f"><label>配偶剩餘財產差額分配請求權<small>法定財產制下，配偶可先取得兩人婚後剩餘財產差額的一半；填入預計金額</small></label><input id="e-claim" type="number" min="0" value="0"> <span>萬</span></div>
+    <div class="f"><label>日常生活必需器具（不計入 ≤100 萬）</label><input id="e-tool1" type="number" min="0" max="100" value="0"> <span>萬</span></div>
+    <div class="f"><label>職業上的工具（不計入 ≤56 萬）</label><input id="e-tool2" type="number" min="0" max="56" value="0"> <span>萬</span></div>
+    <div class="f"><label>過世日期<small>用來推算申報與登記期限</small></label><input id="e-date" type="date" style="width:190px;text-align:left"></div>
+  </div>
+</div>
+<div>
+  <div class="res">
+    <div class="lbl">估計應納遺產稅</div>
+    <div class="big" id="e-tax">—</div>
+    <div class="lbl">遺產淨額 <span class="mid" id="e-net">—</span>　<span id="e-rate"></span></div>
+    <div class="bar" id="e-bar"></div><div class="legend" id="e-legend"></div>
+    <table id="e-table"></table>
+    <div class="tips" id="e-tips"></div>
+  </div>
+</div>
+</div>
+<div class="ref">
+  <table>
+    <tr><th>遺產淨額（扣除免稅額與各項扣除額後）</th><th>稅率</th><th>累進差額</th></tr>
+    <tr><td>5,621 萬以下</td><td>10%</td><td>—</td></tr>
+    <tr><td>5,621 萬 ～ 1 億 1,242 萬</td><td>15%</td><td>281.05 萬</td></tr>
+    <tr><td>1 億 1,242 萬以上</td><td>20%</td><td>843.15 萬</td></tr>
+  </table>
+  <div class="warn">不論是否達免稅額，都要在過世後六個月內申報（可申請延長三個月），才能取得免稅或完稅證明辦理繼承登記；繼承登記也須於六個月內辦理。應納稅額 30 萬以上可申請分 18 期繳納，也可申請以遺產中的現金或實物抵繳。</div>
+</div>
+</section>
+
+<footer>依遺產及贈與稅法第 12 條之 1 財政部公告 115 年標準。本工具為教學用途的簡易估算，未納入所有法定項目，實際稅額以國稅局核定為準；規劃前請洽律師、地政士、會計師或銀行信託部門。<br>愛迪樂健康促進團隊</footer>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const v=id=>parseFloat($(id).value)||0;
+const f=n=>n.toLocaleString('zh-TW',{maximumFractionDigits:1});
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='p-'+t.dataset.p));try{localStorage.setItem('tab',t.dataset.p)}catch(e){}});
+try{const t=localStorage.getItem('tab');if(t)document.querySelector('.tab[data-p="'+t+'"]').click();}catch(e){}
+
+/* ---- gift ---- */
+function giftTax(net){ if(net<=0)return 0; if(net<=2811)return net*.10; if(net<=5621)return net*.15-140.55; return net*.20-421.6; }
+function giftRate(net){ return net<=0?'免稅':net<=2811?'10%':net<=5621?'15%':'20%'; }
+function calcGift(){
+  const prev=v('g-prev'),now=v('g-now'),wed=v('g-wed'),land=v('g-land'),sp=v('g-sp'),yrs=Math.max(1,v('g-yrs'));
+  const wedEx=wed?100:0;
+  const totalBefore=prev, totalAfter=prev+now;
+  const netBefore=Math.max(0,totalBefore-wedEx-244), netAfter=Math.max(0,totalAfter-wedEx-244);
+  const taxBefore=giftTax(netBefore), taxAfter=giftTax(netAfter), add=taxAfter-taxBefore;
+  $('g-tax').textContent=taxAfter<=0?'免稅':'約 '+f(taxAfter)+' 萬';
+  $('g-add').textContent=add<=0?'0':'約 '+f(add)+' 萬';
+  const remain=Math.max(0,244+wedEx-totalAfter);
+  $('g-table').innerHTML=`
+    <tr><td>今年贈與總額（含本次）</td><td>${f(totalAfter)} 萬</td></tr>
+    <tr><td>減：免稅額</td><td>-244 萬</td></tr>
+    ${wed?`<tr><td>減：婚嫁贈與不計入</td><td>-100 萬</td></tr>`:''}
+    <tr class="sum"><td>贈與淨額</td><td>${f(netAfter)} 萬</td></tr>
+    <tr><td>適用稅率</td><td>${giftRate(netAfter)}</td></tr>
+    <tr><td>今年剩餘免稅額度</td><td>${f(remain)} 萬</td></tr>`;
+  const tips=[];
+  if(netAfter>0){
+    const perYear=sp?488:244;
+    const yearsNeeded=Math.ceil(now/(perYear+ (wed?100*(sp?2:1):0)));
+    tips.push(`這筆若改為<b>分年贈與</b>（每年 ${sp?'夫妻合計 488':'244'} 萬），約 <b>${yearsNeeded} 年</b>可全部免稅送完，省下約 ${f(add)} 萬。`);
+  }
+  if(sp&&netAfter>0) tips.push('先把財產<b>贈與配偶</b>（夫妻互贈不計入贈與總額），再由兩人分別贈與子女，免稅額加倍。');
+  if(land) tips.push('不動產以<b>公告現值</b>計算贈與，金額通常比市價低；但子女日後出售時，房地合一稅以<b>受贈時的公告現值</b>為成本，獲利被放大，稅可能更重。請一併評估。');
+  if(netAfter>0) tips.push('贈與後 <b>30 日內</b>要向國稅局申報；若贈與人兩年內過世，這筆仍會併回遺產。');
+  if(netAfter<=0) tips.push('本次在免稅範圍內，不用繳稅；超過 244 萬才需要申報。建議保留匯款紀錄。');
+  tips.push('每年 244 萬是算<b>送的人</b>的總額，不是每個受贈人各 244 萬。');
+  $('g-tips').innerHTML='<ul>'+tips.map(t=>'<li>'+t+'</li>').join('')+'</ul>';
+  /* plan */
+  const per=(sp?488:244);
+  const cap=per*yrs+(wed?100*(sp?2:1):0);
+  const amount=now;
+  $('g-plan').innerHTML= amount<=cap
+    ? `${yrs} 年內每年送 <b style="color:var(--orange)">${f(Math.min(per,amount/yrs))} 萬</b>${sp?'（夫妻各半）':''}，全部免稅。合計 ${f(amount)} 萬，一毛稅都不用繳。`
+    : `${yrs} 年內最多免稅送 <b style="color:var(--orange)">${f(cap)} 萬</b>${sp?'（夫妻合計）':''}；剩下 ${f(amount-cap)} 萬若一次送，約需繳 ${f(giftTax(amount-cap))} 萬贈與稅。把年數拉長到 <b>${Math.ceil((amount-(wed?100*(sp?2:1):0))/per)} 年</b> 就能全部免稅。`;
+}
+['g-prev','g-now','g-wed','g-land','g-sp','g-yrs'].forEach(id=>$(id).addEventListener('input',calcGift));
+calcGift();
+
+/* ---- estate ---- */
+function estTax(net){ if(net<=0)return 0; if(net<=5621)return net*.10; if(net<=11242)return net*.15-281.05; return net*.20-843.15; }
+function estRate(net){ return net<=0?'免稅':net<=5621?'邊際稅率 10%':net<=11242?'邊際稅率 15%':'邊際稅率 20%'; }
+function calcEstate(){
+  const land=v('e-land'),cash=v('e-cash'),stock=v('e-stock'),other=v('e-other'),gift2=v('e-gift2'),gifttax=v('e-gifttax');
+  const sp=v('e-sp'),kid=v('e-kid'),par=Math.min(2,v('e-par')),dis=v('e-dis'),sib=v('e-sib'),debt=v('e-debt'),claim=v('e-claim');
+  const tool1=Math.min(100,v('e-tool1')),tool2=Math.min(56,v('e-tool2'));
+  const minors=$('e-minor').value.split(/[,，\s]+/).map(x=>parseFloat(x)).filter(x=>!isNaN(x)&&x>=0&&x<18);
+  let minorDed=0; const minorRows=minors.map(a=>{const yrs=Math.ceil(18-a);const d=56+yrs*56;minorDed+=d;return `${a} 歲：56＋${yrs}×56＝${d} 萬`;});
+  const gross=land+cash+stock+other+gift2;
+  const rows=[['遺產總額（含兩年內贈與 '+f(gift2)+' 萬）',gross]];
+  const ded=[
+    ['免稅額',1333],['喪葬費扣除額',138],
+    sp?['配偶扣除額',553]:null,
+    kid?['成年子女 '+kid+' 人 × 56 萬',kid*56]:null,
+    minors.length?['未成年子女 '+minors.length+' 人（含加扣）',minorDed]:null,
+    par?['父母 '+par+' 人 × 138 萬',par*138]:null,
+    dis?['重度身心障礙 '+dis+' 人 × 693 萬',dis*693]:null,
+    sib?['受扶養兄弟姊妹、祖父母 '+sib+' 人 × 56 萬',sib*56]:null,
+    debt?['未償債務、稅捐',debt]:null,
+    claim?['配偶剩餘財產差額分配請求權',claim]:null,
+    (tool1+tool2)?['不計入：生活器具、職業工具',tool1+tool2]:null
+  ].filter(Boolean);
+  const dedSum=ded.reduce((a,b)=>a+b[1],0);
+  const net=Math.max(0,gross-dedSum);
+  const tax=Math.max(0,estTax(net)-gifttax);
+  $('e-tax').textContent=net===0?'免稅':'約 '+f(tax)+' 萬';
+  $('e-net').textContent=f(net)+' 萬';
+  $('e-rate').textContent=net===0?'（仍須申報）':estRate(net)+'，有效稅率 '+(gross?(tax/gross*100).toFixed(1):0)+'%';
+  const pct=gross?Math.min(100,tax/gross*100):0, dedPct=gross?Math.min(100-pct,dedSum/gross*100):0;
+  $('e-bar').innerHTML=`<span style="width:${pct}%;background:var(--orange)"></span><span style="width:${dedPct}%;background:var(--amber)"></span>`;
+  $('e-legend').textContent=`橘：繳稅 ${pct.toFixed(1)}%　黃：免稅與扣除 ${dedPct.toFixed(1)}%　其餘：課稅後留給家人的部分`;
+  $('e-table').innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td>${f(r[1])} 萬</td></tr>`).join('')
+    +ded.map(r=>`<tr><td>減：${r[0]}</td><td>-${f(r[1])} 萬</td></tr>`).join('')
+    +`<tr class="sum"><td>遺產淨額</td><td>${f(net)} 萬</td></tr>
+      <tr><td>稅額（累進）</td><td>${f(estTax(net))} 萬</td></tr>
+      ${gifttax?`<tr><td>減：已納贈與稅扣抵</td><td>-${f(gifttax)} 萬</td></tr>`:''}
+      ${minorRows.length?`<tr><td colspan="2" style="color:#bfd8dc;font-size:15px">未成年加扣明細：${minorRows.join('；')}</td></tr>`:''}`;
+  const tips=[];
+  const d=$('e-date').value;
+  if(d){const dt=new Date(d);const add=(m)=>{const x=new Date(dt);x.setMonth(x.getMonth()+m);return x.toLocaleDateString('zh-TW');};
+    tips.push(`申報期限 <b>${add(6)}</b>（可申請延長至 ${add(9)}）；繼承登記也應於 ${add(6)} 前辦理。`);}
+  if(net>0&&cash<tax) tips.push(`遺產中的現金（${f(cash)} 萬）<b>不夠繳稅</b>（約 ${f(tax)} 萬）。可考慮：以遺產中的存款直接繳納、申請分期或實物抵繳，或生前以保險<b>預留稅源</b>。`);
+  if(sp&&!claim&&net>0) tips.push('配偶在世且為法定財產制時，可評估主張<b>剩餘財產差額分配請求權</b>，常能大幅降低甚至免除遺產稅。');
+  if(net>0){const perYear=sp?488:244;tips.push(`若生前每年以 ${sp?'夫妻合計 488':'244'} 萬分年贈與，約 ${Math.ceil(net/perYear)} 年可把淨額降到零（但過世前兩年內的贈與仍會併回）。`);}
+  if(tax>=30) tips.push('稅額達 30 萬以上，可申請分 18 期繳納（每期間隔不超過 2 個月）。');
+  if(net===0) tips.push('淨額為零不用繳稅，但<b>仍要申報</b>取得免稅證明，才能辦理不動產與存款的繼承。');
+  $('e-tips').innerHTML='<ul>'+tips.map(t=>'<li>'+t+'</li>').join('')+'</ul>';
+}
+['e-land','e-cash','e-stock','e-other','e-gift2','e-gifttax','e-sp','e-kid','e-minor','e-par','e-dis','e-sib','e-debt','e-claim','e-tool1','e-tool2','e-date'].forEach(id=>$(id).addEventListener('input',calcEstate));
+calcEstate();
+<\/script>
+</body>
+</html>
+</script>
+<script>
+/* ---- scaling ---- */
+function scale(){const s=Math.min(innerWidth/1600,innerHeight/900);document.documentElement.style.setProperty('--s',s);}
+addEventListener('resize',scale);scale();
+
+/* ---- sound ---- */
+let soundOn=true,ctx;
+function beep(type){
+  if(!soundOn)return;
+  try{ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();
+    const now=ctx.currentTime;
+    const seq=type==='ok'?[[523,0],[659,.12],[784,.24]]:type==='no'?[[220,0],[180,.18]]:type==='flip'?[[660,0]]:[[440,0]];
+    seq.forEach(([f,t])=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,now+t);g.gain.exponentialRampToValueAtTime(.25,now+t+.02);g.gain.exponentialRampToValueAtTime(.0001,now+t+.22);o.connect(g).connect(ctx.destination);o.start(now+t);o.stop(now+t+.25);});
+  }catch(e){}
+}
+function toggleSound(){soundOn=!soundOn;document.getElementById('snd').textContent='音效：'+(soundOn?'開':'關');}
+
+/* ---- slides ---- */
+const slides=[...document.querySelectorAll('.slide')];let cur=0;
+const titles=slides.map((s,i)=>{const h=s.querySelector('h1');return (i+1)+'. '+(h?h.textContent.replace(/\s+/g,' ').trim():'')});
+const tocG=document.getElementById('toc-g');
+titles.forEach((t,i)=>{const a=document.createElement('a');a.textContent=t;a.onclick=()=>{show(i);toggle('toc',false)};tocG.appendChild(a);});
+function show(i){
+  cur=Math.max(0,Math.min(slides.length-1,i));
+  slides.forEach((s,k)=>s.classList.toggle('on',k===cur));
+  document.getElementById('pg').textContent=(cur+1)+' / '+slides.length;
+  document.getElementById('bar').style.width=((cur+1)/slides.length*100)+'%';
+  document.getElementById('notes-body').textContent=slides[cur].dataset.note||'';
+    location.hash=cur+1;
+}
+function go(d){show(cur+d);beep('nav');}
+function toggle(id,force){const el=document.getElementById(id);el.classList.toggle('on',force===undefined?!el.classList.contains('on'):force);}
+function fs(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();}
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT')return;
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();go(1);}
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1);}
+  else if(e.key==='n'||e.key==='N')toggle('notes');
+  else if(e.key==='t'||e.key==='T')toggle('toc');
+  else if(e.key==='f'||e.key==='F')fs();
+  else if(e.key==='c'||e.key==='C')openCalc();
+  else if(e.key==='Escape'){closePop();toggle('toc',false);closeCalc();closeVideo();}
+});
+show(parseInt(location.hash.slice(1))-1||0);
+
+/* ---- popup ---- */
+function openPop(h,b,html){document.querySelector('#pop button').onclick=closePop;document.getElementById('pop-h').textContent=h;const el=document.getElementById('pop-b');if(html)el.innerHTML=b;else el.textContent=b;document.getElementById('pop').classList.add('on');}
+function closePop(){document.getElementById('pop').classList.remove('on');}
+
+/* ---- quizzes ---- */
+document.querySelectorAll('.slide[data-quiz]').forEach(s=>{
+  const q=JSON.parse(s.dataset.quiz);const opts=[...s.querySelectorAll('.opt')];let done=false;
+  opts.forEach((o,i)=>{const pick=()=>{if(done)return;done=true;
+      opts.forEach((x,k)=>x.classList.add(k===q.ans?'ok':'no'));
+      const right=i===q.ans;beep(right?'ok':'no');addScore(right);
+      setTimeout(()=>openPop(right?'答對了！':'再想想',q.fb),800);};
+    o.onclick=pick;o.onkeydown=e=>{if(e.key==='Enter')pick();};});
+});
+
+/* ---- score ---- */
+let scoreOk=0,scoreAll=0;
+function addScore(ok){scoreAll++;if(ok)scoreOk++;document.getElementById('score').textContent='答對 '+scoreOk+' / '+scoreAll;}
+
+/* ---- quiz set (總複習) ---- */
+document.querySelectorAll('.slide[data-quizset]').forEach(sl=>{
+  const qs=JSON.parse(sl.dataset.quizset);const body=sl.querySelector('#qs-body');let idx=0,ok=0;
+  function render(){
+    if(idx>=qs.length){body.innerHTML=`<div class="qs-done"><div class="t">總複習答對</div><div class="big">${ok} / ${qs.length}</div><div class="t">今天全部小考：答對 ${scoreOk} / ${scoreAll}</div><button id="qs-again">再玩一次</button></div>`;body.querySelector('#qs-again').onclick=()=>{idx=0;ok=0;render();};return;}
+    const q=qs[idx];let done=false;
+    body.innerHTML=`<div class="qs-prog">第 ${idx+1} 題／共 ${qs.length} 題</div><div class="q-text">${q.q}</div><div class="opts">${q.o.map((o,i)=>`<div class="opt" tabindex="0"><span class="ab">${'ABCD'[i]}</span>${o}</div>`).join('')}</div>`;
+    const opts=[...body.querySelectorAll('.opt')];
+    opts.forEach((el,i)=>{const pick=()=>{if(done)return;done=true;opts.forEach((x,k)=>x.classList.add(k===q.a?'ok':'no'));const right=i===q.a;if(right)ok++;beep(right?'ok':'no');addScore(right);
+      setTimeout(()=>{openPop(right?'答對了！':'再想想',q.f);document.querySelector('#pop button').onclick=()=>{closePop();idx++;render();};},800);};
+      el.onclick=pick;el.onkeydown=e=>{if(e.key==='Enter')pick();};});
+  }
+  render();
+});
+
+/* ---- true/false ---- */
+document.querySelectorAll('.slide[data-tf]').forEach(sl=>{
+  const items=JSON.parse(sl.dataset.tf);const box=sl.querySelector('.tf');let done=0,ok=0;
+  items.forEach(it=>{const r=document.createElement('div');r.className='tfr';
+    r.innerHTML=`<span class="st">${it.s}</span><button data-v="1">對</button><button data-v="0">錯</button><div class="why">${it.f}</div>`;
+    r.querySelectorAll('button').forEach(b=>b.onclick=()=>{if(r.classList.contains('ok')||r.classList.contains('no'))return;b.classList.add('pick');const right=(b.dataset.v==='1')===it.a;r.classList.add(right?'ok':'no');beep(right?'ok':'no');addScore(right);if(right)ok++;done++;
+      if(done===items.length)setTimeout(()=>openPop('是非題結果','這一組 '+items.length+' 題，答對 '+ok+' 題。'),700);});
+    box.appendChild(r);});
+});
+/* ---- ordering ---- */
+document.querySelectorAll('.slide[data-order]').forEach(sl=>{
+  const q=JSON.parse(sl.dataset.order);const box=sl.querySelector('.ord');
+  function build(){box.innerHTML='';let picked=[];const idx=q.items.map((_,i)=>i).sort(()=>Math.random()-.5);
+    idx.forEach(i=>{const d=document.createElement('div');d.className='ordi';d.innerHTML=`<span class="n">?</span><span>${q.items[i]}</span>`;
+      d.onclick=()=>{if(d.classList.contains('pick')||picked.length===q.items.length)return;picked.push(i);d.classList.add('pick');d.querySelector('.n').textContent=picked.length;beep('flip');
+        if(picked.length===q.items.length){let allOk=true;[...box.children].forEach(el=>{const k=idx[[...box.children].indexOf(el)];const pos=picked.indexOf(k);const right=pos===k;if(!right)allOk=false;el.classList.add(right?'ok':'no');if(!right)el.querySelector('.n').textContent=(pos+1)+'→'+(k+1);});
+          beep(allOk?'ok':'no');addScore(allOk);setTimeout(()=>openPop(allOk?'順序全對！':'順序有誤',(allOk?'':'<b>正確順序</b><br>'+q.items.map((t,i)=>(i+1)+'. '+t).join('<br>')+'<br><br>')+q.f,true),800);}};
+      box.appendChild(d);});}
+  build();sl.querySelector('.ord-again').onclick=build;
+});
+/* ---- fill in blanks ---- */
+document.querySelectorAll('.slide[data-fill]').forEach(sl=>{
+  const q=JSON.parse(sl.dataset.fill);const lines=sl.querySelector('.fill-lines'),bank=sl.querySelector('.bank');
+  function build(){lines.innerHTML='';bank.innerHTML='';let blanks=[],cur=0,checked=false;
+    q.lines.forEach(l=>{const d=document.createElement('div');d.className='fl';const b=document.createElement('span');b.className='blank';b.textContent='　';d.append(l.pre,b,l.post);lines.appendChild(d);blanks.push({el:b,ans:l.ans,val:''});});
+    blanks[0].el.classList.add('cur');
+    q.bank.slice().sort(()=>Math.random()-.5).forEach(w=>{const bt=document.createElement('button');bt.textContent=w;bt.onclick=()=>{if(checked||cur>=blanks.length)return;blanks[cur].val=w;blanks[cur].el.textContent=w;blanks[cur].el.classList.remove('cur');bt.disabled=true;beep('flip');cur++;if(cur<blanks.length)blanks[cur].el.classList.add('cur');
+        else{checked=true;let all=true;blanks.forEach(x=>{const r=x.val===x.ans;if(!r)all=false;x.el.classList.add(r?'ok':'no');if(!r)x.el.textContent=x.val+'（'+x.ans+'）';});beep(all?'ok':'no');addScore(all);setTimeout(()=>openPop(all?'全部填對！':'再看一次',q.f),800);}};bank.appendChild(bt);});
+    const re=document.createElement('button');re.className='alt';re.textContent='重來';re.onclick=build;bank.appendChild(re);}
+  build();
+});
+
+/* ---- inheritance cases ---- */
+const CASES={
+ kid:['案例：張伯伯的房子','<p>張伯伯過世，留下太太和三個孩子，遺產共 <b>1,200 萬</b>。</p><p>配偶和子女<b>平均分</b>：四個人各 <b>300 萬</b>。</p><p>如果二兒子早已過世、留下兩個孫子，二兒子那份 300 萬由兩個孫子<b>代位繼承</b>，各 150 萬；不會因為少一個孩子而變成三個人分。</p>'],
+ par:['案例：黃先生 32 歲意外過世','<p>黃先生結婚三年、還沒有孩子，父母健在。遺產 <b>1,200 萬</b>（含夫妻一起買的房子）。</p><p>第一順位沒人，輪到第二順位父母：太太拿 <b>600 萬</b>，公公、婆婆各 <b>300 萬</b>。</p><p>很多年輕夫妻沒想到公婆會分走一半。預防方法：寫遺囑（父母至少保留特留分 1/4）、太太主張剩餘財產請求權、或用保險指定受益人。</p>'],
+ sib:['案例：陳女士和先生沒有孩子','<p>陳女士過世，沒有子女，父母已往生，有先生和三個兄弟姊妹。遺產 <b>1,200 萬</b>。</p><p>輪到第三順位兄弟姊妹：先生拿 <b>600 萬</b>，三位兄弟姊妹各 <b>200 萬</b>。</p><p>最常見的爭執：房子是夫妻一起打拼買的，卻要分給多年沒往來的兄弟姊妹。有遺囑就不一樣：2027 年 2 月 17 日起兄弟姊妹不再有特留分，遺囑寫「全部給先生」就能全部給先生（在那之前過世，兄弟姊妹仍可主張應繼分 1/3 的特留分）。注意：代位繼承只適用於第一順位（子女先過世由孫子女代位），兄弟姊妹先過世，姪子姪女<b>不能</b>代位。</p>'],
+ gp:['案例：林先生只剩祖母','<p>林先生過世，沒有子女，父母與兄弟姊妹都已不在，有太太和 90 歲的祖母。遺產 <b>1,200 萬</b>。</p><p>輪到第四順位：太太拿 <b>800 萬</b>（2/3），祖母拿 <b>400 萬</b>（1/3）。</p><p>這種情況少見，但說明一件事：只要前面順位都沒人，法律會一直往後找。</p>'],
+ none:['案例：只剩配偶，或完全沒有繼承人','<p>吳女士過世，只有先生，四個順位都沒有人：先生拿 <b>全部</b>。</p><p>獨居的王奶奶過世，沒有配偶，四個順位也都沒人（兄弟姊妹已過世，姪子姪女不能代位）：遺產經法院選任遺產管理人、公告搜索繼承人後，若仍無人承認，<b>歸屬國庫</b>。曾照顧她多年的姪女、鄰居或外籍看護，若沒有遺囑或遺贈，一毛都拿不到。</p><p>這就是獨居長輩最需要寫遺囑的原因。</p>'],
+ r1:['案例：李奶奶全部給小兒子','<p>李奶奶遺產 <b>1,200 萬</b>，兩個兒子，沒有配偶。遺囑寫「全部給小兒子」。</p><p>大兒子的應繼分是 1/2＝600 萬，特留分是應繼分的一半＝<b>300 萬</b>。</p><p>大兒子可向弟弟主張<b>扣減</b>，拿回 300 萬；小兒子實拿 900 萬。遺囑有效，只是被「修剪」到法律底線。</p>'],
+ r2:['案例：張爺爺把財產遺贈給看護','<p>張爺爺遺產 <b>1,200 萬</b>，有太太和一個兒子。遺囑寫「全部遺贈給照顧我十年的看護阿美」。</p><p>太太與兒子的應繼分各 600 萬，特留分各 <b>300 萬</b>。兩人可以各自向阿美主張扣減 300 萬。</p><p>結果：太太 300 萬、兒子 300 萬、阿美最多 <b>600 萬</b>。想多給照顧者可以，但先把家人的特留分算出來，再決定遺贈多少，就不會打官司。</p>'],
+ r3:['案例：陳女士沒有孩子，遺囑全給先生','<p>陳女士遺產 <b>1,200 萬</b>，沒有子女、父母已往生，有先生和三個兄弟姊妹。遺囑寫「全部給先生」。</p><p><b>2027 年 2 月 16 日以前過世（舊法）</b>：兄弟姊妹應繼分各 200 萬，特留分各約 67 萬，三人合計可向先生扣減約 <b>200 萬</b>。</p><p><b>2027 年 2 月 17 日起過世（新法）</b>：兄弟姊妹沒有特留分，先生拿 <b>全部 1,200 萬</b>。</p><p>但若陳女士<b>沒有寫遺囑</b>，不論新舊法，兄弟姊妹仍依應繼分分走 600 萬。</p>'],
+ r4:['案例：林先生全給女兒，兒子沒有主張','<p>林先生遺產 <b>1,200 萬</b>，一兒一女，沒有配偶。遺囑寫「全部給女兒」，因為女兒照顧他多年。</p><p>兒子覺得合理，沒有主張特留分 → 遺囑<b>照原樣執行</b>，女兒拿全部。</p><p>特留分是「可以要」，不是「自動給」。要由被侵害的人自己向對方主張扣減，而且要在時效內（實務多採：知道受侵害起 2 年、繼承開始起 10 年），過了就不能再要。</p>'],
+ w1:['新聞案例：手機打字的遺囑，不算數','<p><b>大S（徐熙媛）</b>2025 年初過世後，媒體報導她生前曾在手機上寫下財產安排。律師普遍指出：自書遺囑必須<b>親手書寫全文</b>，電腦或手機打字、列印後簽名，都不符合法定形式，無法當作有效遺囑。</p><p>另一個 2026 年初的判決：台北一位癌症病人親手寫下自書遺囑，把 3,000 多萬的房產留給兒子和孫子。兩個女兒告上法院，士林地院認定遺囑<b>有效</b>，但侵害女兒特留分，判兩人各拿回遺產的 1/6。</p><p>一句話：自書遺囑便宜方便，但「親手寫、寫日期、親筆簽名」三樣缺一不可，而且還是要留特留分。</p>'],
+ w2:['新聞案例：曹西平想把財產留給乾兒子','<p>資深藝人<b>曹西平</b> 2025 年 12 月驟逝，享壽 66 歲。他未婚、沒有子女、與兄弟多年不往來，生前曾公開說已找律師預立遺囑，要把財產留給長期照顧他的乾兒子。</p><p>但依當時的法律，父母已不在、沒有子女的人，兄弟姊妹仍有特留分（應繼分的 1/3），遺囑無法完全排除。這件事引發社會討論，成為 2026 年 7 月立法院刪除兄弟姊妹特留分的推力之一。</p><p>給大家的提醒：想照顧非親屬，<b>一定要用公證遺囑等最穩的形式</b>立下來；2027 年 2 月 17 日新法上路後，手足就不能再主張特留分。</p>'],
+ w3:['新聞案例：張榮發的密封遺囑，打了 8 年官司','<p>長榮集團創辦人<b>張榮發</b> 2014 年立遺囑：由老臣代筆寫下內容，他親自簽名、密封，再經公證，指定二房獨子張國煒<b>單獨繼承</b>全部遺產並接任總裁，另指定四位遺囑執行人。</p><p>2016 年他過世後，大房三子提告主張遺囑無效。台北地院 2020 年一審、高等法院 2023 年二審、最高法院 2024 年都認定遺囑<b>有效</b>。</p><p>但有效不代表全拿：國稅局核定遺產約 240 億，其他五位繼承人仍各有特留分（應繼分 1/6 的一半），張國煒實際可得約 7/12、約 140 億。</p><p>一句話：遺囑寫得再明確，法院還是要一項一項對照法定要件；特留分照樣要留。</p>'],
+ w4:['案例：代筆遺囑最常輸在「見證人」','<p>張榮發的遺囑是由老臣代筆、本人簽名密封，法院同時檢查了代筆與密封的要件，才確認有效。</p><p>實務上代筆遺囑最常被判無效的原因：</p><p>① 見證人中途<b>離席</b>（去抽菸、接電話），沒有全程在場；<br>② 見證人<b>資格不符</b>，例如找繼承人的配偶或子女來見證，人數就不足三人；<br>③ 遺囑人沒有親口說出內容，只點頭；<br>④ 用<b>蓋章代替簽名</b>。</p><p>建議：長輩不便書寫時，找律師安排代筆＋公證，全程錄影，必要時先請醫師評估意識狀況。</p>'],
+ w5:['案例：口授遺囑是急救用的','<p>口授遺囑只能在<b>生命危急、來不及用其他方式</b>時使用：指定兩位以上見證人，口述內容，由一人筆記或全程錄音封存，大家簽名。</p><p>它有保存期限：遺囑人若之後恢復、能用別的方式立遺囑，<b>三個月後</b>口授遺囑自動失效。而且還要在遺囑人過世後三個月內，由見證人提到親屬會議認定真偽。</p><p>實務上這類遺囑爭議最多：加護病房裡誰在場、說了什麼、有沒有錄到，很難證明。真正的做法是：<b>健康時就先立好遺囑</b>，不要等到急診室。</p>'],
+ w0:['新聞案例：王永慶沒有留遺囑','<p>台塑創辦人<b>王永慶</b> 2008 年在美國過世，<b>沒有留下遺囑</b>。國稅局核定國內遺產約 595 億元。</p><p>大房王月蘭先行使「夫妻剩餘財產差額分配請求權」，取得約 297 億（免稅）；其餘扣除免稅額後依當時舊制 50% 稅率，繳了 <b>119 億遺產稅</b>，至今是台灣最高紀錄。</p><p>之後三房子女為了海外信託、合法配偶身分、一筆存在銀行的 1 億多元，官司打了 <b>13 年</b>，到 2021 年才和解。</p><p>一句話：連經營之神都因為沒有遺囑，讓家人纏訟十幾年。遺囑不是有錢人才需要，是有家人就需要。</p>'],
+ w6:['誰不能當遺囑見證人（民法第 1198 條）','<p>① 未成年人<br>② 受監護或輔助宣告的人<br>③ 繼承人，以及繼承人的配偶、直系血親<br>④ 受遺贈人，以及受遺贈人的配偶、直系血親<br>⑤ 公證人或代行公證職務者的助理、受雇人</p><p>不合格的人不算入見證人人數。例如代筆遺囑需要三位見證人，其中一位是媳婦，就只剩兩位有效，遺囑<b>無效</b>。</p><p>最安全的做法：找律師、里長、公證人事務所的合格見證人，或完全無利害關係的朋友。</p>'],
+ t1:['新聞案例：連公家保管的錢都能被偷','<p>2026 年台北市社會局爆出：一名前社工督導在 2025 年 5 月到 2026 年 6 月間，利用保管五位受監護宣告長者的存摺與印章、代付機構費用的機會，以「以少報多」方式溢領，涉嫌侵占 <b>1,200 多萬元</b>，被查扣多款名牌包，已遭羈押、司法調查中。</p><p>這幾位長輩沒有家人、沒有意定監護、沒有信託，錢只能靠「某一個人」保管。</p><p>對照另一個銀行案例：一位 70 多歲獨居的 A 先生，中風前已把存款放進安養信託，約定按月撥款；中風後銀行聯絡上家人，直接把信託資金用在復健與醫療，不必經手任何人。</p><p>一句話：把錢交給制度，不是交給某個人——包括公家機關。</p>'],
+ t2:['案例：保險金一次領，三年就花光','<p>常見情境：單親媽媽身故，留下 1,500 萬身故保險金給 12 歲的孩子。保險金一次撥入，由叔叔「代管」；三年後孩子成年前，錢只剩幾十萬，叔叔說拿去投資賠了。</p><p>若改成<b>保險金信託</b>：保險金直接匯入信託專戶，約定每月撥 3 萬生活費、學費直接付給學校，剩餘到孩子 25 歲再一次交付；並指定信任的親友或社福團體當信託監察人。</p><p>銀行實務：保險金信託通常先簽契約、預先約定，保費照繳，理賠時保險公司直接匯入信託帳戶，簽約費多在數千元內。</p>'],
+ t3:['案例：失智後被過戶的房子','<p>常見新聞情境：獨居長輩失智後，被親戚或「乾女兒」帶去地政事務所把房子過戶，家人發現時房子已被賣掉。</p><p>不動產信託的做法：把房子登記到銀行信託專戶，<b>任何人（包括自己）都無法單獨處分</b>；要出售必須依契約由信託監察人同意。若房子出租，租金匯入信託帳戶再按月撥給自己，就是「留房養老」。</p><p>另一個常見用法：長輩想把房子留給孫子但擔心兒子先賣掉，可設定「不動產他益信託」，由銀行管理到孫子成年再移轉。</p>'],
+ t4:['案例：王永慶的信託','<p>王永慶生前沒有留遺囑，但把大量海外資產放進<b>信託</b>，由專業經理人管理，確保台塑集團永續經營與公益。這也是他的子女後來爭的焦點：爭的不只是錢，而是信託的管理權。</p><p>一般家庭的遺囑信託更單純：在遺囑中指定「身後財產交給 ○○ 銀行信託，每月給太太 5 萬生活費，太太過世後剩餘平分給子女」。</p><p>適合三種人：配偶年紀大或失智、子女未成年或身心障礙、擔心子女一次拿到大筆遺產就揮霍。遺囑信託仍要留特留分，並須遺囑有效才會生效。</p>'],
+ g1:['新聞案例：穎川建忠，千億總裁失智之後','<p>2026 年媒體報導：身價千億的企業家<b>穎川建忠</b>失智後，五個兒子分成兩派。長子與次子各自拿出有爸爸簽名的文件，都說自己才是指定的財產管理人，官司從台灣打到日本。</p><p>法官指出，當事人已失智，這些簽名能不能代表真實意願已有疑義。最後台北地院裁定由<b>台北市社會局</b>擔任輔助人，協助處理重要法律行為。</p><p>一位叱吒風雲的總裁，最後連「我想住在家裡」都沒有人能替他執行。有錢、有五個兒子，缺的只是一份清醒時簽好的意定監護契約。</p>'],
+ g2:['新聞案例：受監護長者的錢，被保管的人拿走','<p>2026 年台北市社會局前社工督導，涉嫌在一年多內侵占五位受監護宣告長者逾 <b>1,200 萬元</b>，已遭羈押、司法調查中。</p><p>這些長輩沒有親屬，法院只能指定社會局當監護人，存摺印章由社會局保管、由承辦人代付機構費用，結果被「以少報多」溢領。</p><p>律師建議：五十歲開始規劃退休時，就可先簽意定監護，再搭配安養信託，讓錢交給制度、人交給自己信任的人。</p>'],
+ g3:['新聞案例：前總統家族的輔助宣告','<p>2026 年 5 月，前總統馬英九的大姊向法院聲請<b>輔助宣告</b>，馬本人公開否認失智傳聞。這件事讓「輔助宣告」「監護宣告」突然成為全台熱門關鍵字。</p><p>這裡不評論個案，只看制度：當本人沒有事先簽意定監護，就只能由<b>家屬向法院聲請</b>，由法院鑑定、決定要不要宣告、由誰擔任，本人和家人都被動。</p><p>輔助宣告比監護宣告輕：本人仍可自己做日常決定，只有重大法律行為要經輔助人同意。想自己決定「將來由誰協助我」，一樣要靠事先安排。</p>'],
+ claim:['案例：先用剩餘財產請求權，再分遺產','<p>王伯伯婚後財產 <b>3,000 萬</b>，太太自己名下婚後財產 <b>600 萬</b>，兩個成年子女。</p><p>第一步：太太先主張差額一半 (3,000－600)÷2＝<b>1,200 萬</b>，這不是遺產。</p><p>第二步：剩下 1,800 萬才是遺產，太太和兩個子女平均分，各 <b>600 萬</b>。</p><p>結果：太太總共拿到 1,800 萬，子女各 600 萬；而且遺產總額降低，遺產稅可能變成零。</p>']
+};
+document.querySelectorAll('.case').forEach(el=>{const open=()=>{const c=CASES[el.dataset.case];beep('flip');openPop(c[0],c[1],true);};el.onclick=open;el.onkeydown=e=>{if(e.key==='Enter')open();};});
+
+/* ---- myth cards ---- */
+document.querySelectorAll('.card:not(.case)').forEach(c=>c.onclick=()=>{c.classList.toggle('flip');beep('flip');});
+
+/* ---- planning calculator ---- */
+function estTaxP(net){if(net<=0)return 0;if(net<=5621)return net*.10;if(net<=11242)return net*.15-281.05;return net*.20-843.15;}
+function calcPlan(){
+  const v=id=>parseFloat(document.getElementById(id).value)||0;
+  const cash=v('p-cash'),land=v('p-land'),sp=v('p-sp'),spw=v('p-spw'),kid=v('p-kid'),yrs=v('p-yrs'),wed=v('p-wed');
+  const D=1333+138+(sp?553:0)+kid*56;
+  const gross=cash+land;
+  const taxA=estTaxP(Math.max(0,gross-D));
+  const per=sp?488:244;const gifts=Math.min(cash,per*yrs+wed*100*(sp?2:1));
+  const grossB=gross-gifts;const taxB=estTaxP(Math.max(0,grossB-D));
+  const claim=sp?Math.max(0,(grossB-spw)/2):0;const grossC=grossB-claim;const taxC=estTaxP(Math.max(0,grossC-D));
+  const f=n=>n.toLocaleString('zh-TW',{maximumFractionDigits:1});
+  document.getElementById('p-a').textContent=taxA?f(taxA)+' 萬':'免稅';
+  document.getElementById('p-b').textContent=taxB?f(taxB)+' 萬':'免稅';
+  document.getElementById('p-c').textContent=taxC?f(taxC)+' 萬':'免稅';
+  document.getElementById('p-byrs').textContent=yrs?('（'+yrs+' 年共送 '+f(gifts)+' 萬）'):'（0 年）';
+  const mx=Math.max(taxA,1);
+  document.getElementById('p-bars').innerHTML=[['A',taxA,'#9fb8bc'],['B',taxB,'#F4A93C'],['C',taxC,'#E8552D']].map(([k,t,c])=>`<div style="display:flex;align-items:center;gap:1rem;font-size:2.2rem"><span style="width:3rem">${k}</span><div style="flex:1;height:2.2rem;background:rgba(255,255,255,.12);border-radius:1.1rem;overflow:hidden"><div style="width:${t/mx*100}%;height:100%;background:${c}"></div></div></div>`).join('');
+  const cashLeft=cash-gifts;const need=taxC;
+  let tip=`從 A 到 C 共省下 <b style="color:var(--amber)">${f(taxA-taxC)} 萬</b>。`;
+  if(need>0) tip+= cashLeft>=need?` 身後留有現金 ${f(cashLeft)} 萬，足夠繳稅。`:` 但身後現金只剩 ${f(cashLeft)} 萬，不夠繳 ${f(need)} 萬的稅——這就是用保險預留稅源的時機。`;
+  if(gifts>0) tip+=' 分年贈與須在過世前兩年以上完成，否則併回遺產。';
+  document.getElementById('p-tip').innerHTML=tip;
+}
+['p-cash','p-land','p-sp','p-spw','p-kid','p-yrs','p-wed'].forEach(id=>document.getElementById(id).addEventListener('input',calcPlan));
+calcPlan();
+
+/* ---- embedded calculator ---- */
+function openCalc(tab,srcId){
+  const ov=document.getElementById('calcov'),fr=document.getElementById('calcfr');
+  document.getElementById('calcov-title').textContent=srcId==='inh-src'?'應繼分・特留分 試算器':'贈與稅・遺產稅 試算器';
+  const E='<'+'/script>';
+  let src=document.getElementById(srcId||'calc-src').textContent.split('<\\/script>').join(E);
+  if(tab)src=src.replace('</body>','<script>document.querySelector(\'.tab[data-p="'+tab+'"]\').click();'+E+'</body>');
+  fr.srcdoc=src;ov.classList.add('on');beep('nav');
+}
+function openVideo(id){document.getElementById('vidfr').src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';document.getElementById('vid').classList.add('on');}
+function closeVideo(){document.getElementById('vid').classList.remove('on');document.getElementById('vidfr').src='';}
+function closeCalc(){document.getElementById('calcov').classList.remove('on');document.getElementById('calcfr').srcdoc='';}
+</script>
+</body>
+</html>
